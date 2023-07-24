@@ -1,12 +1,10 @@
-# Portfolio🌟
+# 🌟Portfolio🌟
 
-### Resources Used in This Project
+### Framework Used :
 
-- Fonts from https://fonts.google.com/ <br />
-- Icons from https://iconify.design/ <br />
-- LightBulb Svg from https://lukaszadam.com/illustrations <br />
+- [Next JS](https://nextjs.org/) <br />
 
-### External Libraries used in this project:
+### External Libraries Used:
 
-- [framer-motion](https://www.framer.com/motion/) <br />
-- [Tailwind css](https://tailwindcss.com/) <br />
+- [Tailwind CSS](https://tailwindcss.com/) <br />
+- [Framer Motion](https://www.framer.com/motion/) <br />
