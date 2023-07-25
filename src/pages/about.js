@@ -1,46 +1,14 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import Layout from "@/components/Layout";
 import Head from "next/head";
-import AnimatedText from "@/components/AnimatedText";
+import AnimatedText from "@/components/Animations/AnimatedText";
 import Image from "next/image";
 import AboutImage from "../../public/images/profile/developer-pic-2.jpg";
-import { useInView, useMotionValue, useSpring } from "framer-motion";
-import Skills from "@/components/Skills";
-import Experience from "@/components/Experience";
-import Education from "@/components/Education";
-import TransitionEffect from "@/components/TransitionEffect";
-
-// Animate Numbers
-const AnimatedNumbers = ({ value }) => {
-  // Get Refs
-  const ref = useRef(null);
-
-  // Initial Motion Value
-  const motionValue = useMotionValue(0);
-
-  // Set Animation for the Motion Value
-  const springValue = useSpring(motionValue, { duration: 6000 });
-
-  // Get inView Element (Option : Once not Each)
-  const isInView = useInView(ref, { once: true });
-
-  useEffect(() => {
-    // if InView, set to the value expected
-    if (isInView) {
-      motionValue.set(value);
-    }
-  }, [isInView, value, motionValue]);
-
-  useEffect(() => {
-    springValue.on("change", (latest) => {
-      if (ref.current && latest.toFixed(0) <= value) {
-        ref.current.textContent = latest.toFixed(0);
-      }
-    });
-  }, [springValue, value]);
-
-  return <span ref={ref}></span>;
-};
+import Skills from "@/components/About/Skills";
+import Experience from "@/components/About/Experience";
+import Education from "@/components/About/Education";
+import TransitionEffect from "@/components/Transitions/TransitionEffect";
+import AnimatedNumbers from "@/components/Animations/AnimatedNumbers";
 
 const about = () => {
   return (

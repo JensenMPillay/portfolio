@@ -103,7 +103,6 @@ const LogoSvg = ({ className }) => {
 
 const Logo = () => {
   return (
-    // <div className="mt-2 flex items-center justify-center">
     <MotionLink
       href="/"
       className="flex h-16 w-16 items-center justify-center rounded-full border border-solid border-transparent bg-dark text-2xl font-extrabold text-light transition-colors duration-300 ease-in-out hover:border-dark hover:bg-light hover:text-dark dark:border-light dark:bg-light dark:text-dark dark:hover:bg-dark dark:hover:text-light"

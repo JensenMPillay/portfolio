@@ -2,10 +2,10 @@ import Layout from "@/components/Layout";
 import Head from "next/head";
 import Image from "next/image";
 import profileImage from "../../public/images/profile/developer-pic-1.png";
-import AnimatedText from "@/components/AnimatedText";
+import AnimatedText from "@/components/Animations/AnimatedText";
 import Link from "next/link";
-import { LinkArrow } from "@/components/Icons";
-import TransitionEffect from "@/components/TransitionEffect";
+import { LinkArrow } from "@/components/Icons/Icons";
+import TransitionEffect from "@/components/Transitions/TransitionEffect";
 
 export default function Home() {
   return (
