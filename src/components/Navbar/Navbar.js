@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Logo from "./Logo";
-import useThemeSwitcher from "../hooks/useThemeSwitcher";
+import useThemeSwitcher from "../Hooks/useThemeSwitcher";
 import SideNavLink from "./SideNavLink";
 import SwitchThemeButton from "./SwitchThemeButton";
 import SocialIcons from "./SocialIcons";
