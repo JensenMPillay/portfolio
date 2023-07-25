@@ -19,7 +19,7 @@ const projects = () => {
       {/* Transition Page Effect */}
       <TransitionEffect />
       <main className="flex w-full flex-col items-center justify-center text-dark dark:text-light">
-        <Layout className="bg-gradientLightLayout pt-16 dark:bg-gradientDarkLayout">
+        <Layout className="pt-16">
           <AnimatedText
             className="mb-16 text-center md:mb-12 sm:mb-8"
             text="Imagination Trumps Knowledge!"

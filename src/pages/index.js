@@ -20,7 +20,7 @@ export default function Home() {
       {/* Page Main  */}
       <main className="flex min-h-screen w-full items-center text-dark dark:text-light">
         {/* Layout Page  */}
-        <Layout className="bg-gradientLightLayout dark:bg-gradientDarkLayout">
+        <Layout className="">
           <div className="flex w-full items-center justify-between lg:flex-col">
             <div className="w-1/2 md:w-full">
               <Image
