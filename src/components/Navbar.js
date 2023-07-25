@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import Logo from "./Logo";
-import useThemeSwitcher from "../Hooks/useThemeSwitcher";
-import SideNavLink from "./SideNavLink";
-import SwitchThemeButton from "./SwitchThemeButton";
-import SocialIcons from "./SocialIcons";
-import MenuButton from "./MenuButton";
-import MobileMenu from "./MobileMenu";
+import Logo from "./Navbar/Logo";
+import useThemeSwitcher from "./Hooks/useThemeSwitcher";
+import SideNavLink from "./Navbar/SideNavLink";
+import SwitchThemeButton from "./Navbar/SwitchThemeButton";
+import SocialIcons from "./Navbar/SocialIcons";
+import MenuButton from "./Navbar/MenuButton";
+import MobileMenu from "./Navbar/MobileMenu";
 
 const Navbar = () => {
   const [mode, setMode] = useThemeSwitcher();
@@ -16,7 +16,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className="relative z-10 flex w-full items-center justify-between bg-light px-32 py-8 font-medium dark:bg-dark dark:text-light lg:px-16 md:px-12 sm:px-8">
+    <header className="relative z-10 flex w-full items-center justify-between bg-transparent px-32 py-8 font-medium dark:bg-transparent dark:text-light lg:px-16 md:px-12 sm:px-8">
       {/* Hamburger Menu  */}
       <MenuButton isOpen={isOpen} toggleMenu={toggleMenu} />
 
