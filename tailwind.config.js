@@ -39,9 +39,9 @@ module.exports = {
         circularDarkSm:
           "repeating-radial-gradient(rgba(255,255,255,0.5) 2px,rgba(255,255,255,0) 8px,rgba(255,255,255,0) 40px)",
         gradientLightLayout:
-          "linear-gradient(180deg, rgba(227,220,210,1) 0%, rgba(204,139,101,1) 100%)",
+          "radial-gradient(circle, rgba(204,139,101,1) 0%, rgba(227,220,210,1) 100%)",
         gradientDarkLayout:
-          "linear-gradient(0deg, rgba(116,139,111,1) 0%, rgba(1,51,40,1) 100%)",
+          "radial-gradient(circle, rgba(116,139,111,1) 0%, rgba(1,51,40,1) 75%)",
       },
       boxShadow: {
         "3xl": "0 15px 15px 1px rgba(80,230,217, 0.4)",

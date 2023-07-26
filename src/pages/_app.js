@@ -1,10 +1,11 @@
 import "@/styles/globals.css";
 import { Quicksand, Jost } from "next/font/google";
 import Head from "next/head";
-import Navbar from "@/components/Navbar/Navbar";
+import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { AnimatePresence } from "framer-motion";
 import { useRouter } from "next/router";
+import ParticlesBackground from "@/components/ParticlesBackground";
 
 // Custom Fonts
 const quicksand = Quicksand({
@@ -26,13 +27,13 @@ export default function App({ Component, pageProps }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <ParticlesBackground />
       <main
-        className={`${quicksand.variable} ${jost.variable} min-h-screen w-full bg-transparent font-quicksand transition-colors duration-300 ease-in-out`}
+        className={`${quicksand.variable} ${jost.variable} min-h-screen w-full bg-gradientLightLayout font-quicksand transition-colors duration-300 ease-in-out dark:bg-gradientDarkLayout`}
       >
         <Navbar />
+        {/* Animate Exit on Transition and Waiting other animations  */}
         <AnimatePresence mode="wait">
-          {/* Animate Exit on Transition and Waiting other animations  */}
-
           {/* Each Page Come Here  */}
           <Component key={router.asPath} {...pageProps} />
         </AnimatePresence>
