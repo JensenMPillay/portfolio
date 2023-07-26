@@ -16,7 +16,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className="relative z-10 flex w-full items-center justify-between bg-transparent px-32 py-8 font-medium dark:bg-transparent dark:text-light lg:px-16 md:px-12 sm:px-8">
+    <header className="relative z-10 flex w-full items-center bg-transparent px-32 py-8 font-medium dark:bg-transparent dark:text-light lg:px-16 md:px-12 sm:px-8">
       {/* Hamburger Menu  */}
       <MenuButton isOpen={isOpen} toggleMenu={toggleMenu} />
 
@@ -24,7 +24,7 @@ const Navbar = () => {
       <MobileMenu isOpen={isOpen} toggleMenu={toggleMenu} />
 
       {/* Logo  */}
-      <div className="absolute left-1/2 top-2 mt-2 -translate-x-1/2">
+      <div className="fixed left-1/2 top-2 mt-2 -translate-x-1/2">
         <Logo />
       </div>
 

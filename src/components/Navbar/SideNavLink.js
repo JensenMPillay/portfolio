@@ -11,7 +11,7 @@ const SideNavLink = ({ href, title, className = "" }) => {
 
   return (
     <MotionLink
-      className={`${className} group fixed right-[-1vw] -translate-x-1/2 -translate-y-1/2 rotate-90 font-jost text-xl font-light uppercase -tracking-wider lg:hidden`}
+      className={`${className} group fixed right-[-1vw] -translate-x-1/2 -translate-y-1/2 rotate-90 font-jost text-xl font-light uppercase -tracking-wider text-dark dark:text-light lg:hidden`}
       href={href}
       initial={{
         x: 100,

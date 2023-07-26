@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const MenuButton = ({ isOpen, toggleMenu }) => {
   return (
     <motion.button
-      className="hidden flex-col items-center justify-center lg:flex"
+      className="fixed hidden flex-col items-center justify-center lg:flex"
       onClick={toggleMenu}
       initial={{
         opacity: 0,
