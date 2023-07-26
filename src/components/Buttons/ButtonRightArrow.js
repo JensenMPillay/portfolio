@@ -18,12 +18,17 @@ const ButtonRightArrow = ({ name, link }) => {
           {isHovered && (
             <>
               <motion.span
-                className="min-h-[0.5rem] min-w-[40%] rounded-xl bg-light dark:bg-dark"
+                className="min-h-[0.5rem] min-w-[30%] rounded-xl bg-light dark:bg-dark"
                 initial={{ x: -25 }}
-                animate={{ x: 0 }}
+                animate={{ x: 0, translateX: 3 }}
                 transition={{ type: "spring", duration: 1 }}
               ></motion.span>
-              <span className="flex h-auto w-auto -translate-x-1.5 flex-col items-center justify-center">
+              <motion.span
+                className="flex h-auto w-auto -translate-x-1.5 flex-col items-center justify-center"
+                initial={{ translateX: -6 }}
+                animate={{ translateX: -4 }}
+                transition={{ type: "spring", duration: 1 }}
+              >
                 <motion.span
                   className="min-h-[0.5rem] min-w-[1rem] rotate-45 transform rounded-xl bg-light dark:bg-dark"
                   initial={{ x: -25, rotate: 0, translateY: 3 }}
@@ -36,7 +41,7 @@ const ButtonRightArrow = ({ name, link }) => {
                   animate={{ x: 0, rotate: -45, translateY: 0 }}
                   transition={{ type: "spring", duration: 1 }}
                 ></motion.span>
-              </span>
+              </motion.span>
             </>
           )}
         </span>
