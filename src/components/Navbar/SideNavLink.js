@@ -5,25 +5,21 @@ import { motion } from "framer-motion";
 
 const MotionLink = motion(Link);
 
-const SideNavLink = ({ href, title, className = "" }) => {
+const SideNavLink = ({ href, title, initial, animate, className = "" }) => {
   // Get Actual Route for Highlight
   const routerPath = useRouter().asPath;
 
   return (
     <MotionLink
-      className={`${className} group fixed right-[-1vw] -translate-x-1/2 -translate-y-1/2 rotate-90 font-jost text-xl font-light uppercase -tracking-wider text-dark dark:text-light lg:hidden`}
+      className={`${className} group fixed font-jost text-2xl font-light uppercase -tracking-wider text-dark dark:text-light lg:hidden`}
       href={href}
-      initial={{
-        x: 100,
-        rotate: 90,
-      }}
+      initial={{ ...initial }}
       animate={{
-        x: 0,
-        rotate: 90,
-        transition: { type: "spring", duration: 1, delay: 0.6 },
+        ...animate,
+        transition: { type: "spring", duration: 1.4, delay: 0.6 },
       }}
-      whileHover={{ scale: 1.1 }}
-      whileTap={{ scale: 0.9 }}
+      whileHover={{ ...animate, scale: 1.1 }}
+      whileTap={{ ...animate, scale: 0.9 }}
     >
       {title}
       <span

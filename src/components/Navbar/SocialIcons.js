@@ -6,9 +6,28 @@ const SocialIcons = () => {
   const icon = {
     initial: {
       scale: 0,
+      opacity: 0,
+      rotate: 0,
     },
-    animate: {
-      scale: [0, 1, 1.5, 1],
+    animate: (customValue) => ({
+      scale: [0, 1, 1.5, 3, 1.5, 1],
+      opacity: 1,
+      transition: {
+        type: "spring",
+        damping: 8,
+        duration: 1,
+        delay: customValue * 0.2 + 1,
+      },
+    }),
+    hover: {
+      rotate: 360,
+      transition: {
+        type: "spring",
+        damping: 10,
+        duration: 1,
+        repeat: Infinity,
+        repeatDelay: 0.5,
+      },
     },
   };
   return (
@@ -20,7 +39,8 @@ const SocialIcons = () => {
         variants={icon}
         initial="initial"
         animate="animate"
-        transition={{ type: "spring", duration: 1, delay: 1 }}
+        whileHover="hover"
+        custom={3}
       >
         <GithubIcon className="transition-transform duration-100 ease-in-out hover:scale-110 active:scale-90" />
       </motion.a>
@@ -31,7 +51,8 @@ const SocialIcons = () => {
         variants={icon}
         initial="initial"
         animate="animate"
-        transition={{ type: "spring", duration: 1, delay: 0.8 }}
+        whileHover="hover"
+        custom={2}
       >
         <LinkedInIcon className="transition-transform duration-100 ease-in-out hover:scale-110 active:scale-90" />
       </motion.a>
@@ -42,7 +63,8 @@ const SocialIcons = () => {
         variants={icon}
         initial="initial"
         animate="animate"
-        transition={{ type: "spring", duration: 1, delay: 0.6 }}
+        whileHover="hover"
+        custom={1}
       >
         <MailIcon className="transition-transform duration-100 ease-in-out hover:scale-110 active:scale-90" />
       </motion.a>
@@ -50,7 +72,7 @@ const SocialIcons = () => {
         className="h-32 w-0.5 bg-dark dark:bg-light"
         initial={{ height: 0 }}
         animate={{ height: "10rem" }}
-        transition={{ type: "spring", duration: 1, delay: 0.4 }}
+        transition={{ type: "spring", duration: 1, delay: 1 }}
       ></motion.span>
     </div>
   );
