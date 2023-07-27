@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const SwitchThemeButton = ({ mode, setMode }) => {
   return (
     <motion.button
-      className={`fixed right-5 top-5 flex items-center justify-center rounded-full p-1 ${
+      className={`fixed right-[18px] top-[18px] flex items-center justify-center rounded-full p-1 ${
         mode === "light" ? "bg-dark text-light" : "bg-light text-dark"
       }`}
       onClick={() => {

@@ -8,7 +8,7 @@ const particlesConfig = {
       },
       onHover: {
         enable: true,
-        mode: "bubble",
+        mode: "repulse",
         parallax: {
           enable: true,
           force: 60,
@@ -57,10 +57,10 @@ const particlesConfig = {
       //   default: true,
       //   quantity: 1,
       // },
-      //   repulse: {
-      //     distance: 200,
-      //     duration: 0.4,
-      //   },
+      repulse: {
+        distance: 300,
+        duration: 0.4,
+      },
       slow: {
         factor: 3,
         radius: 100,
@@ -181,8 +181,7 @@ const particlesConfig = {
     opacity: {
       random: {
         enable: true,
-        minimumValue: 0.2,
-        maximumValue: 0.5,
+        minimumValue: 0.1,
       },
     },
     collisions: {
@@ -194,13 +193,13 @@ const particlesConfig = {
         retries: 0,
       },
     },
-    links: {
-      color: "#ffffff",
-      distance: 150,
-      enable: false,
-      opacity: 0.5,
-      width: 0.5,
-    },
+    // links: {
+    //   color: "#ffffff",
+    //   distance: 150,
+    //   enable: false,
+    //   opacity: 0.5,
+    //   width: 0.5,
+    // },
   },
   pauseOnBlur: true,
   pauseOnOutsideViewport: true,

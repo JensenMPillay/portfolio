@@ -105,7 +105,7 @@ const Logo = () => {
   return (
     <MotionLink
       href="/"
-      className="flex h-16 w-16 items-center justify-center rounded-full border border-solid border-transparent bg-dark text-2xl font-extrabold text-light transition-colors duration-300 ease-in-out hover:border-dark hover:bg-light hover:text-dark dark:border-light dark:bg-light dark:text-dark dark:hover:bg-dark dark:hover:text-light"
+      className="flex h-12 w-12 items-center justify-center rounded-full border border-solid border-transparent bg-dark text-2xl font-extrabold text-light transition-colors duration-300 ease-in-out hover:border-dark hover:bg-light hover:text-dark dark:border-light dark:bg-light dark:text-dark dark:hover:bg-dark dark:hover:text-light lg:h-10 lg:w-10 md:h-9 md:w-9 sm:h-8 sm:w-8"
       initial={{
         y: -100,
       }}
