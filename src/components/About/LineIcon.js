@@ -21,14 +21,14 @@ const LineIcon = ({ reference }) => {
           cx="75"
           cy="50"
           r="20"
-          className="fill-light stroke-[5px] dark:fill-dark md:stroke-[4px]"
+          className="fill-primaryDark stroke-[5px] dark:fill-dark md:stroke-[4px]"
           style={{ pathLength: scrollYProgress }}
         />
         <circle
           cx="75"
           cy="50"
           r="10"
-          className="animate-pulse  fill-primary stroke-1 dark:fill-primaryDark"
+          className="animate-pulse  fill-dark stroke-1 dark:fill-primaryDark"
         />
       </svg>
     </figure>

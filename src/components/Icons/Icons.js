@@ -1,4 +1,5 @@
 import * as React from "react";
+import { motion } from "framer-motion";
 
 export const GithubIcon = ({ className, mode, ...rest }) => (
   <svg
@@ -402,7 +403,41 @@ export const LinkArrow = ({ className, ...rest }) => (
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={2}
-      d="M11 7H6a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2v-5m-7 1L20 4m-5 0h5v5"
+      d="M11 7H6a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2v-5"
+    />
+    <motion.path
+      fill="none"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      d="M9 15L20 4"
+      // initial={{ pathLength: 0, opacity: 0 }}
+      // animate={{
+      //   pathLength: [0, 1, 1],
+      //   opacity: [0, 1, 1],
+      // }}
+      // transition={{
+      //   repeat: Infinity,
+      //   duration: 2,
+      // }}
+    />
+    <motion.path
+      fill="none"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      d="M15 4h5v5"
+      // initial={{ pathLength: 0, opacity: 0 }}
+      // animate={{
+      //   pathLength: [0, 0, 1],
+      //   opacity: [0, 0, 1],
+      // }}
+      // transition={{
+      //   repeat: Infinity,
+      //   duration: 2,
+      // }}
     />
   </svg>
 );
