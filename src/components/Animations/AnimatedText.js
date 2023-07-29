@@ -6,9 +6,9 @@ const sentence = {
   animate: {
     transition: {
       // Create a Delay for Apparition
-      delay: 0.5,
+      delay: 1,
       // Create a Delay for the Animation of each Word
-      staggerChildren: 0.08,
+      staggerChildren: 0.1,
     },
   },
 };

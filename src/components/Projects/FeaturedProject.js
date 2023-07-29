@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { motion } from "framer-motion";
-import ButtonRightArrow from "../Buttons/ButtonRightArrow";
+import ButtonGo from "../Buttons/ButtonGo";
 
 const FeaturedProject = ({
   id,
@@ -15,6 +15,7 @@ const FeaturedProject = ({
   link,
   github,
 }) => {
+  const MotionLink = motion(Link);
   return (
     <div id={id} className={className}>
       <article className="relative flex w-full items-center justify-between rounded-3xl rounded-br-2xl border border-solid border-dark bg-light p-6 shadow-2xl dark:border-light dark:bg-dark lg:flex-col md:p-4 sm:rounded-2xl sm:rounded-br-xl sm:p-3 xs:p-2">
@@ -36,12 +37,8 @@ const FeaturedProject = ({
           <span className="font-jost text-base font-normal uppercase text-dark/50 dark:text-light/50 lg:text-sm md:text-xs">
             {type}
           </span>
-          <Link
-            href={link}
-            target="_blank"
-            className="underline-offset-2 hover:underline"
-          >
-            <h2 className="my-2 w-full text-left font-jost text-4xl font-bold uppercase lg:text-2xl">
+          <Link href={link} target="_blank" className="">
+            <h2 className="my-2 w-full text-left font-jost text-4xl font-bold uppercase -tracking-wider lg:text-2xl">
               {title}
             </h2>
           </Link>
@@ -49,14 +46,24 @@ const FeaturedProject = ({
             {summary}
           </p>
           <div className="mt-2 flex w-full items-center justify-between lg:mt-1.5 md:mt-1">
-            <ButtonRightArrow name="Go" link={link} />
-            <Link
+            <ButtonGo name="View" link={link} />
+            <MotionLink
               href={github}
               target="_blank"
-              className="mx-2 flex w-16 transition-transform duration-300 ease-in-out hover:scale-110 active:scale-90"
+              className="mx-2 flex w-16"
+              initial={{ rotate: 0 }}
+              whileHover={{
+                rotate: 360,
+                scale: 1.2,
+                transition: {
+                  type: "spring",
+                  damping: 10,
+                  duration: 0.6,
+                },
+              }}
             >
               <GithubIcon className="" />
-            </Link>
+            </MotionLink>
           </div>
         </div>
       </article>

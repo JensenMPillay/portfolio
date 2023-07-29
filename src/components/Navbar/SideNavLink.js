@@ -13,12 +13,16 @@ const SideNavLink = ({ href, title, initial, animate, className = "" }) => {
     <MotionLink
       className={`${className} group fixed font-jost text-2xl font-light uppercase -tracking-wider text-dark dark:text-light lg:hidden`}
       href={href}
-      initial={{ ...initial }}
+      initial={{ ...initial, scale: 1 }}
       animate={{
         ...animate,
         transition: { type: "spring", duration: 1.4, delay: 0.6 },
       }}
-      whileHover={{ ...animate, scale: 1.1 }}
+      whileHover={{
+        ...animate,
+        transition: { type: "spring", damping: 10, delay: 0, duration: 0.1 },
+        scale: 1.2,
+      }}
       whileTap={{ ...animate, scale: 0.9 }}
     >
       {title}

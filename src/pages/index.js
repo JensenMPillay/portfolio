@@ -3,9 +3,8 @@ import Head from "next/head";
 import Image from "next/image";
 import profileImage from "../../public/images/profile/developer-pic-1.png";
 import AnimatedText from "@/components/Animations/AnimatedText";
-import Link from "next/link";
-import { LinkArrow } from "@/components/Icons/Icons";
 import TransitionEffect from "@/components/Transitions/TransitionEffect";
+import ButtonDownload from "@/components/Buttons/ButtonDownload";
 
 export default function Home() {
   return (
@@ -42,19 +41,8 @@ export default function Home() {
                 projects and articles, showcasing my expertise in React.js and
                 web development
               </p>
-              <div className=" mt-2 flex items-center self-start lg:self-center">
-                <Link
-                  href="../../public/dummy.pdf"
-                  target="_blank"
-                  className="btn btn-primary group"
-                  download={false}
-                >
-                  <span className="absolute left-0 top-0 h-full w-0 bg-dark transition-all duration-300 ease-in-out group-hover:w-full dark:bg-light" />
-                  <span className="relative z-10 flex flex-row">
-                    Resume
-                    <LinkArrow className={"ml-1 w-6"} />
-                  </span>
-                </Link>
+              <div className=" mt-4 flex items-center justify-center md:mt-2">
+                <ButtonDownload name="Resume" link="dummy.pdf" />
               </div>
             </div>
           </div>

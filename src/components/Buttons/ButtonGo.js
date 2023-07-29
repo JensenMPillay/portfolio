@@ -2,19 +2,19 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 
-const ButtonRightArrow = ({ name, link }) => {
+const ButtonGo = ({ name, link, download = false }) => {
   const [isHovered, setIsHovered] = useState(false);
   return (
     <Link
       href={link}
       target="_blank"
       className="btn btn-primary group mr-2"
-      //   ref={ref}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      download={download}
     >
       <span className="absolute left-0 top-0 h-full w-0 bg-dark transition-all duration-300 ease-in-out group-hover:w-full dark:bg-light">
-        <span className="flex h-full w-0 items-center justify-center bg-dark transition-all duration-300 ease-in-out group-hover:w-full dark:bg-light">
+        <div className="flex h-full w-0 items-center justify-center bg-dark transition-all duration-300 ease-in-out group-hover:w-full dark:bg-light">
           {isHovered && (
             <>
               <motion.span
@@ -44,7 +44,7 @@ const ButtonRightArrow = ({ name, link }) => {
               </motion.span>
             </>
           )}
-        </span>
+        </div>
       </span>
       <span className="relative flex h-full w-full flex-row transition-all duration-300 ease-out group-hover:opacity-0">
         {name}
@@ -53,4 +53,4 @@ const ButtonRightArrow = ({ name, link }) => {
   );
 };
 
-export default ButtonRightArrow;
+export default ButtonGo;
