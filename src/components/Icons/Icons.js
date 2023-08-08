@@ -1,6 +1,38 @@
 import * as React from "react";
 import { motion } from "framer-motion";
 
+export const HomeIcon = ({ className, mode, ...rest }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={24}
+    height={24}
+    fill="none"
+    viewBox="0 0 24 24"
+    {...rest}
+    className={`h-auto w-full ${className}`}
+    strokeWidth={1.5}
+    stroke="currentColor"
+  >
+    <path d="M22 22L2 22" strokeLinecap="round" />
+    <path
+      d="M2 11L6.06296 7.74968M22 11L13.8741 4.49931C12.7784 3.62279 11.2216 3.62279 10.1259 4.49931L9.34398 5.12486"
+      strokeLinecap="round"
+    />
+    <path
+      d="M15.5 5.5V3.5C15.5 3.22386 15.7239 3 16 3H18.5C18.7761 3 19 3.22386 19 3.5V8.5"
+      strokeLinecap="round"
+    />
+    <path d="M4 22V9.5" strokeLinecap="round" />
+    <path d="M20 9.5V13.5M20 22V17.5" strokeLinecap="round" />
+    <path
+      d="M15 22V17C15 15.5858 15 14.8787 14.5607 14.4393C14.1213 14 13.4142 14 12 14C10.5858 14 9.87868 14 9.43934 14.4393M9 22V17"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path d="M14 9.5C14 10.6046 13.1046 11.5 12 11.5C10.8954 11.5 10 10.6046 10 9.5C10 8.39543 10.8954 7.5 12 7.5C13.1046 7.5 14 8.39543 14 9.5Z" />
+  </svg>
+);
+
 export const GithubIcon = ({ className, mode, ...rest }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -439,5 +471,39 @@ export const LinkArrow = ({ className, ...rest }) => (
       //   duration: 2,
       // }}
     />
+  </svg>
+);
+
+export const DragX = ({ className, ...rest }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth={2}
+    width={24}
+    height={24}
+    viewBox="0 0 24 24"
+    className={`h-auto w-full ${className}`}
+    {...rest}
+  >
+    <path d="m13 22.5-5.18-5.14a2 2 0 0 1-.59-1.43 2 2 0 0 1 2-2 2 2 0 0 1 1.43.59l1.34 1.3V6.38a2 2 0 0 1 1.74-2 1.87 1.87 0 0 1 1.51.56 1.83 1.83 0 0 1 .57 1.34V12l5 .72a1.91 1.91 0 0 1 1.64 1.89 17.18 17.18 0 0 1-1.82 7.71l-.09.18" />
+    <path d="M15.82 10.64a4.54 4.54 0 0 0 1.47-1 4.78 4.78 0 1 0-6.76 0 4.54 4.54 0 0 0 1.47 1M4.36 9.14 1.5 6.27l2.86-2.86M9.14 6.27H1.5" />
+  </svg>
+);
+
+export const DragY = ({ className, ...rest }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth={2}
+    width={24}
+    height={24}
+    viewBox="0 0 24 24"
+    className={`h-auto w-full ${className}`}
+    {...rest}
+  >
+    <path d="m8.2 22.45-5.11-5.11a2 2 0 0 1 2.85-2.85l1.31 1.31V6.41a2 2 0 0 1 1.75-2 1.91 1.91 0 0 1 2.05 1.89V12l5 .72a1.9 1.9 0 0 1 1.65 1.88 17.16 17.16 0 0 1-1.81 7.67l-.09.18" />
+    <path d="M11.05 10.65a4.4 4.4 0 0 0 1.46-1 4.75 4.75 0 1 0-6.72 0 4.4 4.4 0 0 0 1.46 1M18.65 3.45 21.5 6.3l-2.85 2.85M13.9 6.3h7.6" />
   </svg>
 );

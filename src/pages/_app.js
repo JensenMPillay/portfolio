@@ -29,7 +29,7 @@ export default function App({ Component, pageProps }) {
       </Head>
       <ParticlesBackground />
       <main
-        className={`${quicksand.variable} ${jost.variable} min-h-screen w-full bg-gradientLightLayout font-quicksand transition-colors duration-300 ease-in-out dark:bg-gradientDarkLayout`}
+        className={`${quicksand.variable} ${jost.variable} min-h-screen w-full overflow-hidden bg-gradientLightLayout font-quicksand transition-colors duration-300 ease-in-out dark:bg-gradientDarkLayout`}
       >
         <Navbar />
         {/* Animate Exit on Transition and Waiting other animations  */}
@@ -37,7 +37,7 @@ export default function App({ Component, pageProps }) {
           {/* Each Page Come Here  */}
           <Component key={router.asPath} {...pageProps} />
         </AnimatePresence>
-        <Footer />
+        {/* <Footer /> */}
       </main>
     </>
   );

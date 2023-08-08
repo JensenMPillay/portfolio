@@ -11,7 +11,11 @@ const SideNavLink = ({ href, title, initial, animate, className = "" }) => {
 
   return (
     <MotionLink
-      className={`${className} group fixed font-jost text-2xl font-light uppercase -tracking-wider text-dark dark:text-light lg:hidden`}
+      className={`${className} group fixed font-jost text-2xl font-light uppercase -tracking-wider ${
+        routerPath === href
+          ? "text-dark dark:text-light/75"
+          : "text-dark/75 dark:text-light/75"
+      } transition-colors duration-300 ease-in-out hover:text-dark dark:hover:text-light lg:hidden`}
       href={href}
       initial={{ ...initial, scale: 1 }}
       animate={{
@@ -29,7 +33,7 @@ const SideNavLink = ({ href, title, initial, animate, className = "" }) => {
       <span
         className={`absolute -bottom-0.5 left-0 inline-block h-[2px] ${
           routerPath === href ? "w-full" : "w-0"
-        } bg-dark text-light transition-[width] duration-300 ease-in-out group-hover:w-full dark:bg-light dark:text-dark`}
+        } bg-dark transition-[width] duration-300 ease-in-out group-hover:w-full dark:bg-light`}
       />
     </MotionLink>
   );

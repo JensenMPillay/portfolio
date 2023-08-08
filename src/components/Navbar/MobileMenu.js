@@ -25,14 +25,20 @@ const MobileMenu = ({ isOpen, toggleMenu }) => {
               toggle={toggleMenu}
             />
             <MobileNavLink
-              href="/projects"
-              title="Projects"
-              className="my-4"
+              href="/about"
+              title="About"
+              className=""
               toggle={toggleMenu}
             />
             <MobileNavLink
-              href="/about"
-              title="About"
+              href="/skills"
+              title="Skills"
+              className=""
+              toggle={toggleMenu}
+            />
+            <MobileNavLink
+              href="/projects"
+              title="Projects"
               className=""
               toggle={toggleMenu}
             />
