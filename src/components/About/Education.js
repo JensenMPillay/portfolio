@@ -1,8 +1,8 @@
 import { motion, useScroll } from "framer-motion";
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import LineIcon from "./LineIcon";
 
-const Details = ({ type, time, place, info }) => {
+const Details = ({ type, time, place, info, variants }) => {
   const ref = useRef(null);
   return (
     <li
@@ -10,11 +10,7 @@ const Details = ({ type, time, place, info }) => {
       className="mx-auto my-8 flex w-[60%] flex-col items-center justify-between first:mt-0 last:mb-0 md:w-[80%]"
     >
       <LineIcon reference={ref} />
-      <motion.div
-        initial={{ y: 50 }}
-        whileInView={{ y: 0 }}
-        transition={{ duration: 0.5, type: "spring" }}
-      >
+      <motion.div variants={variants} initial="hidden" whileInView="show">
         <h3 className="font-jost text-3xl font-extralight capitalize md:text-2xl sm:text-xl xs:text-base">
           {type}
         </h3>
@@ -27,33 +23,62 @@ const Details = ({ type, time, place, info }) => {
   );
 };
 
-const Education = () => {
+const Education = ({ scrollRef }) => {
   const ref = useRef(null);
+
+  const variantsEducationContainer = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        ease: "easeOut",
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const variantsEducationText = {
+    hidden: { opacity: 0, y: -50 },
+    show: { opacity: 1, y: 0 },
+  };
+
   const { scrollYProgress } = useScroll({
     // Target
-    target: ref,
+    container: scrollRef,
+    // target: ref,
     // Settings Offset
-    offset: ["start end", "center start"],
+    offset: ["start start", "end end"],
   });
+
+  useEffect(() => {
+    scrollRef.current.scrollTo(0, 0);
+  }, [scrollRef]);
+
   return (
-    <div className="mt-64 lg:mt-48 md:mt-32 sm:mt-16">
-      <h2 className="mb-32 w-full text-center font-jost text-6xl font-extralight uppercase lg:mb-24 lg:text-5xl md:mb-16 md:text-4xl sm:mb-8 sm:text-3xl">
+    <div className="">
+      {/* <h2 className="mb-16 w-full text-center font-jost text-6xl font-extralight uppercase lg:mb-12 lg:text-5xl md:mb-8 md:text-4xl sm:mb-6 sm:text-3xl">
         Education
-      </h2>
-      <div ref={ref} className="relative mx-auto w-[75%] lg:w-[90%] md:w-full">
+      </h2> */}
+      <div ref={ref} className="relative w-full">
         {/* SideBar  */}
         <motion.div
           style={{ scaleY: scrollYProgress }}
-          className="absolute left-9 top-0 h-full w-[4px] origin-top bg-dark dark:bg-light md:left-6 md:w-[3px]"
+          className="absolute left-9 top-0 h-full w-[4px] origin-top bg-dark dark:bg-light md:left-6 md:w-[3px] sm:left-3"
         />
         {/* Education List  */}
-        <ul className="ml-4 flex w-full flex-col items-start justify-between md:ml-2">
+        <motion.ul
+          className="ml-4 flex w-full flex-col items-start justify-between md:ml-2"
+          variants={variantsEducationContainer}
+          initial="hidden"
+          whileInView="show"
+        >
           <Details
             type="Bachelor Of Science In Computer Science"
             time="2016-2020"
             place="Massachusetts Institute Of Technology (MIT)"
             info="Relevant courses included Data Structures and Algorithms, Computer Systems Engineering, and Artificial 
             Intelligence."
+            variants={variantsEducationText}
           />
           <Details
             type="Master Of Computer Science"
@@ -61,6 +86,7 @@ const Education = () => {
             place="Stanford University"
             info="Completed a master's project on deep learning, developing a new neural network architecture for natural 
             language understanding."
+            variants={variantsEducationText}
           />
           <Details
             type="Online Coursework"
@@ -68,8 +94,9 @@ const Education = () => {
             place="Coursera And EdX"
             info="Completed coursework in advanced topics such as Reinforcement Learning, Computer Vision, and Machine 
             Learning Engineering."
+            variants={variantsEducationText}
           />
-        </ul>
+        </motion.ul>
       </div>
     </div>
   );

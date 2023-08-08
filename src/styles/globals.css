@@ -2,6 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #748b6f;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #013328;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #013328;
+}
+
+/* Track
+.dark ::-webkit-scrollbar-track {
+  background: #748b6f;
+}
+
+Handle
+.dark ::-webkit-scrollbar-thumb {
+  background: #013328;
+}
+
+Handle on hover
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #013328;
+} */
+
 @layer components {
   .btn {
     @apply relative flex items-center overflow-hidden rounded-lg border-2 border-solid p-2.5 px-6 text-lg font-semibold uppercase shadow transition-all duration-300 ease-in-out md:p-2 md:px-4 md:text-base sm:text-sm;

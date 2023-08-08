@@ -22,7 +22,7 @@ const MenuButton = ({ isOpen, toggleMenu }) => {
   };
   return (
     <motion.button
-      className="group fixed hidden flex-col items-center justify-center lg:flex"
+      className="group fixed left-[28px] top-[28px] hidden flex-col items-center justify-center lg:flex"
       onClick={toggleMenu}
       variants={button}
       initial="initial"

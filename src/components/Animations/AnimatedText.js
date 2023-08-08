@@ -29,14 +29,15 @@ const singleWord = {
   },
 };
 
-const AnimatedText = ({ text, className }) => {
+const AnimatedText = ({ text, className, onAnimationComplete }) => {
   return (
-    <div className="mx-auto flex w-full items-center justify-center overflow-hidden py-2 text-left sm:p-0">
+    <motion.div className="mx-auto flex w-full items-center justify-center overflow-hidden py-2 text-left sm:p-0">
       <motion.h1
         className={`font inline-block w-full font-jost text-7xl font-extralight uppercase text-dark dark:text-light ${className} lg:text-6xl md:text-5xl sm:text-4xl`}
         variants={sentence}
         initial="initial"
         animate="animate"
+        onAnimationComplete={onAnimationComplete ? onAnimationComplete : null}
       >
         {/* Separate Text to Animate each Word  */}
         {text.split(" ").map((word, index) => (
@@ -49,7 +50,7 @@ const AnimatedText = ({ text, className }) => {
           </motion.span>
         ))}
       </motion.h1>
-    </div>
+    </motion.div>
   );
 };
 

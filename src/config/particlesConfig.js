@@ -179,6 +179,7 @@ const particlesConfig = {
       value: 45,
     },
     opacity: {
+      value: 0.5,
       random: {
         enable: true,
         minimumValue: 0.1,

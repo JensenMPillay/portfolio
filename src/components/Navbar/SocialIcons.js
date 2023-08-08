@@ -61,7 +61,7 @@ const SocialIcons = () => {
       <motion.span
         className="h-24 w-0.5 bg-dark dark:bg-light"
         initial={{ height: 0 }}
-        animate={{ height: "8rem" }}
+        animate={{ height: "6rem" }}
         transition={{ type: "spring", duration: 1, delay: 1 }}
       ></motion.span>
     </div>
