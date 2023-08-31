@@ -1,5 +1,5 @@
 const particlesConfig = {
-  fpsLimit: 30,
+  fpsLimit: 15,
   interactivity: {
     events: {
       onClick: {
@@ -37,22 +37,22 @@ const particlesConfig = {
       //       opacity: 1,
       //     },
       //   },
-      bubble: {
-        distance: 100,
-        duration: 2,
-        mix: false,
-        opacity: 10,
-        size: 50,
-        divs: {
-          distance: 200,
-          duration: 0.4,
-        },
-        factor: 10,
-        radius: 100,
-        easing: "ease-out-squad",
-        maxSpeed: 50,
-        speed: 1,
-      },
+      // bubble: {
+      //   distance: 100,
+      //   duration: 2,
+      //   mix: false,
+      //   opacity: 10,
+      //   size: 50,
+      //   divs: {
+      //     distance: 200,
+      //     duration: 0.4,
+      //   },
+      //   factor: 10,
+      //   radius: 100,
+      //   easing: "ease-out-squad",
+      //   maxSpeed: 50,
+      //   speed: 1,
+      // },
       // push: {
       //   default: true,
       //   quantity: 1,
@@ -61,10 +61,10 @@ const particlesConfig = {
         distance: 300,
         duration: 0.4,
       },
-      slow: {
-        factor: 3,
-        radius: 100,
-      },
+      // slow: {
+      //   factor: 3,
+      //   radius: 100,
+      // },
     },
   },
   particles: {
@@ -87,7 +87,7 @@ const particlesConfig = {
         enable: true,
         area: 800,
       },
-      value: 70,
+      value: 45,
     },
     shape: {
       close: true,
