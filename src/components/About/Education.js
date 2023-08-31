@@ -1,13 +1,15 @@
 import { motion, useScroll } from "framer-motion";
 import React, { useEffect, useRef } from "react";
 import LineIcon from "./LineIcon";
+import educationData from "@/data/educationData";
 
-const Details = ({ type, time, place, info, variants }) => {
+const Details = ({ id, type, time, place, info, variants }) => {
   const ref = useRef(null);
   return (
     <li
       ref={ref}
-      className="mx-auto my-8 flex w-[60%] flex-col items-center justify-between first:mt-0 last:mb-0 md:w-[80%]"
+      className="mx-auto my-8 flex w-[60%] flex-col justify-between first:mt-0 last:mb-0 md:w-[80%]"
+      key={id}
     >
       <LineIcon reference={ref} />
       <motion.div variants={variants} initial="hidden" whileInView="show">
@@ -17,7 +19,7 @@ const Details = ({ type, time, place, info, variants }) => {
         <span className="font-jost font-medium capitalize italic text-dark/75 dark:text-light/50 xs:text-sm">
           {time} | {place}
         </span>
-        <p className="w-full font-medium md:text-sm">{info}</p>
+        <p className="my-1 w-full font-medium md:text-sm">{info}</p>
       </motion.div>
     </li>
   );
@@ -72,30 +74,19 @@ const Education = ({ scrollRef }) => {
           initial="hidden"
           whileInView="show"
         >
-          <Details
-            type="Bachelor Of Science In Computer Science"
-            time="2016-2020"
-            place="Massachusetts Institute Of Technology (MIT)"
-            info="Relevant courses included Data Structures and Algorithms, Computer Systems Engineering, and Artificial 
-            Intelligence."
-            variants={variantsEducationText}
-          />
-          <Details
-            type="Master Of Computer Science"
-            time="2020-2022"
-            place="Stanford University"
-            info="Completed a master's project on deep learning, developing a new neural network architecture for natural 
-            language understanding."
-            variants={variantsEducationText}
-          />
-          <Details
-            type="Online Coursework"
-            time="2016-2020"
-            place="Coursera And EdX"
-            info="Completed coursework in advanced topics such as Reinforcement Learning, Computer Vision, and Machine 
-            Learning Engineering."
-            variants={variantsEducationText}
-          />
+          {educationData.map(({ id, type, time, place, info }) => {
+            return (
+              <Details
+                id={id}
+                key={id}
+                type={type}
+                time={time}
+                place={place}
+                info={info}
+                variants={variantsEducationText}
+              />
+            );
+          })}
         </motion.ul>
       </div>
     </div>

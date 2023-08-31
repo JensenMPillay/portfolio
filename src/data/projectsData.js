@@ -1,50 +1,57 @@
-import ImgCrypto from "../../public/images/projects/crypto-screener-cover-image.jpg";
-import ImgFolio from "../../public/images/projects/portfolio-cover-image.jpg";
-
 const projectsData = [
   {
     id: 1,
     className: "",
-    title: "Crypto Screener Application",
-    type: "Featured Project",
+    title: "MarryMix - E-Commerce Platform",
+    tools: [
+      "bootstrap",
+      "iqlocation",
+      "javascript",
+      "node.js",
+      "sql",
+      "stripe",
+      "symfony",
+      "tailwind",
+      "twig",
+    ],
     summary:
-      "A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your local currency.",
-    img: ImgCrypto,
-    link: "/",
-    github: "/",
+      "A web application that offers a curated cocktail menu for ordering at various festive events throughout France. With MarryMix, customers can easily select and order cocktails to enhance their special occasions.",
+    video: "/images/projects/marrymix-preview.mp4",
+    link: "https://marrymix.fr/",
+    github: "https://github.com/JensenMPillay/marrymix",
   },
+  // {
+  //   id: 2,
+  //   className: "",
+  //   title: "Vipcare - E-Commerce Platform",
+  //   tools: ["bootstrap", "javascript", "php", "prestashop", "smarty", "sql"],
+  //   summary:
+  //     "A e-commerce website that offers seamless booking for personalized beauty and wellness services, allowing users to schedule expert sessions for massage, makeup, haircare, and more in Paris and its suburbs.",
+  //   video: "/images/projects/vipcare-preview.mp4",
+  //   link: "https://vipcare.fr/",
+  //   github: false,
+  // },
   {
     id: 2,
     className: "",
-    title: "React Portfolio Website",
-    type: "Featured Project",
+    title: "React.js Blog",
+    tools: ["css", "firebase", "react.js"],
     summary:
-      "A professional portfolio website using React JS, Framer-motion, and Styled-components. It has smooth page transitions, cool background effects, unique design and it is mobile responsive.",
-    img: ImgFolio,
-    link: "/",
-    github: "/",
+      "A blog implementing user management, authorization, and CRUD content management.",
+    video: "/images/projects/blog-preview.mp4",
+    link: "https://github.com/JensenMPillay/BlogReact.JS/tree/master",
+    github: "https://github.com/JensenMPillay/BlogReact.JS/tree/master",
   },
   {
     id: 3,
     className: "",
-    title: "Crypto Screener Application",
-    type: "Featured Project",
+    title: "Portfolio",
+    tools: ["framer-motion", "next.js", "tailwind"],
     summary:
-      "A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your local currency.",
-    img: ImgCrypto,
-    link: "/",
-    github: "/",
-  },
-  {
-    id: 4,
-    className: "",
-    title: "React Portfolio Website",
-    type: "Featured Project",
-    summary:
-      "A professional portfolio website using React JS, Framer-motion, and Styled-components. It has smooth page transitions, cool background effects, unique design and it is mobile responsive.",
-    img: ImgFolio,
-    link: "/",
-    github: "/",
+      "A professional portfolio website using Next.JS, Framer-motion, and Tailwind CSS. It has smooth page transitions, cool background effects, unique design and it is mobile responsive.",
+    video: "/images/projects/portfolio-preview.mp4",
+    link: "https://github.com/JensenMPillay/portfolio",
+    github: "https://github.com/JensenMPillay/portfolio",
   },
 ];
 

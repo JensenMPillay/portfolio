@@ -1,7 +1,7 @@
 import Layout from "@/components/Layout";
 import Head from "next/head";
 import Image from "next/image";
-import profileImage from "../../public/images/profile/developer-pic-1.png";
+import profileImage from "../../public/images/profile/profile.png";
 import AnimatedText from "@/components/Animations/AnimatedText";
 import TransitionEffect from "@/components/Transitions/TransitionEffect";
 import ButtonDownload from "@/components/Buttons/ButtonDownload";
@@ -20,12 +20,15 @@ export default function Home() {
   };
 
   const variantsImage = {
-    hidden: { opacity: 0, height: 0 },
+    hidden: { opacity: 0, scale: 0 },
     show: {
       opacity: 1,
-      height: "fit-content",
+      // height: "fit-content",
+      scale: 1,
       transition: {
-        duration: 1,
+        duration: 0.5,
+        type: "spring",
+        damping: 10,
       },
     },
   };
@@ -36,7 +39,7 @@ export default function Home() {
       opacity: 1,
       y: 0,
       transition: {
-        delay: 0.75,
+        delay: 0.25,
         ease: "easeInOut",
       },
     },
@@ -63,7 +66,7 @@ export default function Home() {
         <Layout className="" direction="center">
           <div className="flex w-full items-center justify-between lg:flex-col">
             <motion.div
-              className="flex w-1/2 items-center justify-center overflow-hidden md:w-full"
+              className="flex w-1/3 items-center justify-center overflow-hidden md:w-full"
               initial="hidden"
               animate={controls}
               variants={variantsImage}
@@ -71,14 +74,14 @@ export default function Home() {
               <Image
                 src={profileImage}
                 alt="ProfileImageJM"
-                className="h-auto w-full lg:hidden md:flex"
+                className="h-48 w-48 lg:mb-4 lg:h-36 lg:w-36 md:h-24 md:w-24"
                 priority
-                sizes="(max-width: 768px) 100vw, (max-width:1200px) 50vw, 33vw"
+                // sizes="(max-width: 768px) 100vw, (max-width:1200px) 50vw, 33vw"
               ></Image>
             </motion.div>
-            <div className="flex w-1/2 flex-col items-center self-center lg:w-full lg:text-center">
+            <div className="flex w-2/3 flex-col items-center self-center lg:w-full lg:text-center">
               <AnimatedText
-                text="Turning Vision Into Reality With Code And Design."
+                text="Welcome, I'm Jensen, Software Developer"
                 className="xl:!text-6xl lg:text-center lg:!text-5xl md:!text-4xl sm:!text-3xl"
                 onAnimationComplete={handleAnimationComplete}
               />
@@ -91,16 +94,16 @@ export default function Home() {
                   className="my-4 text-lg font-medium lg:text-base md:text-sm sm:text-xs"
                   variants={variantsText}
                 >
-                  As a skilled full-stack developer, I am dedicated to turning
-                  ideas into innovative web applications. Explore my latest
-                  projects and articles, showcasing my expertise in React.js and
-                  web development
+                  As a totally dedicated full-stack developer, my goal is to
+                  turn ideas into innovative web applications. Explore my
+                  portfolio and projects, highlighting my mastery of React.js
+                  and Symfony.
                 </motion.p>
                 <motion.div
                   className=" mt-4 flex items-center justify-center md:mt-2"
                   variants={variantsText}
                 >
-                  <ButtonDownload name="Resume" link="dummy.pdf" />
+                  <ButtonDownload name="Resume" link="/docs/CV_JensenM.pdf" />
                 </motion.div>
               </motion.div>
             </div>

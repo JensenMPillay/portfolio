@@ -2,7 +2,7 @@ import React from "react";
 import { GithubIcon, LinkedInIcon, MailIcon } from "../Icons/Icons";
 import { motion } from "framer-motion";
 
-const SocialIconContainer = ({ href, index, children }) => {
+const SocialIconContainer = ({ href, index, name, children }) => {
   const icon = {
     initial: {
       scale: 0,
@@ -25,19 +25,22 @@ const SocialIconContainer = ({ href, index, children }) => {
         type: "inertia",
         velocity: 450,
       },
+      duration:0.5,
     },
   };
   return (
     <motion.a
       href={href}
       target="_blank"
-      className="w-12 "
+      className="w-12 relative group"
       variants={icon}
       initial="initial"
       animate="animate"
       whileHover="hover"
       custom={index}
     >
+      <span
+       className="absolute text-dark transition-all duration-300 group-hover:delay-1000 delay-0 opacity-0 group-hover:opacity-100 dark:text-light top-1/2 left-full -translate-y-1/2">{name}</span>
       {children}
     </motion.a>
   );
@@ -46,16 +49,21 @@ const SocialIconContainer = ({ href, index, children }) => {
 const SocialIcons = () => {
   return (
     <div className="fixed bottom-0 left-8 flex flex-col items-center justify-center text-dark dark:text-light lg:left-4 md:left-1">
-      <SocialIconContainer href="https:/www.github.com/JensenMPillay" index="3">
-        <GithubIcon />
-      </SocialIconContainer>
+        <SocialIconContainer
+        name="Github"
+          href="https:/www.github.com/JensenMPillay"
+          index="3"
+        >
+          <GithubIcon />
+        </SocialIconContainer>
       <SocialIconContainer
+      name="LinkedIn"
         href="https:/www.linkedin.com/in/jensenpillay/"
         index="2"
       >
         <LinkedInIcon />
       </SocialIconContainer>
-      <SocialIconContainer href="mailto:jmooroongapillay@gmail.com" index="1">
+      <SocialIconContainer name="Send&nbsp;Email" href="mailto:jmooroongapillay@gmail.com" index="1">
         <MailIcon />
       </SocialIconContainer>
       <motion.span

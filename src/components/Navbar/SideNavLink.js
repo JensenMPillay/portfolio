@@ -13,9 +13,9 @@ const SideNavLink = ({ href, title, initial, animate, className = "" }) => {
     <MotionLink
       className={`${className} group fixed font-jost text-2xl font-light uppercase -tracking-wider ${
         routerPath === href
-          ? "text-dark dark:text-light/75"
+          ? "text-dark dark:text-light"
           : "text-dark/75 dark:text-light/75"
-      } transition-colors duration-300 ease-in-out hover:text-dark dark:hover:text-light lg:hidden`}
+      } duration-300 ease-in-out transition-colors hover:text-dark dark:hover:text-light lg:hidden`}
       href={href}
       initial={{ ...initial, scale: 1 }}
       animate={{

@@ -8,36 +8,36 @@ const Layout = ({ children, className, direction }) => {
 
   switch (direction) {
     case "center":
-      initialProps = { scale: 1 };
+      initialProps = { opacity: 1 };
       animateProps = {
-        scale: 1,
+        opacity: 1,
         transition: { duration: 1, ease: "easeInOut" },
       };
-      exitProps = { scale: 0 };
+      exitProps = { opacity: 0 };
       break;
     case "top":
-      initialProps = { y: "-200%" };
+      initialProps = { y: "-150%" };
       animateProps = {
         y: "0%",
         transition: { duration: 1, type: "spring" },
       };
-      exitProps = { y: ["0%", "-200%"] };
+      exitProps = { y: ["0%", "-150%"] };
       break;
     case "left":
-      initialProps = { x: "-200%" };
+      initialProps = { x: "-100%" };
       animateProps = {
         x: "0%",
         transition: { duration: 1, type: "spring" },
       };
-      exitProps = { x: ["0%", "-200%"] };
+      exitProps = { x: ["0%", "-100%"] };
       break;
     case "right":
-      initialProps = { x: "200%" };
+      initialProps = { x: "100%" };
       animateProps = {
         x: "0%",
         transition: { duration: 1, type: "spring" },
       };
-      exitProps = { x: ["0%", "200%"] };
+      exitProps = { x: ["0%", "100%"] };
       break;
     default:
       break;

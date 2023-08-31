@@ -21,7 +21,7 @@ const about = () => {
         <Layout className="" direction="left">
           <AnimatedText
             className="mb-16 text-center md:mb-12 sm:mb-8"
-            text="Passion Fuels Purpose!"
+            text="About"
           />
           <SwitchContent />
         </Layout>
