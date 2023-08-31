@@ -50,7 +50,7 @@ const projectsData = [
     summary:
       "A professional portfolio website using Next.JS, Framer-motion, and Tailwind CSS. It has smooth page transitions, cool background effects, unique design and it is mobile responsive.",
     video: "/images/projects/portfolio-preview.mp4",
-    link: "https://github.com/JensenMPillay/portfolio",
+    link: "https://portfolio-jensenmpillay.vercel.app/",
     github: "https://github.com/JensenMPillay/portfolio",
   },
 ];
