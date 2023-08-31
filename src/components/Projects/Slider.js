@@ -63,16 +63,16 @@ const Slider = ({ children }) => {
           dragConstraints={dragFieldRef}
         >
           {projectsData.map(
-            ({ id, className, title, type, summary, img, link, github }) => {
+            ({ id, className, title, tools, summary, video, link, github }) => {
               return (
                 <FeaturedProject
                   id={id}
                   key={id}
                   className={`m-2 min-w-fit cursor-grab ${className}`}
                   title={title}
-                  type={type}
+                  tools={tools}
                   summary={summary}
-                  img={img}
+                  video={video}
                   link={link}
                   github={github}
                   handleIsInView={handleIsInView}
@@ -80,6 +80,8 @@ const Slider = ({ children }) => {
               );
             },
           )}
+          {/* Drag Navigation Behavior  */}
+          <div className="h-auto w-24 p-16"></div>
         </motion.div>
       </div>
       {/* <div className="h-12 w-12">

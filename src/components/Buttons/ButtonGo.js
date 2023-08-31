@@ -2,7 +2,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 
-const ButtonGo = ({ name, link, download = false }) => {
+const ButtonGo = ({ name, link }) => {
   const [isHovered, setIsHovered] = useState(false);
   return (
     <Link
@@ -11,7 +11,6 @@ const ButtonGo = ({ name, link, download = false }) => {
       className="btn btn-primary group mr-2"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      download={download}
     >
       <span className="absolute left-0 top-0 h-full w-0 bg-dark transition-all duration-300 ease-in-out group-hover:w-full dark:bg-light">
         <div className="flex h-full w-0 items-center justify-center bg-dark transition-all duration-300 ease-in-out group-hover:w-full dark:bg-light">
