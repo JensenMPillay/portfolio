@@ -51,14 +51,14 @@ const SocialIcons = () => {
     <div className="fixed bottom-0 left-8 flex flex-col items-center justify-center text-dark dark:text-light lg:left-4 md:left-1">
         <SocialIconContainer
         name="Github"
-          href="https:/www.github.com/JensenMPillay"
+          href="https://www.github.com/JensenMPillay"
           index="3"
         >
           <GithubIcon />
         </SocialIconContainer>
       <SocialIconContainer
       name="LinkedIn"
-        href="https:/www.linkedin.com/in/jensenpillay/"
+        href="https://www.linkedin.com/in/jensenpillay/"
         index="2"
       >
         <LinkedInIcon />
