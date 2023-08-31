@@ -7,6 +7,7 @@ const LineIcon = ({ reference }) => {
     target: reference,
     // Settings Offset
     offset: ["center end", "center center"],
+    layoutEffect: false,
   });
   return (
     <motion.figure

@@ -1,8 +1,10 @@
 import { motion, useScroll } from "framer-motion";
 import React, { useEffect, useRef } from "react";
 import LineIcon from "./LineIcon";
+import experienceData from "@/data/experienceData";
 
 const Details = ({
+  id,
   position,
   company,
   companyLink,
@@ -15,7 +17,8 @@ const Details = ({
   return (
     <li
       ref={ref}
-      className="mx-auto my-8 flex w-[60%] flex-col items-center justify-between first:mt-0 last:mb-0 md:w-[80%]"
+      className="mx-auto my-8 flex w-[60%] flex-col justify-between first:mt-0 last:mb-0 md:w-[80%]"
+      key={id}
     >
       <LineIcon reference={ref} />
       <motion.div variants={variants} initial="hidden" whileInView="show">
@@ -26,7 +29,7 @@ const Details = ({
             target="_blank"
             className="capitalize text-primaryDark dark:text-primaryDark"
           >
-            @{company}
+            {company && `@${company}`}
           </a>
         </h3>
         <span className="font-jost font-medium capitalize italic text-dark/75 dark:text-light/50 xs:text-sm">
@@ -86,49 +89,23 @@ const Experience = ({ scrollRef }) => {
           initial="hidden"
           whileInView="show"
         >
-          <Details
-            position="Software Engineer"
-            company="Google"
-            companyLink="https://www.google.com"
-            time="2022-Present"
-            address="Mountain View, CA"
-            work="Worked on a team responsible for developing new features for Google's 
-search engine, including improving the accuracy and relevance of search results and 
-developing new tools for data analysis and visualization."
-            variants={variantsExperienceText}
-          />
-          <Details
-            position="Intern"
-            company="Facebook"
-            companyLink="https://www.facebook.com"
-            time="Summer 2021"
-            address="Menlo Park, CA"
-            work="Worked on a team responsible for developing a new mobile app feature that allowed users to create and 
-            share short-form video content, including designing and implementing a new user interface and developing 
-            the backend infrastructure to support the feature."
-            variants={variantsExperienceText}
-          />
-          <Details
-            position="Software Developer"
-            company="Amazon"
-            companyLink="https://www.amazon.com"
-            time="2020-2021"
-            address="Seattle, WA"
-            work="Worked on a team responsible for developing Amazon's mobile app, including implementing new features such 
-            as product recommendations and user reviews, and optimizing the app's performance and reliability."
-            variants={variantsExperienceText}
-          />
-          <Details
-            position="Software Developer Intern"
-            company="Microsoft"
-            companyLink="https://www.microsoft.com"
-            time="Summer 2019"
-            address="Redmond, WA"
-            work="Worked on a team responsible for developing new features for Microsoft's Windows operating system, 
-            including implementing a new user interface for a system settings panel and optimizing the performance of 
-            a core system component."
-            variants={variantsExperienceText}
-          />
+          {experienceData.map(
+            ({ id, position, company, companyLink, time, address, work }) => {
+              return (
+                <Details
+                  id={id}
+                  key={id}
+                  position={position}
+                  company={company}
+                  companyLink={companyLink}
+                  time={time}
+                  address={address}
+                  work={work}
+                  variants={variantsExperienceText}
+                />
+              );
+            },
+          )}
         </motion.ul>
       </div>
     </div>
