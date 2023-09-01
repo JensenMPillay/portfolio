@@ -12,7 +12,7 @@ const about = () => {
         <title>Portfolio JM | About</title>
         <meta
           name="description"
-          content="jensen mooroongapillay portfolio developer software freelance application web"
+          content="Welcome to Jensen Mooroongapillay's portfolio. Here is an 'About Me' section."
         />
       </Head>
       {/* Transition Page Effect */}

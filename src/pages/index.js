@@ -58,7 +58,7 @@ export default function Home() {
         <title>Portfolio JM | Home</title>
         <meta
           name="description"
-          content="jensen mooroongapillay portfolio developer software freelance application web fullstack frontend backend"
+          content="Welcome to Jensen Mooroongapillay's portfolio. I'm a full-stack software developer with expertise in web applications."
         />
       </Head>
       {/* Transition Page Effect */}

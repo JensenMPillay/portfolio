@@ -12,7 +12,7 @@ const skills = () => {
         <title>Portfolio JM | Skills</title>
         <meta
           name="description"
-          content="jensen mooroongapillay portfolio developer software freelance application web react nextjs symfony javascript php mysql tailwind bootstrap"
+          content="Welcome to Jensen Mooroongapillay's portfolio. Here you will find my skills like Javascript, PHP, React, NextJS, Symfony, Tailwind, Bootstrap, MySQL & Others."
         />
       </Head>
       {/* Transition Page Effect */}
