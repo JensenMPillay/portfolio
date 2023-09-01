@@ -9,10 +9,10 @@ const projects = () => {
   return (
     <>
       <Head>
-        <title>JM Portfolio | About</title>
+        <title>Portfolio JM | Projects</title>
         <meta
           name="description"
-          content="jensen mooroongapillay portfolio projects"
+          content="jensen mooroongapillay portfolio developer software freelance application web projects javascript php symfony react nextjs mysql tailwind bootstrap"
         />
       </Head>
       {/* Transition Page Effect */}

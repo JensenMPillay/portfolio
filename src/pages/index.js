@@ -55,8 +55,11 @@ export default function Home() {
     <>
       {/* Complete Head Component  */}
       <Head>
-        <title>JM Portfolio | Home</title>
-        <meta name="description" content="jensen mooroongapillay portfolio" />
+        <title>Portfolio JM | Home</title>
+        <meta
+          name="description"
+          content="jensen mooroongapillay portfolio developer software freelance application web fullstack frontend backend"
+        />
       </Head>
       {/* Transition Page Effect */}
       {/* <TransitionEffect /> */}
