@@ -9,10 +9,10 @@ const about = () => {
   return (
     <>
       <Head>
-        <title>JM Portfolio | About</title>
+        <title>Portfolio JM | About</title>
         <meta
           name="description"
-          content="jensen mooroongapillay portfolio about"
+          content="jensen mooroongapillay portfolio developer software freelance application web"
         />
       </Head>
       {/* Transition Page Effect */}
