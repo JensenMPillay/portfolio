@@ -1,6 +1,6 @@
 import { GithubIcon } from "@/components/Icons/Icons";
 import Link from "next/link";
-import React, { useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { motion, useAnimationControls, useInView } from "framer-motion";
 import ButtonGo from "../Buttons/ButtonGo";
 
@@ -17,8 +17,12 @@ const FeaturedProject = ({
 }) => {
   const ref = useRef(null);
   const videoRef = useRef(null);
+
   const isInView = useInView(ref, { once: false, amount: 0.5 });
-  const videoIsInView = useInView(videoRef, { once: false, amount: 0.5 });
+  const isVideoInView = useInView(videoRef, { once: false, amount: 0.5 });
+
+  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+
   const MotionLink = motion(Link);
 
   const variantsProjectTextContainer = {
@@ -38,15 +42,29 @@ const FeaturedProject = ({
   };
 
   useEffect(() => {
+    const videoCurrentRef = videoRef.current;
+    const handleVideoLoadedMetadata = () => {
+      setIsVideoLoaded(true);
+    };
+    videoCurrentRef.addEventListener(
+      "canplaythrough",
+      handleVideoLoadedMetadata,
+    );
     if (isInView) {
       handleIsInView(id);
     }
-    if (videoIsInView) {
-      videoRef.current.play();
+    if (isVideoInView) {
+      videoCurrentRef.play();
     } else {
-      videoRef.current.pause();
+      videoCurrentRef.pause();
     }
-  }, [isInView, handleIsInView, id, videoIsInView]);
+    return () => {
+      videoCurrentRef.removeEventListener(
+        "canplaythrough",
+        handleVideoLoadedMetadata,
+      );
+    };
+  }, [isInView, handleIsInView, id, isVideoInView]);
 
   return (
     <div id={id} className={className} ref={ref}>
@@ -58,7 +76,7 @@ const FeaturedProject = ({
             opacity: 0,
           }}
           whileInView={{
-            opacity: 1,
+            opacity: isVideoLoaded ? 1 : 0,
           }}
           transition={{
             duration: 1,
