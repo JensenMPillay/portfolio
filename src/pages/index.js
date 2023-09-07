@@ -27,7 +27,7 @@ export default function Home() {
     show: {
       opacity: 1,
       transition: {
-        duration: 3,
+        duration: 2.5,
       },
     },
   };
