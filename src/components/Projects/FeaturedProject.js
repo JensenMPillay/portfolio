@@ -1,7 +1,7 @@
 import { GithubIcon } from "@/components/Icons/Icons";
 import Link from "next/link";
 import React, { useEffect, useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { motion, useAnimationControls, useInView } from "framer-motion";
 import ButtonGo from "../Buttons/ButtonGo";
 
 const FeaturedProject = ({
@@ -20,6 +20,7 @@ const FeaturedProject = ({
   const isInView = useInView(ref, { once: false, amount: 0.5 });
   const videoIsInView = useInView(videoRef, { once: false, amount: 0.5 });
   const MotionLink = motion(Link);
+
   const variantsProjectTextContainer = {
     hidden: { opacity: 0 },
     show: {
@@ -55,16 +56,12 @@ const FeaturedProject = ({
           className="flex w-full cursor-not-allowed items-center justify-center overflow-hidden rounded-lg lg:w-full"
           initial={{
             opacity: 0,
-            scale: 0,
           }}
           whileInView={{
             opacity: 1,
-            scale: 1,
           }}
           transition={{
             duration: 1,
-            type: "spring",
-            damping: 15,
           }}
         >
           {/* <Image
