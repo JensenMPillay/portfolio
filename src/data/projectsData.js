@@ -8,6 +8,7 @@ const projectsData = [
       "iqlocation",
       "javascript",
       "node.js",
+      "php",
       "sql",
       "stripe",
       "symfony",
@@ -35,7 +36,7 @@ const projectsData = [
     id: 2,
     className: "",
     title: "React.js Blog",
-    tools: ["css", "firebase", "react.js"],
+    tools: ["css", "firebase", "javascript", "react.js"],
     summary:
       "A blog implementing user management, authorization, and CRUD content management.",
     video: "/images/projects/blog-preview.mp4",
@@ -46,7 +47,7 @@ const projectsData = [
     id: 3,
     className: "",
     title: "Portfolio",
-    tools: ["framer-motion", "next.js", "tailwind"],
+    tools: ["framer-motion", "javascript", "next.js", "tailwind"],
     summary:
       "A professional portfolio website using Next.JS, Framer-motion, and Tailwind CSS. It has smooth page transitions, cool background effects, unique design and it is mobile responsive.",
     video: "/images/projects/portfolio-preview.mp4",
