@@ -8,17 +8,6 @@ import ButtonDownload from "@/components/Buttons/ButtonDownload";
 import { motion, useAnimationControls } from "framer-motion";
 
 export default function Home() {
-  const variantsContainer = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: {
-        ease: "easeOut",
-        staggerChildren: 0.1,
-      },
-    },
-  };
-
   const variantsImage = {
     hidden: { opacity: 0, scale: 0 },
     show: {
@@ -33,14 +22,12 @@ export default function Home() {
     },
   };
 
-  const variantsText = {
-    hidden: { opacity: 0, y: -100 },
+  const variantsContainer = {
+    hidden: { opacity: 0 },
     show: {
       opacity: 1,
-      y: 0,
       transition: {
-        delay: 0.25,
-        ease: "easeInOut",
+        duration: 3,
       },
     },
   };
@@ -64,7 +51,7 @@ export default function Home() {
       {/* Transition Page Effect */}
       {/* <TransitionEffect /> */}
       {/* Page Main  */}
-      <main className="flex min-h-screen w-full items-center text-dark dark:text-light">
+      <main className="flex min-h-screen w-full items-center">
         {/* Layout Page  */}
         <Layout className="" direction="center">
           <div className="flex w-full items-center justify-between lg:flex-col">
@@ -93,20 +80,18 @@ export default function Home() {
                 animate={controls}
                 variants={variantsContainer}
               >
-                <motion.p
-                  className="my-4 text-lg font-medium lg:text-base md:text-sm sm:text-xs"
-                  variants={variantsText}
-                >
+                <motion.p className="my-4 text-lg font-medium text-dark/50 dark:text-light/50 lg:text-base md:text-sm sm:text-xs">
                   As a totally dedicated full-stack developer, my goal is to
                   turn ideas into innovative web applications. Explore my
-                  portfolio and projects, highlighting my mastery of React.js
+                  portfolio and projects, highlighting my expertise of React.js
                   and Symfony.
                 </motion.p>
-                <motion.div
-                  className=" mt-4 flex items-center justify-center md:mt-2"
-                  variants={variantsText}
-                >
-                  <ButtonDownload name="Resume" link="/docs/CV_JensenM.pdf" />
+                <motion.div className=" mt-4 flex items-center justify-center md:mt-2">
+                  <ButtonDownload
+                    className="text-dark/50 dark:text-light/50"
+                    name="Resume"
+                    link="/docs/CV_JensenM.pdf"
+                  />
                 </motion.div>
               </motion.div>
             </div>
