@@ -81,7 +81,7 @@ const Slider = ({ children }) => {
             },
           )}
           {/* Drag Navigation Behavior  */}
-          <div className="h-auto w-24 p-16"></div>
+          <div className="h-auto w-60 p-60 xl:w-48 xl:p-48 lg:w-32 lg:p-32 md:w-24 md:p-24"></div>
         </motion.div>
       </div>
       {/* <div className="h-12 w-12">
