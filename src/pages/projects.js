@@ -12,7 +12,7 @@ const projects = () => {
         <title>Portfolio JM | Projects</title>
         <meta
           name="description"
-          content="Welcome to Jensen Mooroongapillay's portfolio. Here you will find my projects in React, NextJS, Symfony, Tailwind, Bootstrap, MySQL & Others."
+          content="Welcome to Jensen Mooroongapillay's portfolio. Here you will find my projects in ReactJS, NextJS, PHP, Symfony, Tailwind, Bootstrap, MySQL & Others."
         />
       </Head>
       {/* Transition Page Effect */}
