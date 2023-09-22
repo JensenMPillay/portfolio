@@ -21,30 +21,38 @@ const projectsData = [
     link: "https://marrymix.fr/",
     github: "https://github.com/JensenMPillay/marrymix",
   },
-  // {
-  //   id: 2,
-  //   className: "",
-  //   title: "Vipcare - E-Commerce Platform",
-  //   tools: ["bootstrap", "javascript", "php", "prestashop", "smarty", "sql"],
-  //   summary:
-  //     "A e-commerce website that offers seamless booking for personalized beauty and wellness services, allowing users to schedule expert sessions for massage, makeup, haircare, and more in Paris and its suburbs.",
-  //   video: "/images/projects/vipcare-preview.mp4",
-  //   link: "https://vipcare.fr/",
-  //   github: false,
-  // },
   {
     id: 2,
     className: "",
-    title: "React.js Blog",
-    tools: ["css", "firebase", "javascript", "react.js"],
+    title: "Vipcare - E-Commerce Platform",
+    tools: ["bootstrap", "javascript", "php", "prestashop", "smarty", "sql"],
     summary:
-      "A blog implementing user management, authorization, and CRUD content management.",
-    video: "/images/projects/blog-preview.mp4",
-    link: "https://github.com/JensenMPillay/BlogReact.JS/tree/master",
-    github: "https://github.com/JensenMPillay/BlogReact.JS/tree/master",
+      "A e-commerce website that offers seamless booking for personalized beauty and wellness services, allowing users to schedule expert sessions for massage, makeup, haircare, and more in Paris and its suburbs.",
+    video: "/images/projects/vipcare-preview.mp4",
+    link: "https://vipcare.fr/",
+    github: false,
   },
   {
     id: 3,
+    className: "",
+    title: "Chesspy",
+    tools: [
+      "flask",
+      "framer-motion",
+      "javascript",
+      "next.js",
+      "python",
+      "tailwind",
+      "typescript",
+    ],
+    summary:
+      "A chess statistics search engine using the Chess.com API, Next.js, and Python.",
+    video: "/images/projects/chesspy-preview.mp4",
+    link: "https://chesspy.vercel.app/",
+    github: "https://github.com/JensenMPillay/chesspy",
+  },
+  {
+    id: 4,
     className: "",
     title: "Portfolio",
     tools: ["framer-motion", "javascript", "next.js", "tailwind"],
@@ -53,6 +61,17 @@ const projectsData = [
     video: "/images/projects/portfolio-preview.mp4",
     link: "https://portfolio-jensenmpillay.vercel.app/",
     github: "https://github.com/JensenMPillay/portfolio",
+  },
+  {
+    id: 5,
+    className: "",
+    title: "React.js Blog",
+    tools: ["css", "firebase", "javascript", "react.js"],
+    summary:
+      "A blog implementing user management, authorization, and CRUD content management.",
+    video: "/images/projects/blog-preview.mp4",
+    link: "https://github.com/JensenMPillay/BlogReact.JS/tree/master",
+    github: "https://github.com/JensenMPillay/BlogReact.JS/tree/master",
   },
 ];
 
