@@ -3,7 +3,7 @@ import Script from "next/script";
 
 export default function Document() {
   return (
-    <Html lang="fr">
+    <Html lang="en">
       <Head />
       <body>
         {/* Tailwind CSS Dark Mode Doc - Avoid First Load with Default Settings */}
