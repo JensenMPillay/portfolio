@@ -3,8 +3,8 @@ const educationData = [
     id: 1,
     type: "Application Development Diploma",
     time: "2020-2022",
-    place: "OpenClassrooms, Online Courses",
-    info: "Completed Courses in HTML, CSS, Javascript, SQL, PHP, Symfony, React, React-Native, Git, Adobe XD.",
+    place: "Doranco Ecole Sup' Tech Creatives & OpenClassroom, Online Courses",
+    info: "Completed Courses in HTML, CSS, Javascript, MySQL, PHP, Symfony, React, React-Native, Git, Adobe XD, Figma.",
   },
   {
     id: 2,
