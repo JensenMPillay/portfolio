@@ -31,7 +31,7 @@ const SwitchThemeButton = ({ mode, setMode }) => {
   };
   return (
     <motion.button
-      className={`fixed right-[18px] top-[18px] flex items-center justify-center rounded-full p-1 ${
+      className={`fixed right-[18px] top-[18px] flex h-auto w-8 items-center justify-center rounded-full p-1  ${
         mode === "light" ? "bg-dark text-light" : "bg-light text-dark"
       }`}
       onClick={() => {
@@ -44,9 +44,9 @@ const SwitchThemeButton = ({ mode, setMode }) => {
       whileTap="tap"
     >
       {mode === "dark" ? (
-        <SunIcon className="h-auto w-full fill-dark" />
+        <SunIcon className="fill-dark" />
       ) : (
-        <MoonIcon className="h-auto w-full fill-dark" />
+        <MoonIcon className="fill-dark" />
       )}
     </motion.button>
   );
