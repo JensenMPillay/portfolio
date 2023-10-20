@@ -44,9 +44,9 @@ const SwitchThemeButton = ({ mode, setMode }) => {
       whileTap="tap"
     >
       {mode === "dark" ? (
-        <SunIcon className="fill-dark" />
+        <SunIcon className="h-auto w-full fill-dark" />
       ) : (
-        <MoonIcon className="fill-dark" />
+        <MoonIcon className="h-auto w-full fill-dark" />
       )}
     </motion.button>
   );
