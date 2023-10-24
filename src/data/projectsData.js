@@ -62,17 +62,6 @@ const projectsData = [
     link: "https://portfolio-jensenmpillay.vercel.app/",
     github: "https://github.com/JensenMPillay/portfolio",
   },
-  {
-    id: 5,
-    className: "",
-    title: "React.js Blog",
-    tools: ["css", "firebase", "javascript", "react.js"],
-    summary:
-      "A blog implementing user management, authorization, and CRUD content management.",
-    video: "/images/projects/blog-preview.mp4",
-    link: "https://github.com/JensenMPillay/BlogReact.JS/tree/master",
-    github: "https://github.com/JensenMPillay/BlogReact.JS/tree/master",
-  },
 ];
 
 export default projectsData;
