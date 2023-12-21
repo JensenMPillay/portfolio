@@ -1,7 +1,7 @@
 import { GithubIcon } from "@/components/Icons/Icons";
+import { motion, useInView } from "framer-motion";
 import Link from "next/link";
-import React, { useState, useEffect, useRef } from "react";
-import { motion, useAnimationControls, useInView } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
 import ButtonGo from "../Buttons/ButtonGo";
 
 const FeaturedProject = ({
@@ -68,7 +68,7 @@ const FeaturedProject = ({
 
   return (
     <div id={id} className={className} ref={ref}>
-      <article className="relative flex h-full w-full flex-row items-center justify-between rounded-3xl border-solid border-dark bg-transparent p-6 shadow-lg backdrop-blur dark:border-light dark:bg-transparent lg:flex-col lg:justify-center md:p-4 sm:rounded-2xl sm:p-3 xs:p-2">
+      <article className="relative flex h-full w-full flex-row items-center justify-between rounded-3xl border-solid border-dark bg-transparent p-6 shadow-lg backdrop-blur dark:border-light dark:bg-transparent lg:flex-col lg:justify-start md:p-4 sm:rounded-2xl sm:p-3 xs:p-2">
         {/* <div className="absolute -right-3 top-0 -z-10 h-[103%] w-[101%] rounded-[2.5rem] rounded-br-3xl bg-dark dark:bg-light sm:h-[102%] xs:-right-2 xs:w-full xs:rounded-[1.5rem]" /> */}
         <motion.div
           className="flex w-full cursor-not-allowed items-center justify-center overflow-hidden rounded-lg lg:w-full"
