@@ -2,12 +2,32 @@ const projectsData = [
   {
     id: 1,
     className: "",
+    title: "PDFAI - SaaS Platform",
+    tools: [
+      "javascript",
+      "next.js",
+      "node.js",
+      "openai",
+      "prisma",
+      "stripe",
+      "tailwind",
+      "trpc",
+      "typescript",
+    ],
+    summary:
+      "An AI-driven SaaS app enabling direct PDF interaction via an AI Chat Interface. Authenticate, subscribe for enhanced capabilities, upload & interact with PDFs contextualized by an AI.",
+    video: "/images/projects/pdfai-preview.mp4",
+    link: "https://pdfai-jensenmpillay.vercel.app/",
+    github: "https://github.com/JensenMPillay/pdfai",
+  },
+  {
+    id: 2,
+    className: "",
     title: "MarryMix - E-Commerce Platform",
     tools: [
       "bootstrap",
       "iqlocation",
       "javascript",
-      "node.js",
       "php",
       "sql",
       "stripe",
@@ -22,7 +42,7 @@ const projectsData = [
     github: "https://github.com/JensenMPillay/marrymix",
   },
   {
-    id: 2,
+    id: 3,
     className: "",
     title: "Vipcare - E-Commerce Platform",
     tools: ["bootstrap", "javascript", "php", "prestashop", "smarty", "sql"],
@@ -33,7 +53,7 @@ const projectsData = [
     github: false,
   },
   {
-    id: 3,
+    id: 4,
     className: "",
     title: "Chesspy",
     tools: [
@@ -52,7 +72,7 @@ const projectsData = [
     github: "https://github.com/JensenMPillay/chesspy",
   },
   {
-    id: 4,
+    id: 5,
     className: "",
     title: "Portfolio",
     tools: ["framer-motion", "javascript", "next.js", "tailwind"],
