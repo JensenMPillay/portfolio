@@ -1,11 +1,10 @@
+import AnimatedText from "@/components/Animations/AnimatedText";
+import ButtonDownload from "@/components/Buttons/ButtonDownload";
 import Layout from "@/components/Layout";
+import { motion, useAnimationControls } from "framer-motion";
 import Head from "next/head";
 import Image from "next/image";
 import profileImage from "../../public/images/profile/profile.png";
-import AnimatedText from "@/components/Animations/AnimatedText";
-import TransitionEffect from "@/components/Transitions/TransitionEffect";
-import ButtonDownload from "@/components/Buttons/ButtonDownload";
-import { motion, useAnimationControls } from "framer-motion";
 
 export default function Home() {
   const variantsImage = {
@@ -17,7 +16,7 @@ export default function Home() {
       transition: {
         duration: 0.5,
         type: "spring",
-        damping: 10,
+        damping: 15,
       },
     },
   };
@@ -27,7 +26,7 @@ export default function Home() {
     show: {
       opacity: 1,
       transition: {
-        duration: 2.5,
+        duration: 1,
       },
     },
   };
@@ -64,7 +63,7 @@ export default function Home() {
               <Image
                 src={profileImage}
                 alt="ProfileImageJM"
-                className="h-48 w-48 lg:mb-4 lg:h-36 lg:w-36 md:h-24 md:w-24"
+                className="h-48 w-48 rounded-full bg-dark lg:mb-4 lg:h-36 lg:w-36 md:h-24 md:w-24"
                 priority
                 // sizes="(max-width: 768px) 100vw, (max-width:1200px) 50vw, 33vw"
               ></Image>
