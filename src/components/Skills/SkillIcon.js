@@ -1,5 +1,5 @@
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import MouseLightEffect from "./MouseLightEffect";
 
 const SkillIcon = ({ size, name, children, variants }) => {
@@ -61,7 +61,7 @@ const SkillIcon = ({ size, name, children, variants }) => {
       >
         {children}
       </motion.div>
-      <span className="opacity-1 group-hover:opacity-150 text-lg font-extralight capitalize -tracking-wide lg:text-base md:text-sm sm:hidden">
+      <span className="opacity-1 group-hover:opacity-150 text-lg font-extralight capitalize -tracking-wide lg:text-base md:text-sm sm:text-xs">
         {name}
       </span>
     </motion.div>

@@ -1,14 +1,14 @@
-import React, { useRef, useState } from "react";
-import Experience from "@/components/About/Experience";
-import Education from "@/components/About/Education";
 import AboutMe from "@/components/About/AboutMe";
+import Education from "@/components/About/Education";
+import Experience from "@/components/About/Experience";
 import { motion } from "framer-motion";
+import { useRef, useState } from "react";
 
 const SwitchContent = () => {
   const scrollRef = useRef(null);
   const [content, setContent] = useState("aboutme");
   return (
-    <div className="flex h-[50vh] w-full flex-row items-center justify-center rounded-3xl border-solid border-dark shadow-lg dark:border-light lg:flex-col sm:rounded-2xl">
+    <div className="flex h-[70vh] w-full flex-row items-center justify-center rounded-3xl border-solid border-dark shadow-lg dark:border-light lg:flex-col sm:rounded-2xl">
       <motion.div
         className="flex h-full w-1/4 flex-col lg:h-1/4 lg:w-full lg:flex-row lg:items-center lg:justify-between"
         initial={{ opacity: 0, scale: 0 }}
