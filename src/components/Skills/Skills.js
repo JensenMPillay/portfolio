@@ -6,19 +6,26 @@ const Skills = () => {
   const [size, setSize] = useState(0);
 
   useEffect(() => {
-    // Initialize Values
+    // Initialize Size Icon
     function handleResize() {
-      if (window.matchMedia("(min-width: 1279px)").matches) {
-        setSize(250);
-      } else if (window.matchMedia("(min-width: 1023px)").matches) {
-        setSize(225);
-      } else if (window.matchMedia("(min-width: 767px)").matches) {
-        setSize(175);
-      } else if (window.matchMedia("(min-width: 639px)").matches) {
-        setSize(125);
-      } else {
-        setSize(150);
-      }
+      // Viewport Size
+      const viewportWidth = window.innerWidth;
+
+      // Options
+      const sizeOptions = [
+        { minWidth: 1279, size: 250 },
+        { minWidth: 1023, size: 225 },
+        { minWidth: 767, size: 200 },
+        { minWidth: 639, size: 175 },
+      ];
+
+      // Get Size
+      const newSize = sizeOptions.find(
+        (option) => viewportWidth >= option.minWidth,
+      );
+
+      // Set Size
+      setSize(newSize ? newSize.size : 150);
     }
     handleResize();
     window.addEventListener("resize", handleResize);
