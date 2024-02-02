@@ -1,6 +1,6 @@
-import React, { useEffect } from "react";
-import AnimatedNumbers from "../Animations/AnimatedNumbers";
 import { motion } from "framer-motion";
+import { useEffect } from "react";
+import AnimatedNumbers from "../Animations/AnimatedNumbers";
 
 const AboutMe = ({ scrollRef }) => {
   const variantsContainer = {
@@ -14,10 +14,10 @@ const AboutMe = ({ scrollRef }) => {
     },
   };
 
-  const variantsText = {
-    hidden: { opacity: 0, y: -50 },
-    show: { opacity: 1, y: 0 },
-  };
+  // const variantsText = {
+  //   hidden: { opacity: 0, y: -50 },
+  //   show: { opacity: 1, y: 0 },
+  // };
 
   useEffect(() => {
     scrollRef.current.scrollTo(0, 0);
@@ -61,44 +61,12 @@ const AboutMe = ({ scrollRef }) => {
           and thrive in a stimulating environment.
         </motion.p>
       </motion.div>
-      {/* <motion.div
-        className="relative col-span-3 h-max rounded-2xl border-2 border-solid border-dark bg-transparent p-8 dark:border-light dark:bg-transparent xl:col-span-4 md:order-1 md:col-span-8"
-        initial={{
-          opacity: 0,
-          scale: 0,
-        }}
-        whileInView={{
-          opacity: 1,
-          scale: 1,
-        }}
-        transition={{
-          duration: 1,
-          type: "spring",
-          damping: 15,
-        }}
-      >
-        <Image
-          src={AboutImage}
-          alt="AboutImage"
-          className="h-auto w-full rounded-2xl"
-          priority
-          sizes="(max-width: 768px) 100vw, (max-width:1200px) 50vw, 33vw"
-        />
-      </motion.div> */}
       <motion.div
         className="col-span-2 flex flex-col items-end justify-between xl:col-span-8 xl:flex-row xl:items-center md:order-3"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
-        {/* <div className="flex flex-col items-end justify-center xl:items-center ">
-          <span className="inline-block font-jost text-7xl font-extralight lg:text-6xl md:text-5xl sm:text-4xl">
-            <AnimatedNumbers value={1} />+
-          </span>
-          <h2 className="font-jost text-lg font-medium uppercase text-dark/75 dark:text-light/75 md:text-base">
-            Satisfied Clients
-          </h2>
-        </div> */}
         <div className="flex flex-col items-end justify-center xl:items-center ">
           <span className="inline-block font-jost text-7xl font-extralight lg:text-6xl md:text-5xl sm:text-4xl">
             <AnimatedNumbers value={10} />+

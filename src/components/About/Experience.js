@@ -1,7 +1,7 @@
-import { motion, useScroll } from "framer-motion";
-import React, { useEffect, useRef } from "react";
-import LineIcon from "./LineIcon";
 import experienceData from "@/data/experienceData";
+import { motion, useScroll } from "framer-motion";
+import { useEffect, useRef } from "react";
+import LineIcon from "./LineIcon";
 
 const Details = ({
   id,
@@ -10,7 +10,7 @@ const Details = ({
   companyLink,
   time,
   address,
-  work,
+  works,
   variants,
 }) => {
   const ref = useRef(null);
@@ -35,7 +35,15 @@ const Details = ({
         <span className="font-jost font-medium capitalize italic text-dark/75 dark:text-light/50 xs:text-sm">
           {time} | {address}
         </span>
-        <p className="w-full font-medium md:text-sm">{work}</p>
+        <p className="w-full font-medium md:text-sm">
+          <ul className="list-disc">
+            {works.map((line, index) => (
+              <li key={index} className="my-1">
+                {line}
+              </li>
+            ))}
+          </ul>
+        </p>
       </motion.div>
     </li>
   );
@@ -72,10 +80,7 @@ const Experience = ({ scrollRef }) => {
   }, [scrollRef]);
 
   return (
-    <div className="">
-      {/* <h2 className="mb-16 w-full text-center font-jost text-6xl font-extralight uppercase lg:mb-12 lg:text-5xl md:mb-8 md:text-4xl sm:mb-6 sm:text-3xl">
-        Experience
-      </h2> */}
+    <>
       <div ref={ref} className="relative w-full">
         {/* SideBar  */}
         <motion.div
@@ -90,7 +95,7 @@ const Experience = ({ scrollRef }) => {
           whileInView="show"
         >
           {experienceData.map(
-            ({ id, position, company, companyLink, time, address, work }) => {
+            ({ id, position, company, companyLink, time, address, works }) => {
               return (
                 <Details
                   id={id}
@@ -100,7 +105,7 @@ const Experience = ({ scrollRef }) => {
                   companyLink={companyLink}
                   time={time}
                   address={address}
-                  work={work}
+                  works={works}
                   variants={variantsExperienceText}
                 />
               );
@@ -108,7 +113,7 @@ const Experience = ({ scrollRef }) => {
           )}
         </motion.ul>
       </div>
-    </div>
+    </>
   );
 };
 

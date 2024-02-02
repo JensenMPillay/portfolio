@@ -54,7 +54,7 @@ const SocialIcons = () => {
         <LinkedInIcon className="transition-all duration-300 group-hover:scale-125" />
       </SocialIconContainer>
       <SocialIconContainer
-        name="Send&nbsp;Email"
+        name="Email"
         href="mailto:jmooroongapillay@gmail.com"
         index="1"
       >

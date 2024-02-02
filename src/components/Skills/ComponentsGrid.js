@@ -25,14 +25,9 @@ const ComponentsGrid = ({ skillsSVGs, size }) => {
       whileInView="show"
     >
       {/* Mapping from List of Components  */}
-      {/* {Object.entries(skillsSVGs).map(([key, skillSVG]) => (
-          <SkillIcon key={key} size={size} name={key}>
-            {skillSVG("")}
-          </SkillIcon>
-        ))} */}
-      {Object.entries(skillsSVGs).map(([key, skillSVG]) => (
+      {Object.entries(skillsSVGs).map(([key, SkillSVG]) => (
         <SkillIcon key={key} size={size} name={key} variants={variantsIcon}>
-          {skillSVG("")}
+          <SkillSVG />
         </SkillIcon>
       ))}
     </motion.div>

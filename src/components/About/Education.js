@@ -1,7 +1,7 @@
-import { motion, useScroll } from "framer-motion";
-import React, { useEffect, useRef } from "react";
-import LineIcon from "./LineIcon";
 import educationData from "@/data/educationData";
+import { motion, useScroll } from "framer-motion";
+import { useEffect, useRef } from "react";
+import LineIcon from "./LineIcon";
 
 const Details = ({ id, type, time, place, info, variants }) => {
   const ref = useRef(null);
@@ -45,9 +45,8 @@ const Education = ({ scrollRef }) => {
   };
 
   const { scrollYProgress } = useScroll({
-    // Target
+    // Target (Container or Direct Target)
     container: scrollRef,
-    // target: ref,
     // Settings Offset
     offset: ["start start", "end end"],
   });
@@ -57,10 +56,7 @@ const Education = ({ scrollRef }) => {
   }, [scrollRef]);
 
   return (
-    <div className="">
-      {/* <h2 className="mb-16 w-full text-center font-jost text-6xl font-extralight uppercase lg:mb-12 lg:text-5xl md:mb-8 md:text-4xl sm:mb-6 sm:text-3xl">
-        Education
-      </h2> */}
+    <>
       <div ref={ref} className="relative w-full">
         {/* SideBar  */}
         <motion.div
@@ -89,7 +85,7 @@ const Education = ({ scrollRef }) => {
           })}
         </motion.ul>
       </div>
-    </div>
+    </>
   );
 };
 
