@@ -55,9 +55,9 @@ export default function Home() {
       {/* Transition Page Effect */}
       {/* <TransitionEffect /> */}
       {/* Page Main  */}
-      <main className="flex h-screen w-full items-center">
+      <main className="flex h-[90vh] w-full items-center">
         {/* Layout Page  */}
-        <Layout className="" direction="center">
+        <Layout className="flex items-center justify-center" direction="center">
           <div className="flex w-full items-center justify-between lg:flex-col">
             <motion.div
               className="flex w-1/3 items-center justify-center overflow-hidden md:w-full"
