@@ -1,3 +1,4 @@
+import navTabData from "@/data/navTabData";
 import { useState } from "react";
 import useThemeSwitcher from "./Hooks/useThemeSwitcher";
 import HomeButton from "./Navbar/HomeButton";
@@ -39,8 +40,8 @@ const Navbar = () => {
 
       {/* SideBar NavLinks Desktop Screen */}
       <SideNavLink
-        href="/skills"
-        title="Skills"
+        href={navTabData[0].href}
+        title={navTabData[0].title}
         className="left-[47%] top-0 mt-4 -translate-x-1/2"
         initial={{
           y: -100,
@@ -50,8 +51,8 @@ const Navbar = () => {
         }}
       />
       <SideNavLink
-        href="/about"
-        title="About"
+        href={navTabData[1].href}
+        title={navTabData[1].title}
         className="left-0 top-1/2 -rotate-90"
         initial={{
           x: -100,
@@ -63,8 +64,8 @@ const Navbar = () => {
         }}
       />
       <SideNavLink
-        href="/projects"
-        title="Projects"
+        href={navTabData[2].href}
+        title={navTabData[2].title}
         className="right-0 top-1/2 -mr-2 rotate-90"
         initial={{
           x: 100,

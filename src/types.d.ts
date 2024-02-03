@@ -1,6 +1,12 @@
 // Icon SVGs
 export type SVGProps = React.SVGAttributes<SVGElement>;
 
+// Text
+export type TextProps = {
+  title: string;
+  paragraphs: string[];
+};
+
 // Toggle Button  (Navbar)
 export type ToggleButtonProps = {
   isOpen: boolean;
@@ -24,7 +30,7 @@ export type LinkProps = {
 // About Tab
 export type ScrollRef = MutableRefObject<HTMLDivElement | null>;
 
-export type Tab = {
+export type TabProps = {
   title: string;
   value: string;
   content: (scrollRef: ScrollRef) => JSX.Element;
@@ -32,6 +38,13 @@ export type Tab = {
 
 export type AboutContentProps = {
   scrollRef: ScrollRef;
+};
+
+export type AboutMeProps = TextProps & {
+  aside: {
+    title: string;
+    value: number;
+  }[];
 };
 
 export type ExperienceDetailsProps = {

@@ -1,6 +1,7 @@
 import AnimatedText from "@/components/Animations/AnimatedText";
 import ButtonDownload from "@/components/Buttons/ButtonDownload";
 import Layout from "@/components/Layout";
+import indexData from "@/data/indexData";
 import {
   AnimationDefinition,
   Variants,
@@ -75,7 +76,7 @@ export default function Home() {
             </motion.div>
             <div className="flex w-2/3 flex-col items-center self-center lg:w-full lg:text-center">
               <AnimatedText
-                text="Welcome, I'm Jensen, Software Developer"
+                text={indexData.title}
                 className="mb-0 xl:text-6xl lg:text-5xl md:text-4xl sm:text-3xl"
                 onAnimationComplete={handleAnimationComplete}
               />
@@ -84,12 +85,14 @@ export default function Home() {
                 animate={controls}
                 variants={variantsContainer}
               >
-                <motion.p className="my-4 text-lg font-medium text-dark/50 dark:text-light/50 lg:text-base md:text-sm sm:text-xs">
-                  As a totally dedicated full-stack developer, my goal is to
-                  turn ideas into innovative web applications. Explore my
-                  portfolio and projects, highlighting my expertise of React.js
-                  and Symfony.
-                </motion.p>
+                {indexData.paragraphs.map((paragraph, index) => (
+                  <motion.p
+                    key={index}
+                    className="my-4 text-lg font-medium text-dark/50 dark:text-light/50 lg:text-base md:text-sm sm:text-xs"
+                  >
+                    {paragraph}
+                  </motion.p>
+                ))}
                 <motion.div className=" mt-4 flex items-center justify-center md:mt-2">
                   <ButtonDownload title="Resume" href="/docs/CV_JensenM.pdf" />
                 </motion.div>

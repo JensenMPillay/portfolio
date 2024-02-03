@@ -1,6 +1,7 @@
 import AnimatedText from "@/components/Animations/AnimatedText";
 import Layout from "@/components/Layout";
 import Skills from "@/components/Skills/Skills";
+import navTabData from "@/data/navTabData";
 import Head from "next/head";
 
 const skills = () => {
@@ -17,7 +18,7 @@ const skills = () => {
       {/* <TransitionEffect /> */}
       <main className="flex max-h-[90vh] w-full flex-col items-center overflow-y-auto text-dark dark:text-light">
         <Layout className="" direction="top">
-          <AnimatedText className="" text="SKILLS" />
+          <AnimatedText className="" text={navTabData[0].title} />
           <Skills />
         </Layout>
       </main>

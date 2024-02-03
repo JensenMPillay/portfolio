@@ -1,7 +1,4 @@
-import AboutMe from "@/components/About/AboutMe";
-import Education from "@/components/About/Education";
-import Experience from "@/components/About/Experience";
-import { Tab } from "@/types";
+import switchTabData from "@/data/switchTabData";
 import { motion } from "framer-motion";
 import { useRef, useState } from "react";
 
@@ -9,27 +6,9 @@ const SwitchContent = () => {
   // Ref
   const scrollRef = useRef<HTMLDivElement | null>(null);
 
-  // Tabs
-  const tabs: Tab[] = [
-    {
-      title: "About Me",
-      value: "aboutme",
-      content: (scrollRef) => <AboutMe scrollRef={scrollRef} />,
-    },
-    {
-      title: "Experience",
-      value: "experience",
-      content: (scrollRef) => <Experience scrollRef={scrollRef} />,
-    },
-    {
-      title: "Education",
-      value: "education",
-      content: (scrollRef) => <Education scrollRef={scrollRef} />,
-    },
-  ];
   // Content
   const [content, setContent] =
-    useState<(typeof tabs)[number]["value"]>("aboutme");
+    useState<(typeof switchTabData)[number]["value"]>("aboutme");
 
   return (
     <div className="flex h-[70vh] w-full flex-row items-center justify-center rounded-3xl border-solid border-dark shadow-lg dark:border-light lg:flex-col sm:rounded-2xl">
@@ -38,7 +17,7 @@ const SwitchContent = () => {
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
       >
-        {tabs.map(({ title, value }, index) => (
+        {switchTabData.map(({ title, value }, index) => (
           <div
             key={index}
             className="group flex h-1/3 w-full cursor-pointer items-center justify-center border-dark"
@@ -65,7 +44,7 @@ const SwitchContent = () => {
         className="h-full w-3/4 overflow-scroll overflow-x-hidden p-8 backdrop-blur lg:w-full lg:p-6 md:p-4"
         ref={scrollRef}
       >
-        {tabs.find((tab) => tab.value === content)?.content(scrollRef)}
+        {switchTabData.find((tab) => tab.value === content)?.content(scrollRef)}
       </div>
     </div>
   );
