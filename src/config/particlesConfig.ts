@@ -127,11 +127,6 @@ const particlesConfig: ISourceOptions = {
           height: 12,
         },
         {
-          src: "https://www.svgrepo.com/show/508935/nodejs02.svg",
-          width: 24,
-          height: 24,
-        },
-        {
           src: "https://www.svgrepo.com/show/306453/mysql.svg",
           width: 24,
           height: 24,
@@ -163,6 +158,46 @@ const particlesConfig: ISourceOptions = {
         },
         {
           src: "https://www.svgrepo.com/show/333609/tailwind-css.svg",
+          width: 24,
+          height: 24,
+        },
+        {
+          src: "https://www.svgrepo.com/show/508915/flask.svg",
+          width: 24,
+          height: 24,
+        },
+        {
+          src: "https://www.svgrepo.com/show/465132/framer.svg",
+          width: 24,
+          height: 24,
+        },
+        {
+          src: "https://www.svgrepo.com/show/341877/graphql.svg",
+          width: 24,
+          height: 24,
+        },
+        {
+          src: "https://www.svgrepo.com/show/512400/javascript-155.svg",
+          width: 24,
+          height: 24,
+        },
+        {
+          src: "https://www.svgrepo.com/show/508932/nodejs01.svg",
+          width: 24,
+          height: 24,
+        },
+        {
+          src: "https://www.svgrepo.com/show/342129/postgresql.svg",
+          width: 24,
+          height: 24,
+        },
+        {
+          src: "https://www.svgrepo.com/show/354210/prisma.svg",
+          width: 24,
+          height: 24,
+        },
+        {
+          src: "https://www.svgrepo.com/show/342317/typescript.svg",
           width: 24,
           height: 24,
         },
