@@ -86,8 +86,9 @@ export default function Home() {
                 src={profileImage}
                 alt="ProfileImageJM"
                 className="h-48 w-48 rounded-full bg-dark lg:mb-4 lg:h-36 lg:w-36 md:h-24 md:w-24"
-                priority
-                // sizes="(max-width: 768px) 100vw, (max-width:1200px) 50vw, 33vw"
+                placeholder="blur"
+                blurDataURL={"/images/profile/profile.png"}
+                sizes="(max-width: 768px) 100vw, (max-width:1200px) 50vw, 33vw"
               ></Image>
             </motion.div>
             <div className="flex w-2/3 flex-col items-center self-center lg:w-full lg:text-center">
