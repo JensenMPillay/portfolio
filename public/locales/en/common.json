@@ -1,0 +1,12 @@
+{
+  "titles": {
+    "home": "home",
+    "skills": "skills",
+    "about": "about",
+    "projects": "projects"
+  },
+  "buttons": {
+    "resume": "cv",
+    "view": "view"
+  }
+}

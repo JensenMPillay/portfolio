@@ -1,7 +1,7 @@
-import experienceData from "@/data/experienceData";
-import { AboutContentProps, ExperienceDetailsProps } from "@/types";
+import { AboutContentProps, ExperienceDetailsProps } from "@/@types/types";
 import { containerVariants, textVariants } from "@/utils/variants";
 import { Variants, motion, useScroll } from "framer-motion";
+import { useTranslation } from "next-i18next";
 import { useEffect, useRef } from "react";
 import LineIcon from "./LineIcon";
 
@@ -52,6 +52,13 @@ const Details = ({
 };
 
 const Experience = ({ scrollRef }: AboutContentProps) => {
+  // Content
+  const { t } = useTranslation("about");
+
+  const experienceData: ExperienceDetailsProps[] = t("experienceData", {
+    returnObjects: true,
+  });
+
   const ref = useRef<HTMLDivElement | null>(null);
 
   const { scrollYProgress } = useScroll({

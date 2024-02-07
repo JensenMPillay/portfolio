@@ -1,5 +1,5 @@
-import { SVGProps } from "@/types";
-import { cn } from "@/utils/tailwindMerge";
+import { SVGProps } from "@/@types/types";
+import { cn } from "@/utils/utils";
 
 export const AdobeXD = ({ className, ...rest }: SVGProps) => (
   <svg

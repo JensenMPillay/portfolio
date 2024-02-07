@@ -1,14 +1,41 @@
-import socialIcons from "@/data/socialIcons";
-import { SocialIconProps } from "@/types";
+import { SocialIconProps } from "@/@types/types";
 import { Variants, motion } from "framer-motion";
 import { PropsWithChildren } from "react";
+import { GithubIcon, LinkedInIcon, MailIcon } from "../Icons/Icons";
+
+const socialIcons: SocialIconProps[] = [
+  {
+    index: 3,
+    name: "Github",
+    href: "https://www.github.com/JensenMPillay",
+    icon: (
+      <GithubIcon className="transition-all duration-300 group-hover:scale-125" />
+    ),
+  },
+  {
+    index: 2,
+    name: "LinkedIn",
+    href: "https://www.linkedin.com/in/jensenpillay/",
+    icon: (
+      <LinkedInIcon className="transition-all duration-300 group-hover:scale-125" />
+    ),
+  },
+  {
+    index: 1,
+    name: "Email",
+    href: "mailto:jmooroongapillay@gmail.com",
+    icon: (
+      <MailIcon className="transition-all duration-300 group-hover:scale-125" />
+    ),
+  },
+];
 
 const SocialIconContainer = ({
   href,
   index,
   name,
   children,
-}: PropsWithChildren<Pick<SocialIconProps, "index" | "name" | "href">>) => {
+}: PropsWithChildren<Omit<SocialIconProps, "icon">>) => {
   const icon: Variants = {
     initial: {
       scale: 0,

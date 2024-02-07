@@ -1,7 +1,8 @@
+import { ProjectProps } from "@/@types/types";
 import { GithubIcon } from "@/components/Icons/Icons";
-import { ProjectProps } from "@/types";
 import { containerVariants, textVariants } from "@/utils/variants";
 import { motion, useInView } from "framer-motion";
+import { useTranslation } from "next-i18next";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import ButtonGo from "../Buttons/ButtonGo";
@@ -17,6 +18,11 @@ const FeaturedProject = ({
   github,
   handleIsInView,
 }: ProjectProps & { handleIsInView: (projectInViewId: number) => void }) => {
+  // Content
+  const { t } = useTranslation("common");
+
+  const buttonName = t("buttons.view");
+
   const ref = useRef<HTMLDivElement | null>(null);
   const videoRef = useRef<HTMLVideoElement | null>(null);
 
@@ -115,7 +121,7 @@ const FeaturedProject = ({
             className="mt-2 flex w-full items-center justify-between lg:mt-1.5 md:mt-1"
             variants={textVariants}
           >
-            {link && <ButtonGo title="View" href={link} />}
+            {link && <ButtonGo title={buttonName} href={link} />}
             {github && (
               <MotionLink
                 href={github}

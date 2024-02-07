@@ -1,7 +1,7 @@
-import educationData from "@/data/educationData";
-import { AboutContentProps, EducationDetailsProps } from "@/types";
+import { AboutContentProps, EducationDetailsProps } from "@/@types/types";
 import { containerVariants, textVariants } from "@/utils/variants";
 import { Variants, motion, useScroll } from "framer-motion";
+import { useTranslation } from "next-i18next";
 import { useEffect, useRef } from "react";
 import LineIcon from "./LineIcon";
 
@@ -35,6 +35,13 @@ const Details = ({
 };
 
 const Education = ({ scrollRef }: AboutContentProps) => {
+  // Content
+  const { t } = useTranslation("about");
+
+  const educationData: EducationDetailsProps[] = t("educationData", {
+    returnObjects: true,
+  });
+
   const ref = useRef(null);
 
   const { scrollYProgress } = useScroll({

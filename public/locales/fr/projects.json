@@ -1,0 +1,88 @@
+{
+  "projectsData": [
+    {
+      "id": 1,
+      "className": "",
+      "title": "PDFAI - Plateforme SaaS",
+      "tools": [
+        "javascript",
+        "next.js",
+        "node.js",
+        "openai",
+        "prisma",
+        "stripe",
+        "tailwind",
+        "trpc",
+        "typescript"
+      ],
+      "summary": "Une application SaaS pilotée par l'IA permettant une interaction directe avec les PDF via une interface de chat IA. Authentifiez-vous, abonnez-vous pour des fonctionnalités améliorées, téléchargez et interagissez avec des PDF contextualisés par une IA.",
+      "video": "/images/projects/pdfai-preview.mp4",
+      "link": "https://pdfai-jensenmpillay.vercel.app/",
+      "github": "https://github.com/JensenMPillay/pdfai"
+    },
+    {
+      "id": 2,
+      "className": "",
+      "title": "MarryMix - Plateforme E-commerce",
+      "tools": [
+        "bootstrap",
+        "iqlocation",
+        "javascript",
+        "php",
+        "sql",
+        "stripe",
+        "symfony",
+        "tailwind",
+        "twig"
+      ],
+      "summary": "Une application web qui propose un menu de cocktails sélectionnés pour la commande lors de différents événements festifs à travers la France. Avec MarryMix, les clients peuvent facilement sélectionner et commander des cocktails pour embellir leurs occasions spéciales.",
+      "video": "/images/projects/marrymix-preview.mp4",
+      "link": "https://marrymix.fr/",
+      "github": "https://github.com/JensenMPillay/marrymix"
+    },
+    {
+      "id": 3,
+      "className": "",
+      "title": "Vipcare - Plateforme E-commerce",
+      "tools": [
+        "bootstrap",
+        "javascript",
+        "php",
+        "prestashop",
+        "smarty",
+        "sql"
+      ],
+      "summary": "Un site e-commerce qui offre une réservation transparente pour des services de beauté et de bien-être personnalisés, permettant aux utilisateurs de planifier des séances expertes pour des massages, des maquillages, des soins capillaires et plus encore à Paris et dans sa banlieue.",
+      "video": "/images/projects/vipcare-preview.mp4",
+      "link": "https://vipcare.fr/"
+    },
+    {
+      "id": 4,
+      "className": "",
+      "title": "Chesspy",
+      "tools": [
+        "flask",
+        "framer-motion",
+        "javascript",
+        "next.js",
+        "python",
+        "tailwind",
+        "typescript"
+      ],
+      "summary": "Un moteur de recherche de statistiques d'échecs utilisant l'API de Chess.com, Next.js et Python.",
+      "video": "/images/projects/chesspy-preview.mp4",
+      "link": "https://chesspy.vercel.app/",
+      "github": "https://github.com/JensenMPillay/chesspy"
+    },
+    {
+      "id": 5,
+      "className": "",
+      "title": "Portfolio",
+      "tools": ["framer-motion", "javascript", "next.js", "tailwind"],
+      "summary": "Un site web de portfolio professionnel utilisant Next.JS, Framer Motion et Tailwind CSS. Il dispose de transitions de page fluides, d'effets de fond attrayants, d'un design unique et est responsive sur mobile.",
+      "video": "/images/projects/portfolio-preview.mp4",
+      "link": "https://portfolio-jensenmpillay.vercel.app/",
+      "github": "https://github.com/JensenMPillay/portfolio"
+    }
+  ]
+}

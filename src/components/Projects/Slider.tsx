@@ -1,10 +1,19 @@
-import projectsData from "@/data/projectsData";
-import { cn } from "@/utils/tailwindMerge";
+import { ProjectProps } from "@/@types/types";
+import { cn } from "@/utils/utils";
 import { motion } from "framer-motion";
+import { useTranslation } from "next-i18next";
 import { PropsWithChildren, useEffect, useRef, useState } from "react";
 import FeaturedProject from "./FeaturedProject";
 
 const Slider = ({ children }: PropsWithChildren) => {
+  // Content
+  const { t } = useTranslation("projects");
+
+  const projectsData: ProjectProps[] = t("projectsData", {
+    returnObjects: true,
+  });
+
+  // Slider Config
   const wrapperRef = useRef<HTMLDivElement | null>(null);
   const dragFieldRef = useRef<HTMLDivElement | null>(null);
   const contentRef = useRef<HTMLDivElement | null>(null);
@@ -37,7 +46,7 @@ const Slider = ({ children }: PropsWithChildren) => {
     return () => {
       window.removeEventListener("resize", updateOffset);
     };
-  }, []);
+  }, [projectsData.length]);
 
   return (
     <div className="relative flex h-full flex-col items-center">

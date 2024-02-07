@@ -1,4 +1,4 @@
-import { cn } from "@/utils/tailwindMerge";
+import { cn } from "@/utils/utils";
 import { Target, Variant, motion } from "framer-motion";
 import { PropsWithChildren } from "react";
 

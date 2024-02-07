@@ -1,4 +1,5 @@
-import { ToggleButtonProps } from "@/types";
+import { ToggleButtonProps } from "@/@types/types";
+import { cn } from "@/utils/utils";
 import { navButtonVariants } from "@/utils/variants";
 import { motion } from "framer-motion";
 
@@ -13,23 +14,26 @@ const MenuButton = ({ isOpen, toggleMenu }: ToggleButtonProps) => {
       whileHover="hover"
     >
       <span
-        className={`block h-0.5 w-6 rounded-sm bg-dark transition-all duration-300 ease-in-out  dark:bg-light ${
+        className={cn(
+          "block h-0.5 w-6 rounded-sm bg-dark transition-all duration-300 ease-in-out  dark:bg-light",
           isOpen
             ? "translate-y-1 rotate-45"
-            : "-translate-y-0.5 self-start group-hover:w-4"
-        }`}
+            : "-translate-y-0.5 self-start group-hover:w-4",
+        )}
       ></span>
       <span
-        className={`my-0.5 block h-0.5 w-6 rounded-sm bg-dark transition-all duration-300 ease-in-out dark:bg-light ${
-          isOpen ? "opacity-0" : "opacity-100"
-        }`}
+        className={cn(
+          "my-0.5 block h-0.5 w-6 rounded-sm bg-dark transition-all duration-300 ease-in-out dark:bg-light",
+          isOpen ? "opacity-0" : "opacity-100",
+        )}
       ></span>
       <span
-        className={`block h-0.5 w-6 rounded-sm bg-dark transition-all duration-300 ease-in-out dark:bg-light ${
+        className={cn(
+          "block h-0.5 w-6 rounded-sm bg-dark transition-all duration-300 ease-in-out dark:bg-light",
           isOpen
             ? "-translate-y-1 -rotate-45"
-            : "translate-y-0.5 self-end group-hover:w-4"
-        }`}
+            : "translate-y-0.5 self-end group-hover:w-4",
+        )}
       ></span>
     </motion.button>
   );

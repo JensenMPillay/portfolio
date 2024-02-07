@@ -1,4 +1,4 @@
-import { skillsSVGsProps } from "@/types";
+import { skillsSVGsProps } from "@/@types/types";
 import { Variants, motion } from "framer-motion";
 import SkillIcon from "./SkillIcon";
 
@@ -25,7 +25,7 @@ const ComponentsGrid = ({ skillsSVGs, size }: Props) => {
   };
   return (
     <motion.div
-      className={`grid h-full w-full grid-cols-7 place-items-center gap-x-6 gap-y-3 overflow-hidden xl:grid-cols-6 lg:grid-cols-5 lg:gap-x-5 lg:gap-y-2.5 md:grid-cols-4 md:gap-x-4 md:gap-y-2 sm:grid-cols-3`}
+      className="grid h-full w-full grid-cols-7 place-items-center gap-x-6 gap-y-3 overflow-hidden xl:grid-cols-6 lg:grid-cols-5 lg:gap-x-5 lg:gap-y-2.5 md:grid-cols-4 md:gap-x-4 md:gap-y-2 sm:grid-cols-3"
       variants={variantsGrid}
       initial="hidden"
       whileInView="show"

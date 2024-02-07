@@ -1,4 +1,4 @@
-import { LinkProps } from "@/types";
+import { LinkProps } from "@/@types/types";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";

@@ -1,8 +1,16 @@
-import { ToggleButtonProps } from "@/types";
+import { ToggleButtonProps } from "@/@types/types";
 import { AnimatePresence, motion } from "framer-motion";
+import { useTranslation } from "next-i18next";
 import MobileNavLink from "./MobileNavLink";
 
 const MobileMenu = ({ isOpen, toggleMenu }: ToggleButtonProps) => {
+  // Content
+  const { t } = useTranslation("common");
+
+  const { home, skills, about, projects } = t("titles", {
+    returnObjects: true,
+  });
+
   return (
     // Navlinks Tablet & Mobile Screen
     <AnimatePresence>
@@ -18,12 +26,12 @@ const MobileMenu = ({ isOpen, toggleMenu }: ToggleButtonProps) => {
           }}
         >
           <nav className="flex min-h-full w-full flex-col items-center justify-around">
-            <MobileNavLink href="/" title="Home" toggle={toggleMenu} />
-            <MobileNavLink href="/about" title="About" toggle={toggleMenu} />
-            <MobileNavLink href="/skills" title="Skills" toggle={toggleMenu} />
+            <MobileNavLink href="/" title={home} toggle={toggleMenu} />
+            <MobileNavLink href="/about" title={about} toggle={toggleMenu} />
+            <MobileNavLink href="/skills" title={skills} toggle={toggleMenu} />
             <MobileNavLink
               href="/projects"
-              title="Projects"
+              title={projects}
               toggle={toggleMenu}
             />
           </nav>

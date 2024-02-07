@@ -57,7 +57,7 @@ const SkillIcon = ({
 
   return (
     <motion.div
-      className={`group relative flex flex-col place-items-center overflow-hidden rounded-lg`}
+      className="group relative flex flex-col place-items-center overflow-hidden rounded-lg"
       style={{
         perspective: size,
       }}

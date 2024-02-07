@@ -1,14 +1,22 @@
 import AnimatedText from "@/components/Animations/AnimatedText";
 import Layout from "@/components/Layout";
 import Slider from "@/components/Projects/Slider";
-import navTabData from "@/data/navTabData";
+import { getTitlePage } from "@/utils/utils";
+import { GetStaticProps } from "next";
+import { useTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Head from "next/head";
 
-const projects = () => {
+export default function Projects() {
+  // Content
+  const { t } = useTranslation("common");
+
+  const titlePage = t("titles.projects");
+
   return (
     <>
       <Head>
-        <title>Portfolio JM | Projects</title>
+        <title>{getTitlePage(titlePage)}</title>
         <meta
           name="description"
           content="Welcome to Jensen Mooroongapillay's portfolio. Here you will find my projects in ReactJS, NextJS, PHP, Symfony, Tailwind, Bootstrap, MySQL & Others."
@@ -18,12 +26,16 @@ const projects = () => {
       {/* <TransitionEffect /> */}
       <main className="flex max-h-[90vh] w-full flex-col items-center text-dark dark:text-light">
         <Layout className="" direction="right">
-          <AnimatedText className="" text={navTabData[2].title} />
+          <AnimatedText className="" text={titlePage} />
           <Slider />
         </Layout>
       </main>
     </>
   );
-};
+}
 
-export default projects;
+export const getStaticProps: GetStaticProps = async ({ locale }) => ({
+  props: {
+    ...(await serverSideTranslations(locale ?? "en", ["common", "projects"])),
+  },
+});

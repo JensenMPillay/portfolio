@@ -1,4 +1,4 @@
-import navTabData from "@/data/navTabData";
+import { useTranslation } from "next-i18next";
 import { useState } from "react";
 import useThemeSwitcher from "./Hooks/useThemeSwitcher";
 import HomeButton from "./Navbar/HomeButton";
@@ -6,9 +6,16 @@ import MenuButton from "./Navbar/MenuButton";
 import MobileMenu from "./Navbar/MobileMenu";
 import SideNavLink from "./Navbar/SideNavLink";
 import SocialIcons from "./Navbar/SocialIcons";
+import SwitchButtons from "./Navbar/SwitchButtons";
+import SwitchLangButton from "./Navbar/SwitchLangButton";
 import SwitchThemeButton from "./Navbar/SwitchThemeButton";
 
 const Navbar = () => {
+  // Content
+  const { t } = useTranslation("common");
+
+  const { skills, about, projects } = t("titles", { returnObjects: true });
+
   const { mode, setMode } = useThemeSwitcher();
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
@@ -33,16 +40,19 @@ const Navbar = () => {
       </div> */}
 
       {/* SwitchMode Button  */}
-      <SwitchThemeButton mode={mode} setMode={setMode} />
+      <SwitchButtons>
+        <SwitchLangButton />
+        <SwitchThemeButton mode={mode} setMode={setMode} />
+      </SwitchButtons>
 
       {/* Social Icons  */}
       <SocialIcons />
 
       {/* SideBar NavLinks Desktop Screen */}
       <SideNavLink
-        href={navTabData[0].href}
-        title={navTabData[0].title}
-        className="left-[47%] top-0 mt-4 -translate-x-1/2"
+        href="/skills"
+        title={skills}
+        className="sticky mx-auto"
         initial={{
           y: -100,
         }}
@@ -51,8 +61,8 @@ const Navbar = () => {
         }}
       />
       <SideNavLink
-        href={navTabData[1].href}
-        title={navTabData[1].title}
+        href="/about"
+        title={about}
         className="left-0 top-1/2 -rotate-90"
         initial={{
           x: -100,
@@ -64,9 +74,9 @@ const Navbar = () => {
         }}
       />
       <SideNavLink
-        href={navTabData[2].href}
-        title={navTabData[2].title}
-        className="right-0 top-1/2 -mr-2 rotate-90"
+        href="projects"
+        title={projects}
+        className="right-0 top-1/2 rotate-90"
         initial={{
           x: 100,
           rotate: 90,

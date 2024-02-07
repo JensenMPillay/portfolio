@@ -6,6 +6,8 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 
 import Navbar from "@/components/Navbar";
+import { cn } from "@/utils/utils";
+import { appWithTranslation } from "next-i18next";
 import type { AppProps } from "next/app";
 
 // Custom Fonts
@@ -19,7 +21,7 @@ const jost = Jost({
   variable: "--font-jost",
 });
 
-export default function App({ Component, pageProps }: AppProps) {
+function App({ Component, pageProps }: AppProps) {
   // Get Routes
   const router = useRouter();
   return (
@@ -30,7 +32,11 @@ export default function App({ Component, pageProps }: AppProps) {
       </Head>
       <ParticlesBackground />
       <main
-        className={`${quicksand.variable} ${jost.variable} min-h-screen w-full overflow-hidden bg-gradientLightLayout font-quicksand transition-colors duration-300 ease-in-out dark:bg-gradientDarkLayout`}
+        className={cn(
+          "min-h-screen w-full overflow-hidden bg-gradientLightLayout font-quicksand transition-colors duration-300 ease-in-out dark:bg-gradientDarkLayout",
+          quicksand.variable,
+          jost.variable,
+        )}
       >
         <Navbar />
         {/* Animate Exit on Transition and Waiting other animations  */}
@@ -43,3 +49,5 @@ export default function App({ Component, pageProps }: AppProps) {
     </>
   );
 }
+
+export default appWithTranslation(App);

@@ -1,5 +1,5 @@
-import { LinkProps } from "@/types";
-import { cn } from "@/utils/tailwindMerge";
+import { LinkProps } from "@/@types/types";
+import { cn } from "@/utils/utils";
 import { Target, motion } from "framer-motion";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -25,7 +25,7 @@ const SideNavLink = ({
   return (
     <MotionLink
       className={cn(
-        `group fixed font-jost text-2xl font-light uppercase -tracking-wider transition-colors duration-300 ease-in-out hover:text-dark dark:hover:text-light lg:hidden`,
+        "group fixed font-jost text-2xl font-light uppercase -tracking-wider transition-colors duration-300 ease-in-out hover:text-dark dark:hover:text-light lg:hidden",
         className,
         routerPath === href
           ? "text-dark dark:text-light"
@@ -46,9 +46,10 @@ const SideNavLink = ({
     >
       {title}
       <span
-        className={`absolute -bottom-0.5 left-0 inline-block h-[2px] ${
-          routerPath === href ? "w-full" : "w-0"
-        } bg-dark transition-[width] duration-300 ease-in-out group-hover:w-full dark:bg-light`}
+        className={cn(
+          "absolute -bottom-0.5 left-0 inline-block h-[2px] bg-dark transition-[width] duration-300 ease-in-out group-hover:w-full dark:bg-light",
+          routerPath === href ? "w-full" : "w-0",
+        )}
       />
     </MotionLink>
   );

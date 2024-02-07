@@ -1,11 +1,18 @@
-import aboutmeData from "@/data/aboutmeData";
-import { AboutContentProps } from "@/types";
+import { AboutContentProps, AboutMeProps } from "@/@types/types";
 import { containerVariants } from "@/utils/variants";
 import { motion } from "framer-motion";
+import { useTranslation } from "next-i18next";
 import { useEffect } from "react";
 import AnimatedNumbers from "../Animations/AnimatedNumbers";
 
 const AboutMe = ({ scrollRef }: AboutContentProps) => {
+  // Content
+  const { t } = useTranslation("about");
+
+  const { title, paragraphs, aside }: AboutMeProps = t("aboutmeData", {
+    returnObjects: true,
+  });
+
   useEffect(() => {
     scrollRef.current.scrollTo(0, 0);
   }, [scrollRef]);
@@ -21,9 +28,9 @@ const AboutMe = ({ scrollRef }: AboutContentProps) => {
           className="mb-4 font-jost text-lg font-extralight uppercase text-dark/75 dark:text-light/75 md:self-center"
           variants={containerVariants}
         >
-          {aboutmeData.title}
+          {title}
         </motion.h2>
-        {aboutmeData.paragraphs.map((paragraph, index) => (
+        {paragraphs.map((paragraph, index) => (
           <motion.p
             key={index}
             className="my-2 font-medium"
@@ -39,7 +46,7 @@ const AboutMe = ({ scrollRef }: AboutContentProps) => {
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
-        {aboutmeData.aside.map((info, index) => (
+        {aside.map((info, index) => (
           <div
             key={index}
             className="flex flex-col items-end justify-center xl:items-center "

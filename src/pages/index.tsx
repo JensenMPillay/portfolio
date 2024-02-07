@@ -1,18 +1,33 @@
 import AnimatedText from "@/components/Animations/AnimatedText";
 import ButtonDownload from "@/components/Buttons/ButtonDownload";
 import Layout from "@/components/Layout";
-import indexData from "@/data/indexData";
+import { getTitlePage } from "@/utils/utils";
 import {
   AnimationDefinition,
   Variants,
   motion,
   useAnimationControls,
 } from "framer-motion";
+import { GetStaticProps } from "next";
+import { useTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Head from "next/head";
 import Image from "next/image";
 import profileImage from "../../public/images/profile/profile.png";
 
 export default function Home() {
+  // Content
+  const { t: c } = useTranslation("common");
+
+  const titlePage = c("titles.home");
+
+  const buttonName = c("buttons.resume");
+
+  const { t } = useTranslation("index");
+
+  const { title, paragraphs } = t("indexData", { returnObjects: true });
+
+  // Variants
   const variantsImage: Variants = {
     hidden: { opacity: 0, scale: 0 },
     show: {
@@ -37,6 +52,7 @@ export default function Home() {
     },
   };
 
+  // Animation
   const controls = useAnimationControls();
 
   const handleAnimationComplete = (definition: AnimationDefinition) => {
@@ -47,7 +63,7 @@ export default function Home() {
     <>
       {/* Complete Head Component  */}
       <Head>
-        <title>Portfolio JM | Home</title>
+        <title>{getTitlePage(titlePage)}</title>
         <meta
           name="description"
           content="Welcome to Jensen Mooroongapillay's portfolio. I'm a full-stack software developer with expertise in web applications."
@@ -76,7 +92,7 @@ export default function Home() {
             </motion.div>
             <div className="flex w-2/3 flex-col items-center self-center lg:w-full lg:text-center">
               <AnimatedText
-                text={indexData.title}
+                text={title}
                 className="mb-0 xl:text-6xl lg:text-5xl md:text-4xl sm:text-3xl"
                 onAnimationComplete={handleAnimationComplete}
               />
@@ -85,7 +101,7 @@ export default function Home() {
                 animate={controls}
                 variants={variantsContainer}
               >
-                {indexData.paragraphs.map((paragraph, index) => (
+                {paragraphs.map((paragraph, index) => (
                   <motion.p
                     key={index}
                     className="my-4 text-lg font-medium text-dark/50 dark:text-light/50 lg:text-base md:text-sm sm:text-xs"
@@ -94,7 +110,10 @@ export default function Home() {
                   </motion.p>
                 ))}
                 <motion.div className=" mt-4 flex items-center justify-center md:mt-2">
-                  <ButtonDownload title="Resume" href="/docs/CV_JensenM.pdf" />
+                  <ButtonDownload
+                    title={buttonName}
+                    href="/docs/CV_JensenM.pdf"
+                  />
                 </motion.div>
               </motion.div>
             </div>
@@ -104,3 +123,9 @@ export default function Home() {
     </>
   );
 }
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => ({
+  props: {
+    ...(await serverSideTranslations(locale ?? "en", ["common", "index"])),
+  },
+});

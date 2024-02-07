@@ -1,0 +1,12 @@
+{
+  "titles": {
+    "home": "accueil",
+    "skills": "compétences",
+    "about": "profil",
+    "projects": "projets"
+  },
+  "buttons": {
+    "resume": "cv",
+    "view": "voir"
+  }
+}

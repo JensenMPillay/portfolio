@@ -1,9 +1,9 @@
-import { skillsSVGsProps } from "@/types";
+import { skillsSVGsProps } from "@/@types/types";
 import { useEffect, useState } from "react";
 import * as skillsSVGsObject from "../Icons/SkillsIcons";
 import ComponentsGrid from "./ComponentsGrid";
 
-const Skills = () => {
+const SkillsGrid = () => {
   const [size, setSize] = useState<number>(0);
 
   // Type Import SkillsSVGs
@@ -53,4 +53,4 @@ const Skills = () => {
   );
 };
 
-export default Skills;
+export default SkillsGrid;

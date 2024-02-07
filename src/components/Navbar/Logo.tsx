@@ -1,4 +1,4 @@
-import { SVGProps } from "@/types";
+import { SVGProps } from "@/@types/types";
 import { motion } from "framer-motion";
 import Link from "next/link";
 

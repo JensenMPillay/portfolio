@@ -1,0 +1,122 @@
+{
+  "tabData": [
+    {
+      "title": "A Propos",
+      "value": "aboutme"
+    },
+    {
+      "title": "Experience",
+      "value": "experience"
+    },
+    {
+      "title": "Education",
+      "value": "education"
+    }
+  ],
+  "aboutmeData": {
+    "title": "À Propos de Moi",
+    "paragraphs": [
+      "Passionné par la programmation et la logique informatique, je suis motivé par une soif constante d'apprentissage et de développement de nouvelles compétences dans ce domaine en constante évolution.",
+      "Actuellement à la recherche d'une opportunité professionnelle, mon objectif est de consolider mes connaissances et de continuer à progresser pour apporter des contributions significatives aux complexités de l'informatique.",
+      "Convaincu que ma passion pour la programmation, associée à l'enthousiasme et au professionnalisme, peut apporter de la valeur à n'importe quelle équipe, je suis prêt à m'engager pleinement pour relever de nouveaux défis et partager des connaissances et de l'énergie avec mes collègues.",
+      "N'hésitez pas à me contacter si vous recherchez un professionnel motivé et dévoué, désireux de contribuer activement à votre entreprise et de s'épanouir dans un environnement stimulant."
+    ],
+    "aside": [
+      {
+        "title": "Projets Terminés",
+        "value": 10
+      },
+      {
+        "title": "Années d'Expérience",
+        "value": 3
+      }
+    ]
+  },
+  "educationData": [
+    {
+      "id": 1,
+      "type": "Diplôme de Développeur d'Applications",
+      "time": "2020-2022",
+      "place": "Doranco Ecole Sup' Tech Creatives & OpenClassroom, Cours en ligne",
+      "info": "HTML, CSS, Javascript, MySQL, PHP, Symfony, React, React-Native, Git, Adobe XD, Figma."
+    },
+    {
+      "id": 2,
+      "type": "Diplôme d'Ingénieur en Electronique",
+      "time": "2013-2015",
+      "place": "Ecole ESME SUDRIA - Paris",
+      "info": "Spécialisation Optronique."
+    },
+    {
+      "id": 3,
+      "type": "DUT Mesures Physiques",
+      "time": "2011-2013",
+      "place": "Université Paris-Sud, Orsay",
+      "info": "Spécialisation Electronique/Mécanique."
+    },
+    {
+      "id": 4,
+      "type": "CPGE PCSI - Classe Préparatoire aux Grandes Ecoles",
+      "time": "2010-2011",
+      "place": "Lycée Carnot, Paris",
+      "info": "Spécialisation Physique-Chimie et Sciences de l'Ingénieur."
+    },
+    {
+      "id": 5,
+      "type": "BAC Scientifique",
+      "time": "2007-2010",
+      "place": "Lycée Jean-Baptiste de la Salle-Notre Dame de la Compassion, Saint-Denis",
+      "info": "Spécialisation Sciences de l'Ingénieur."
+    }
+  ],
+  "experienceData": [
+    {
+      "id": 1,
+      "position": "Freelance",
+      "company": "",
+      "companyLink": "https://portfolio-jensenmpillay.vercel.app/",
+      "time": "2023-2024",
+      "address": "Evry, France",
+      "works": [
+        "Développement de SaaS.",
+        "Landing Pages.",
+        "Plateformes E-commerce.",
+        "Modules.",
+        "PDFAI: SaaS avec IA.",
+        "Marrymix: E-commerce BtoC.",
+        "Chesspy: Site de recherche.",
+        "CarBnb: Plateforme BtoB."
+      ]
+    },
+    {
+      "id": 2,
+      "position": "Développeur d'Applications",
+      "company": "Philiance",
+      "companyLink": "https://www.philiance.com/",
+      "time": "2022-2023",
+      "address": "Evry, France",
+      "works": [
+        "Intégration de maquettes Figma selon UX/UI.",
+        "Création & Administration de base de données.",
+        "Développement de Back-Office.",
+        "Développement d'API.",
+        "Développement de solutions techniques selon besoin clients.",
+        "Optimisation du Référencement SEO."
+      ]
+    },
+    {
+      "id": 3,
+      "position": "Coordinateur Logistique des Mobilisations Militantes",
+      "company": "Amnesty International France",
+      "companyLink": "https://www.amnesty.fr/",
+      "time": "2017-2020",
+      "address": "Paris, FRANCE",
+      "works": [
+        "Organisation et gestion de la chaîne logistique.",
+        "Développement de l'activité militante.",
+        "Organisation des rencontres et événements militants.",
+        "Coordination de la dimension matérielle des mobilisations militantes."
+      ]
+    }
+  ]
+}

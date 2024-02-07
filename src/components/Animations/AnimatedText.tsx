@@ -1,4 +1,4 @@
-import { cn } from "@/utils/tailwindMerge";
+import { cn } from "@/utils/utils";
 import { AnimationDefinition, Variants, motion } from "framer-motion";
 
 type Props = {
