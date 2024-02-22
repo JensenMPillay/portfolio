@@ -11,7 +11,7 @@ export default function Skills() {
   // Content
   const { t } = useTranslation("common");
 
-  const titlePage = t("titles.projects");
+  const titlePage = t("titles.skills");
 
   return (
     <>
