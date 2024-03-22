@@ -68,7 +68,7 @@ const FeaturedProject = ({
             opacity: 0,
           }}
           whileInView={{
-            opacity: isVideoLoaded ? 1 : 0,
+            opacity: 1,
           }}
           transition={{
             duration: 1,
@@ -81,7 +81,13 @@ const FeaturedProject = ({
             priority
             sizes="(max-width: 768px) 100vw, (max-width:1200px) 50vw, 33vw"
           /> */}
-          <video className="h-auto w-full" muted loop ref={videoRef}>
+          <video
+            className="h-auto w-full"
+            muted
+            loop
+            playsInline
+            ref={videoRef}
+          >
             <source src={video} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
