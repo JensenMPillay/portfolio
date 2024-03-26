@@ -29,6 +29,13 @@ function App({ Component, pageProps }: AppProps) {
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/icon.ico" />
+        <meta name="description" content="Personal Portfolio of Jensen M." />
+        <meta property="og:title" content="J.M. Portfolio" />
+        <meta
+          property="og:description"
+          content="Personal Portfolio of Jensen M."
+        />
+        <meta property="og:image" content="/icon.ico" />
       </Head>
       <ParticlesBackground />
       <main
