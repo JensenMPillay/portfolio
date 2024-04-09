@@ -8,6 +8,8 @@ const ButtonDownload = ({ title, href }: LinkProps) => {
       target="_blank"
       className="group relative flex items-center px-20 py-4 text-lg font-semibold uppercase md:text-base sm:text-sm"
       download
+      rel="noopener noreferrer"
+      locale={false}
     >
       <span className="absolute left-0 top-1/2 flex h-full w-1/3 -translate-y-1/2 rounded-full bg-dark transition-all duration-300 ease-in-out group-hover:w-full dark:bg-light" />
       <span className="absolute left-0 top-1/2 flex h-full w-1/3 -translate-y-1/2 flex-row items-center justify-center transition-all duration-300 ease-in-out group-hover:w-2/5">
