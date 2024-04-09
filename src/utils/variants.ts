@@ -14,7 +14,7 @@ export const navButtonVariants: Variants = {
     transition: {
       type: "spring",
       damping: 10,
-      duration: 1,
+      duration: 0.6,
     },
     // tap: {
     //   scale: 0.9,

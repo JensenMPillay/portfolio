@@ -21,7 +21,7 @@ const Layout = ({
       initialProps = { opacity: 1 };
       animateProps = {
         opacity: 1,
-        transition: { duration: 1, ease: "easeInOut" },
+        transition: { duration: 0.6, ease: "easeInOut" },
       };
       exitProps = { opacity: 0 };
       break;
@@ -29,7 +29,7 @@ const Layout = ({
       initialProps = { y: "-150%" };
       animateProps = {
         y: "0%",
-        transition: { duration: 1, type: "spring" },
+        transition: { duration: 0.6, type: "spring" },
       };
       exitProps = { y: ["0%", "-150%"] };
       break;
@@ -37,7 +37,7 @@ const Layout = ({
       initialProps = { x: "-100%" };
       animateProps = {
         x: "0%",
-        transition: { duration: 1, type: "spring" },
+        transition: { duration: 0.6, type: "spring" },
       };
       exitProps = { x: ["0%", "-100%"] };
       break;
@@ -45,7 +45,7 @@ const Layout = ({
       initialProps = { x: "100%" };
       animateProps = {
         x: "0%",
-        transition: { duration: 1, type: "spring" },
+        transition: { duration: 0.6, type: "spring" },
       };
       exitProps = { x: ["0%", "100%"] };
       break;

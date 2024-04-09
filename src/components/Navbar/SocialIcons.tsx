@@ -47,7 +47,7 @@ const SocialIconContainer = ({
       transition: {
         type: "spring",
         damping: 8,
-        duration: 1,
+        duration: 0.6,
         delay: customValue * 0.2 + 1,
       },
     }),
@@ -82,7 +82,7 @@ const SocialIcons = () => {
         className="h-24 w-0.5 bg-dark dark:bg-light"
         initial={{ height: 0 }}
         animate={{ height: "6rem" }}
-        transition={{ type: "spring", duration: 1, delay: 1 }}
+        transition={{ type: "spring", duration: 0.6, delay: 0.6 }}
       ></motion.span>
     </div>
   );

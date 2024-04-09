@@ -35,7 +35,7 @@ const SideNavLink = ({
       initial={{ ...initial, scale: 1 }}
       animate={{
         ...animate,
-        transition: { type: "spring", duration: 1.4, delay: 0.6 },
+        transition: { type: "spring", duration: 1, delay: 0.6 },
       }}
       whileHover={{
         ...animate,

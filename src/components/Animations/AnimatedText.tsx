@@ -11,8 +11,6 @@ type Props = {
 const sentence: Variants = {
   animate: {
     transition: {
-      // Create a Delay for Apparition
-      delay: 1,
       // Create a Delay for the Animation of each Word
       staggerChildren: 0.1,
     },
@@ -30,7 +28,7 @@ const singleWord: Variants = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 1,
+      duration: 0.6,
     },
   },
 };
