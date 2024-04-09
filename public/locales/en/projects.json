@@ -23,6 +23,30 @@
     {
       "id": 2,
       "className": "",
+      "title": "Carbnb - Airbnb for Cars",
+      "tools": [
+        "graphql",
+        "googleapi",
+        "javascript",
+        "jest",
+        "next.js",
+        "node.js",
+        "prisma",
+        "stripe",
+        "supabase",
+        "tailwind",
+        "typescript",
+        "zod",
+        "zustand"
+      ],
+      "summary": "A web platform inspired by Airbnb, dedicated to car rental between individuals. Search for available cars, authenticate to reserve or list your own vehicle for rent. Simplified and secure car rental experience.",
+      "video": "/images/projects/carbnb-preview.mp4",
+      "link": "https://carbnb-jmpillay.vercel.app/",
+      "github": "https://github.com/JensenMPillay/carbnb"
+    },
+    {
+      "id": 3,
+      "className": "",
       "title": "MarryMix - E-Commerce Platform",
       "tools": [
         "bootstrap",
@@ -41,7 +65,7 @@
       "github": "https://github.com/JensenMPillay/marrymix"
     },
     {
-      "id": 3,
+      "id": 4,
       "className": "",
       "title": "Vipcare - E-Commerce Platform",
       "tools": [
@@ -57,7 +81,7 @@
       "link": "https://vipcare.fr/"
     },
     {
-      "id": 4,
+      "id": 5,
       "className": "",
       "title": "Chesspy",
       "tools": [
@@ -75,7 +99,7 @@
       "github": "https://github.com/JensenMPillay/chesspy"
     },
     {
-      "id": 5,
+      "id": 6,
       "className": "",
       "title": "Portfolio",
       "tools": ["framer-motion", "javascript", "next.js", "tailwind"],

@@ -35,9 +35,8 @@ const AboutMe = ({ scrollRef }: AboutContentProps) => {
             key={index}
             className="my-2 font-medium"
             variants={containerVariants}
-          >
-            {paragraph}
-          </motion.p>
+            dangerouslySetInnerHTML={{ __html: paragraph }}
+          />
         ))}
       </motion.div>
       <motion.div

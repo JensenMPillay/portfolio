@@ -16,10 +16,9 @@
   "aboutmeData": {
     "title": "About Me",
     "paragraphs": [
-      "Passionate about programming and computational logic, I'm driven by a constant thirst for learning and developing new skills in this ever-evolving field.",
-      "Currently seeking a professional opportunity, my goal is to solidify my knowledge and keep progressing to make meaningful contributions to the complexities of computer science.",
-      "With a firm belief that my programming passion, combined with enthusiasm and professionalism, can bring value to any team, I'm ready to fully commit to tackling new challenges and sharing knowledge and energy with colleagues.",
-      "Feel free to reach out if you're seeking a motivated and dedicated professional, eager to actively contribute to your company and thrive in a stimulating environment."
+      "Currently a <strong>freelance full-stack developer specialized in ReactJS/NodeJS</strong>, I aspire to participate in innovative and stimulating projects to leverage my skills in designing increasingly rich and complex applications.",
+      "My great adaptability and my constant desire to progress make me a committed developer, <strong>ready to actively contribute</strong> to adventures that are as professionally enriching as they are humanly rewarding.",
+      "Feel free <strong>to reach out</strong> if you're seeking a motivated and dedicated professional, eager to actively contribute to your company and thrive in a stimulating environment."
     ],
     "aside": [
       {
@@ -76,18 +75,24 @@
       "id": 1,
       "position": "Freelance",
       "company": "",
-      "companyLink": "https://portfolio-jensenmpillay.vercel.app/",
+      "companyLink": "https://portfolio-jmpillay.vercel.app/",
       "time": "2023-2024",
       "address": "Evry, France",
       "works": [
-        "SaaS Development.",
-        "Landing Pages.",
-        "E-commerce Platforms.",
-        "Modules.",
-        "PDFAI: SaaS with AI.",
-        "Marrymix: BtoC E-commerce.",
-        "Chesspy: Search Site.",
-        "CarBnb: BtoB Platform."
+        "Web development in line with UX/UI principles. ",
+        "Development of REST, GraphQL, and tRPC APIs.",
+        "Creation and management of databases.",
+        "Secure integration of online payment and subscription solutions.",
+        "Development of contextual AI chatbots.",
+        "Implementation of automated tests. Jest/RTL",
+        "Client communication, analysis, and interpretation of IT needs.",
+        "Writing of technical and functional specifications.",
+        "Design and prototyping of user interface.",
+        "Various open-source projects:",
+        "PDFAI: SaaS application enabling communication on PDF documents via AI chatbot.",
+        "Carbnb: CtoC platform for peer-to-peer car rental (Airbnb model).",
+        "Marrymix: BtoC E-commerce platform for festive event services.",
+        "Chesspy: Site for statistical analysis of chess."
       ]
     },
     {
@@ -98,12 +103,15 @@
       "time": "2022-2023",
       "address": "Evry, France",
       "works": [
-        "Integration of Figma mockups according to UX/UI.",
-        "Creation & Administration of databases.",
-        "Back-Office development.",
-        "API development.",
-        "Development of technical solutions according to client needs.",
-        "SEO Optimization."
+        "Development of technical solutions compliant with client specifications.",
+        "Creation and management of databases.",
+        "Development of REST APIs.",
+        "Improvement and optimization of business algorithm.",
+        "Testing, customer feedback management, and improvement (Agile method).",
+        "Integration of Figma mockups adhering to UX/UI principles.",
+        "SEO optimization.",
+        "Writing of technical and functional specifications.",
+        "Digital monitoring to ensure data security and legal compliance."
       ]
     },
     {
@@ -117,7 +125,8 @@
         "Organization and management of the supply chain.",
         "Development of militant activity.",
         "Organization of meetings and militant events.",
-        "Coordination of the material dimension of militant mobilizations."
+        "Coordination of the material dimension of militant mobilizations.",
+        "Budget management for the entire logistics sector."
       ]
     }
   ]

@@ -3,6 +3,30 @@
     {
       "id": 1,
       "className": "",
+      "title": "Carbnb - Airbnb pour Voitures",
+      "tools": [
+        "graphql",
+        "googleapi",
+        "javascript",
+        "jest",
+        "next.js",
+        "node.js",
+        "prisma",
+        "stripe",
+        "supabase",
+        "tailwind",
+        "typescript",
+        "zod",
+        "zustand"
+      ],
+      "summary": "Une plateforme web inspirée d'Airbnb, dédiée à la location de voitures entre particuliers. Recherchez des voitures disponibles, authentifiez-vous pour réserver ou proposer votre propre véhicule à la location. Expérience de location de voiture simplifiée et sécurisée.",
+      "video": "/images/projects/carbnb-preview.mp4",
+      "link": "https://carbnb-jmpillay.vercel.app/",
+      "github": "https://github.com/JensenMPillay/carbnb"
+    },
+    {
+      "id": 2,
+      "className": "",
       "title": "PDFAI - Plateforme SaaS",
       "tools": [
         "javascript",
@@ -13,7 +37,8 @@
         "stripe",
         "tailwind",
         "trpc",
-        "typescript"
+        "typescript",
+        "zod"
       ],
       "summary": "Une application SaaS pilotée par l'IA permettant une interaction directe avec les PDF via une interface de chat IA. Authentifiez-vous, abonnez-vous pour des fonctionnalités améliorées, téléchargez et interagissez avec des PDF contextualisés par une IA.",
       "video": "/images/projects/pdfai-preview.mp4",
@@ -21,7 +46,7 @@
       "github": "https://github.com/JensenMPillay/pdfai"
     },
     {
-      "id": 2,
+      "id": 3,
       "className": "",
       "title": "MarryMix - Plateforme E-commerce",
       "tools": [
@@ -41,7 +66,7 @@
       "github": "https://github.com/JensenMPillay/marrymix"
     },
     {
-      "id": 3,
+      "id": 4,
       "className": "",
       "title": "Vipcare - Plateforme E-commerce",
       "tools": [
@@ -57,7 +82,7 @@
       "link": "https://vipcare.fr/"
     },
     {
-      "id": 4,
+      "id": 5,
       "className": "",
       "title": "Chesspy",
       "tools": [
@@ -75,7 +100,7 @@
       "github": "https://github.com/JensenMPillay/chesspy"
     },
     {
-      "id": 5,
+      "id": 6,
       "className": "",
       "title": "Portfolio",
       "tools": ["framer-motion", "javascript", "next.js", "tailwind"],

@@ -16,10 +16,9 @@
   "aboutmeData": {
     "title": "À Propos de Moi",
     "paragraphs": [
-      "Passionné par la programmation et la logique informatique, je suis motivé par une soif constante d'apprentissage et de développement de nouvelles compétences dans ce domaine en constante évolution.",
-      "Actuellement à la recherche d'une opportunité professionnelle, mon objectif est de consolider mes connaissances et de continuer à progresser pour apporter des contributions significatives aux complexités de l'informatique.",
-      "Convaincu que ma passion pour la programmation, associée à l'enthousiasme et au professionnalisme, peut apporter de la valeur à n'importe quelle équipe, je suis prêt à m'engager pleinement pour relever de nouveaux défis et partager des connaissances et de l'énergie avec mes collègues.",
-      "N'hésitez pas à me contacter si vous recherchez un professionnel motivé et dévoué, désireux de contribuer activement à votre entreprise et de s'épanouir dans un environnement stimulant."
+      "Actuellement <strong>développeur fullstack spécialisé ReactJS/NodeJS</strong> en freelance, j'aspire à prendre part à des projets innovants et stimulants afin de mettre à profit mes compétences dans la conception d'applications toujours plus riches et complexes.",
+      "Ma grande adaptabilité et ma volonté permanente de progresser font de moi un développeur engagé, <strong>prêt à contribuer</strong> activement à des aventures aussi enrichissantes professionnellement que humainement.",
+      "N'hésitez pas à <strong>me contacter</strong> si vous recherchez un professionnel motivé et dévoué, désireux de contribuer activement à votre entreprise et de s'épanouir dans un environnement stimulant."
     ],
     "aside": [
       {
@@ -76,18 +75,24 @@
       "id": 1,
       "position": "Freelance",
       "company": "",
-      "companyLink": "https://portfolio-jensenmpillay.vercel.app/",
+      "companyLink": "https://portfolio-jmpillay.vercel.app/",
       "time": "2023-2024",
       "address": "Evry, France",
       "works": [
-        "Développement de SaaS.",
-        "Landing Pages.",
-        "Plateformes E-commerce.",
-        "Modules.",
-        "PDFAI: SaaS avec IA.",
-        "Marrymix: E-commerce BtoC.",
-        "Chesspy: Site de recherche.",
-        "CarBnb: Plateforme BtoB."
+        "Développement web en adéquation aux principes UX/UI.",
+        "Développement d'API REST, GraphQL et tRPC.",
+        "Création et gestion de base de données.",
+        "Intégration sécurisée de solutions de paiement et d'abonnement en ligne.",
+        "Développement de chatbots IA contextuels.",
+        "Mise en place de tests automatisés.",
+        "Communication client, analyse et interprétation des besoins en informatique.",
+        "Rédaction de spécifications techniques et fonctionnelles.",
+        "Conception et prototypage d'interface utilisateur.",
+        "Divers projets open-source :",
+        "PDFAI : Application SaaS permettant de communiquer sur des documents PDF via chatbot IA.",
+        "Carbnb : Plateforme CtoC de location de voitures entre particuliers (modèle Airbnb).",
+        "Marrymix : Plateforme E-commerce BtoC de prestations pour événements festifs.",
+        "Chesspy : Site d'analyse statistiques d'échecs."
       ]
     },
     {
@@ -98,12 +103,15 @@
       "time": "2022-2023",
       "address": "Evry, France",
       "works": [
-        "Intégration de maquettes Figma selon UX/UI.",
-        "Création & Administration de base de données.",
-        "Développement de Back-Office.",
-        "Développement d'API.",
-        "Développement de solutions techniques selon besoin clients.",
-        "Optimisation du Référencement SEO."
+        "Développement de solutions techniques conformes au cahier des charges client.",
+        "Création et gestion de base de données.",
+        "Développement d’API REST.",
+        "Amélioration et optimisation de l'algorithme métier.",
+        "Recettes, gestion des retours clients et amélioration (méthode Agile).",
+        "Intégration de maquettes Figma conformes aux principes UX/UI.",
+        "Optimisation du référencement SEO.",
+        "Rédaction de spécifications techniques et fonctionnelles.",
+        "Veille numérique afin de garantir la sécurité des données et la conformité légale."
       ]
     },
     {
@@ -117,7 +125,8 @@
         "Organisation et gestion de la chaîne logistique.",
         "Développement de l'activité militante.",
         "Organisation des rencontres et événements militants.",
-        "Coordination de la dimension matérielle des mobilisations militantes."
+        "Coordination de la dimension matérielle des mobilisations militantes.",
+        "Gestion budgétaire de l'ensemble du volet logistique."
       ]
     }
   ]

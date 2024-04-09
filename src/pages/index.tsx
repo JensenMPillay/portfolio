@@ -35,7 +35,7 @@ export default function Home() {
       // height: "fit-content",
       scale: 1,
       transition: {
-        duration: 0.5,
+        duration: 0.2,
         type: "spring",
         damping: 15,
       },
@@ -47,7 +47,7 @@ export default function Home() {
     show: {
       opacity: 1,
       transition: {
-        duration: 1,
+        duration: 0.4,
       },
     },
   };
@@ -85,7 +85,7 @@ export default function Home() {
               <Image
                 src={profileImage}
                 alt="ProfileImageJM"
-                className="h-48 w-48 rounded-full bg-dark lg:mb-4 lg:h-36 lg:w-36 md:h-24 md:w-24"
+                className="h-48 w-48 rounded-full bg-dark/50 dark:bg-light/50 lg:mb-4 lg:h-36 lg:w-36 md:h-24 md:w-24"
                 placeholder="blur"
                 blurDataURL={"/images/profile/profile.png"}
                 sizes="(max-width: 768px) 100vw, (max-width:1200px) 50vw, 33vw"
@@ -105,10 +105,9 @@ export default function Home() {
                 {paragraphs.map((paragraph, index) => (
                   <motion.p
                     key={index}
-                    className="my-4 text-lg font-medium text-dark/50 dark:text-light/50 lg:text-base md:text-sm sm:text-xs"
-                  >
-                    {paragraph}
-                  </motion.p>
+                    className="my-4 text-lg font-medium text-dark/70 dark:text-light/70 lg:text-base md:text-sm sm:text-xs"
+                    dangerouslySetInnerHTML={{ __html: paragraph }}
+                  />
                 ))}
                 <motion.div className=" mt-4 flex items-center justify-center md:mt-2">
                   <ButtonDownload
