@@ -52,7 +52,14 @@ const AboutMe = ({ scrollRef }: AboutContentProps) => {
             className="flex flex-col items-end justify-center xl:items-center "
           >
             <span className="inline-block font-jost text-7xl font-extralight lg:text-6xl md:text-5xl sm:text-4xl">
-              <AnimatedNumbers value={info.value} />+
+              <AnimatedNumbers
+                value={
+                  info.key === "experience"
+                    ? new Date().getFullYear() - 2020
+                    : info.value
+                }
+              />
+              +
             </span>
             <h2 className="font-jost text-lg font-medium uppercase text-dark/75 dark:text-light/75 md:text-base">
               {info.title}

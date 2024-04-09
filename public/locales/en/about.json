@@ -23,10 +23,12 @@
     ],
     "aside": [
       {
+        "key": "project",
         "title": "Projects Completed",
         "value": 10
       },
       {
+        "key": "experience",
         "title": "Years Of Experience",
         "value": 3
       }

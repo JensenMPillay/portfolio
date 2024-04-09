@@ -42,6 +42,7 @@ export type AboutContentProps = {
 
 export type AboutMeProps = TextProps & {
   aside: {
+    key: string;
     title: string;
     value: number;
   }[];
