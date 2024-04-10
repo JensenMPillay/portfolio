@@ -96,7 +96,7 @@ const Slider = ({ children }: PropsWithChildren) => {
       {/* <div className="h-12 w-12">
         <DragY />
       </div> */}
-      <div className="my-4 text-center font-jost text-xl font-semibold text-dark dark:text-light lg:my-3 lg:text-lg md:my-2 md:text-base sm:text-sm">
+      <div className="my-2 text-center font-jost text-xl font-semibold text-dark dark:text-light lg:text-lg md:my-1 md:text-base sm:text-sm">
         {projectInView} / {projectsLength}
       </div>
     </div>
