@@ -3,6 +3,27 @@
     {
       "id": 1,
       "className": "",
+      "title": "PDFAI - Plateforme SaaS",
+      "tools": [
+        "javascript",
+        "next.js",
+        "node.js",
+        "openai",
+        "prisma",
+        "stripe",
+        "tailwind",
+        "trpc",
+        "typescript",
+        "zod"
+      ],
+      "summary": "Une application SaaS pilotée par l'IA permettant une interaction directe avec les PDF via une interface de chat IA. Authentifiez-vous, abonnez-vous pour des fonctionnalités améliorées, téléchargez et interagissez avec des PDF contextualisés par une IA.",
+      "video": "/images/projects/pdfai-preview.mp4",
+      "link": "https://pdfai-jensenmpillay.vercel.app/",
+      "github": "https://github.com/JensenMPillay/pdfai"
+    },
+    {
+      "id": 2,
+      "className": "",
       "title": "Carbnb - Airbnb pour Voitures",
       "tools": [
         "graphql",
@@ -23,27 +44,6 @@
       "video": "/images/projects/carbnb-preview.mp4",
       "link": "https://carbnb-jmpillay.vercel.app/",
       "github": "https://github.com/JensenMPillay/carbnb"
-    },
-    {
-      "id": 2,
-      "className": "",
-      "title": "PDFAI - Plateforme SaaS",
-      "tools": [
-        "javascript",
-        "next.js",
-        "node.js",
-        "openai",
-        "prisma",
-        "stripe",
-        "tailwind",
-        "trpc",
-        "typescript",
-        "zod"
-      ],
-      "summary": "Une application SaaS pilotée par l'IA permettant une interaction directe avec les PDF via une interface de chat IA. Authentifiez-vous, abonnez-vous pour des fonctionnalités améliorées, téléchargez et interagissez avec des PDF contextualisés par une IA.",
-      "video": "/images/projects/pdfai-preview.mp4",
-      "link": "https://pdfai-jensenmpillay.vercel.app/",
-      "github": "https://github.com/JensenMPillay/pdfai"
     },
     {
       "id": 3,
