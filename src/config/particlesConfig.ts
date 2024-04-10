@@ -1,4 +1,4 @@
-import type { ISourceOptions } from "tsparticles-engine";
+import { ISourceOptions } from "@tsparticles/engine";
 
 const particlesConfig: ISourceOptions = {
   fpsLimit: 15,
@@ -87,121 +87,128 @@ const particlesConfig: ISourceOptions = {
     number: {
       density: {
         enable: true,
-        area: 800,
+        width: 1920,
+        height: 1080,
       },
       value: 45,
+      limit: {
+        mode: "delete",
+        value: 0,
+      },
     },
     shape: {
       close: true,
       fill: true,
-      image: [
-        {
-          src: "https://www.svgrepo.com/show/503151/adobe-xd.svg",
-          width: 24,
-          height: 24,
-          // replaceColor: true,
-        },
-        {
-          src: "https://www.svgrepo.com/show/344496/bootstrap.svg",
-          width: 24,
-          height: 24,
-        },
-        {
-          src: "https://www.svgrepo.com/show/445675/css.svg",
-          width: 24,
-          height: 24,
-        },
-        {
-          src: "https://www.svgrepo.com/show/532271/figma.svg",
-          width: 24,
-          height: 24,
-        },
-        {
-          src: "https://www.svgrepo.com/show/447165/github-outline.svg",
-          width: 24,
-          height: 24,
-        },
-        {
-          src: "https://www.svgrepo.com/show/479068/html5-logo.svg",
-          width: 12,
-          height: 12,
-        },
-        {
-          src: "https://www.svgrepo.com/show/306453/mysql.svg",
-          width: 24,
-          height: 24,
-        },
-        {
-          src: "https://www.svgrepo.com/show/354112/nextjs.svg",
-          width: 24,
-          height: 24,
-        },
-        {
-          src: "https://www.svgrepo.com/show/508936/php02.svg",
-          width: 24,
-          height: 24,
-        },
-        {
-          src: "https://www.svgrepo.com/show/306598/prestashop.svg",
-          width: 24,
-          height: 24,
-        },
-        {
-          src: "https://www.svgrepo.com/show/473768/react.svg",
-          width: 24,
-          height: 24,
-        },
-        {
-          src: "https://www.svgrepo.com/show/443470/brand-symfony.svg",
-          width: 24,
-          height: 24,
-        },
-        {
-          src: "https://www.svgrepo.com/show/333609/tailwind-css.svg",
-          width: 24,
-          height: 24,
-        },
-        {
-          src: "https://www.svgrepo.com/show/508915/flask.svg",
-          width: 24,
-          height: 24,
-        },
-        {
-          src: "https://www.svgrepo.com/show/465132/framer.svg",
-          width: 24,
-          height: 24,
-        },
-        {
-          src: "https://www.svgrepo.com/show/341877/graphql.svg",
-          width: 24,
-          height: 24,
-        },
-        {
-          src: "https://www.svgrepo.com/show/512400/javascript-155.svg",
-          width: 24,
-          height: 24,
-        },
-        {
-          src: "https://www.svgrepo.com/show/508932/nodejs01.svg",
-          width: 24,
-          height: 24,
-        },
-        {
-          src: "https://www.svgrepo.com/show/342129/postgresql.svg",
-          width: 24,
-          height: 24,
-        },
-        {
-          src: "https://www.svgrepo.com/show/354210/prisma.svg",
-          width: 24,
-          height: 24,
-        },
-        {
-          src: "https://www.svgrepo.com/show/342317/typescript.svg",
-          width: 24,
-          height: 24,
-        },
-      ],
+      options: {
+        image: [
+          {
+            src: "https://www.svgrepo.com/show/503151/adobe-xd.svg",
+            width: 24,
+            height: 24,
+            // replaceColor: true,
+          },
+          {
+            src: "https://www.svgrepo.com/show/344496/bootstrap.svg",
+            width: 24,
+            height: 24,
+          },
+          {
+            src: "https://www.svgrepo.com/show/445675/css.svg",
+            width: 24,
+            height: 24,
+          },
+          {
+            src: "https://www.svgrepo.com/show/532271/figma.svg",
+            width: 24,
+            height: 24,
+          },
+          {
+            src: "https://www.svgrepo.com/show/447165/github-outline.svg",
+            width: 24,
+            height: 24,
+          },
+          {
+            src: "https://www.svgrepo.com/show/479068/html5-logo.svg",
+            width: 12,
+            height: 12,
+          },
+          {
+            src: "https://www.svgrepo.com/show/306453/mysql.svg",
+            width: 24,
+            height: 24,
+          },
+          {
+            src: "https://www.svgrepo.com/show/354112/nextjs.svg",
+            width: 24,
+            height: 24,
+          },
+          {
+            src: "https://www.svgrepo.com/show/508936/php02.svg",
+            width: 24,
+            height: 24,
+          },
+          {
+            src: "https://www.svgrepo.com/show/306598/prestashop.svg",
+            width: 24,
+            height: 24,
+          },
+          {
+            src: "https://www.svgrepo.com/show/473768/react.svg",
+            width: 24,
+            height: 24,
+          },
+          {
+            src: "https://www.svgrepo.com/show/443470/brand-symfony.svg",
+            width: 24,
+            height: 24,
+          },
+          {
+            src: "https://www.svgrepo.com/show/333609/tailwind-css.svg",
+            width: 24,
+            height: 24,
+          },
+          {
+            src: "https://www.svgrepo.com/show/508915/flask.svg",
+            width: 24,
+            height: 24,
+          },
+          {
+            src: "https://www.svgrepo.com/show/465132/framer.svg",
+            width: 24,
+            height: 24,
+          },
+          {
+            src: "https://www.svgrepo.com/show/341877/graphql.svg",
+            width: 24,
+            height: 24,
+          },
+          {
+            src: "https://www.svgrepo.com/show/512400/javascript-155.svg",
+            width: 24,
+            height: 24,
+          },
+          {
+            src: "https://www.svgrepo.com/show/508932/nodejs01.svg",
+            width: 24,
+            height: 24,
+          },
+          {
+            src: "https://www.svgrepo.com/show/342129/postgresql.svg",
+            width: 24,
+            height: 24,
+          },
+          {
+            src: "https://www.svgrepo.com/show/354210/prisma.svg",
+            width: 24,
+            height: 24,
+          },
+          {
+            src: "https://www.svgrepo.com/show/342317/typescript.svg",
+            width: 24,
+            height: 24,
+          },
+        ],
+      },
       type: "image",
     },
     color: {
@@ -217,9 +224,11 @@ const particlesConfig: ISourceOptions = {
     },
     opacity: {
       value: 0.5,
-      random: {
+      animation: {
+        startValue: "random",
+        sync: true,
         enable: true,
-        minimumValue: 0.1,
+        mode: "random",
       },
     },
     collisions: {

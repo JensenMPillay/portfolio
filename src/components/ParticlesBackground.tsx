@@ -1,18 +1,20 @@
 import particlesConfig from "@/config/particlesConfig";
+import { Container } from "@tsparticles/engine";
+import Particles, { initParticlesEngine } from "@tsparticles/react";
+import { loadSlim } from "@tsparticles/slim";
 import { motion } from "framer-motion";
-import { useCallback } from "react";
-import Particles from "react-tsparticles";
-import type { Container, Engine } from "tsparticles-engine";
-import { loadSlim } from "tsparticles-slim";
+import { useCallback, useEffect, useMemo, useState } from "react";
 
 const ParticlesBackground = () => {
-  const particlesInit = useCallback(async (engine: Engine) => {
-    // console.log(engine);
-    // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
-    // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-    // starting from v2 you can add only the features you need reducing the bundle size
-    //await loadFull(engine);
-    await loadSlim(engine);
+  const [initParticles, setInitParticles] = useState<boolean>(false);
+
+  // this should be run only once per application lifetime
+  useEffect(() => {
+    initParticlesEngine(async (engine) => {
+      await loadSlim(engine);
+    }).then(() => {
+      setInitParticles(true);
+    });
   }, []);
 
   const particlesLoaded = useCallback(
@@ -23,6 +25,8 @@ const ParticlesBackground = () => {
     [],
   );
 
+  const options = useMemo(() => particlesConfig, []);
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -31,10 +35,9 @@ const ParticlesBackground = () => {
       transition={{ ease: "linear", duration: 5 }}
     >
       <Particles
-        options={particlesConfig}
+        options={options}
         id="tsparticles"
-        init={particlesInit}
-        loaded={particlesLoaded}
+        particlesLoaded={particlesLoaded}
       />
     </motion.div>
   );
