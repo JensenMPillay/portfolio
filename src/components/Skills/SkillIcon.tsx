@@ -10,7 +10,7 @@ import MouseLightEffect from "./MouseLightEffect";
 
 type Props = {
   size: number;
-  name: string;
+  name: string | null;
   variants: Variants;
 };
 
@@ -29,7 +29,7 @@ const SkillIcon = ({
   const rotateX = useTransform(y, [0, size / 2], [45, -45]);
   const rotateY = useTransform(x, [0, size / 2], [-45, 45]);
 
-  function handleMouseMove(event: MouseEvent<HTMLDivElement | null>) {
+  function handleMouseMove(event: MouseEvent<HTMLLIElement | null>) {
     let containerRect = event.currentTarget.getBoundingClientRect();
     let mouseXPosition = event.clientX - containerRect.left;
     let mouseYPosition = event.clientY - containerRect.top;
@@ -56,7 +56,7 @@ const SkillIcon = ({
   }, [size, x, y]);
 
   return (
-    <motion.div
+    <motion.li
       className="group relative flex flex-col place-items-center overflow-hidden rounded-lg"
       style={{
         perspective: size,
@@ -81,7 +81,7 @@ const SkillIcon = ({
       <span className="opacity-1 group-hover:opacity-150 text-lg font-extralight capitalize -tracking-wide lg:text-base md:text-sm sm:text-xs">
         {name}
       </span>
-    </motion.div>
+    </motion.li>
   );
 };
 

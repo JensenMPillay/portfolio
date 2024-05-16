@@ -71,55 +71,52 @@ export default function Home() {
       </Head>
       {/* Transition Page Effect */}
       {/* <TransitionEffect /> */}
-      {/* Page Main  */}
-      <main className="flex h-[90vh] w-full items-center">
-        {/* Layout Page  */}
-        <Layout className="flex items-center justify-center" direction="center">
-          <div className="flex w-full items-center justify-between lg:flex-col">
+      {/* Layout Page  */}
+      <Layout className="self-center" direction="center">
+        <div className="flex w-full items-center justify-between lg:flex-col">
+          <motion.div
+            className="flex w-1/3 items-center justify-center md:w-full"
+            initial="hidden"
+            animate={controls}
+            variants={variantsImage}
+          >
+            <Image
+              src={profileImage}
+              alt="ProfileImageJM"
+              className="h-48 w-48 rounded-full bg-dark/50 dark:bg-light/50 lg:mb-4 lg:h-36 lg:w-36 md:h-24 md:w-24"
+              placeholder="blur"
+              blurDataURL={"/images/profile/profile.png"}
+              sizes="(max-width: 768px) 100vw, (max-width:1200px) 50vw, 33vw"
+            ></Image>
+          </motion.div>
+          <div className="flex w-2/3 flex-col items-center self-center lg:w-full lg:text-center">
+            <AnimatedText
+              text={title}
+              className="mb-0 xl:text-6xl lg:text-5xl md:text-4xl sm:text-3xl"
+              onAnimationComplete={handleAnimationComplete}
+            />
             <motion.div
-              className="flex w-1/3 items-center justify-center overflow-hidden md:w-full"
               initial="hidden"
               animate={controls}
-              variants={variantsImage}
+              variants={variantsContainer}
             >
-              <Image
-                src={profileImage}
-                alt="ProfileImageJM"
-                className="h-48 w-48 rounded-full bg-dark/50 dark:bg-light/50 lg:mb-4 lg:h-36 lg:w-36 md:h-24 md:w-24"
-                placeholder="blur"
-                blurDataURL={"/images/profile/profile.png"}
-                sizes="(max-width: 768px) 100vw, (max-width:1200px) 50vw, 33vw"
-              ></Image>
-            </motion.div>
-            <div className="flex w-2/3 flex-col items-center self-center lg:w-full lg:text-center">
-              <AnimatedText
-                text={title}
-                className="mb-0 xl:text-6xl lg:text-5xl md:text-4xl sm:text-3xl"
-                onAnimationComplete={handleAnimationComplete}
-              />
-              <motion.div
-                initial="hidden"
-                animate={controls}
-                variants={variantsContainer}
-              >
-                {paragraphs.map((paragraph, index) => (
-                  <motion.p
-                    key={index}
-                    className="my-4 text-lg font-medium text-dark/70 dark:text-light/70 lg:text-base md:text-sm sm:text-xs"
-                    dangerouslySetInnerHTML={{ __html: paragraph }}
-                  />
-                ))}
-                <motion.div className=" mt-4 flex items-center justify-center md:mt-2">
-                  <ButtonDownload
-                    title={buttonName}
-                    href="/docs/CV_JensenM.pdf"
-                  />
-                </motion.div>
+              {paragraphs.map((paragraph, index) => (
+                <motion.p
+                  key={index}
+                  className="my-4 text-lg font-medium text-dark/70 dark:text-light/70 lg:text-base md:text-sm sm:text-xs"
+                  dangerouslySetInnerHTML={{ __html: paragraph }}
+                />
+              ))}
+              <motion.div className=" mt-4 flex items-center justify-center md:mt-2">
+                <ButtonDownload
+                  title={buttonName}
+                  href="/docs/CV_JensenM.pdf"
+                />
               </motion.div>
-            </div>
+            </motion.div>
           </div>
-        </Layout>
-      </main>
+        </div>
+      </Layout>
     </>
   );
 }

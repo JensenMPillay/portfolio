@@ -54,9 +54,9 @@ const Layout = ({
   }
 
   return (
-    <motion.div
+    <motion.section
       className={cn(
-        "z-0 inline-block h-full w-full bg-transparent p-32 pt-0 transition-colors duration-300 ease-in-out dark:bg-transparent xl:p-24 xl:pt-0 lg:p-16 lg:pt-0 md:p-12 md:pt-0 sm:p-8 sm:pt-0",
+        "z-0 flex h-full w-full flex-col bg-transparent p-32 text-dark transition-colors duration-300 ease-in-out dark:bg-transparent dark:text-light xl:p-24 lg:p-16 md:p-12 sm:p-8",
         className,
       )}
       initial={initialProps}
@@ -64,7 +64,7 @@ const Layout = ({
       exit={exitProps}
     >
       {children}
-    </motion.div>
+    </motion.section>
   );
 };
 

@@ -1,6 +1,10 @@
-import SwitchContent from "@/components/About/SwitchContent";
+import { TabProps } from "@/@types/types";
+import AboutMe from "@/components/About/AboutMe";
+import Education from "@/components/About/Education";
+import Experience from "@/components/About/Experience";
 import AnimatedText from "@/components/Animations/AnimatedText";
 import Layout from "@/components/Layout";
+import SwitchContent from "@/components/SwitchContent";
 import { getTitlePage } from "@/utils/utils";
 import { GetStaticProps } from "next";
 import { useTranslation } from "next-i18next";
@@ -13,6 +17,29 @@ export default function About() {
 
   const titlePage = t("titles.about");
 
+  // Content
+  const { t: trad } = useTranslation("about");
+
+  const tabsData: Omit<TabProps, "content">[] = trad("tabsData", {
+    returnObjects: true,
+  });
+
+  // Tabs
+  const tabsContent: Omit<TabProps, "title">[] = [
+    {
+      value: "aboutme",
+      content: (scrollRef) => <AboutMe scrollRef={scrollRef} />,
+    },
+    {
+      value: "experience",
+      content: (scrollRef) => <Experience scrollRef={scrollRef} />,
+    },
+    {
+      value: "education",
+      content: (scrollRef) => <Education scrollRef={scrollRef} />,
+    },
+  ];
+
   return (
     <>
       <Head>
@@ -24,12 +51,10 @@ export default function About() {
       </Head>
       {/* Transition Page Effect */}
       {/* <TransitionEffect /> */}
-      <main className="flex max-h-[90vh] w-full flex-col items-center text-dark dark:text-light">
-        <Layout direction="left">
-          <AnimatedText className="" text={titlePage} />
-          <SwitchContent />
-        </Layout>
-      </main>
+      <Layout direction="left">
+        <AnimatedText className="" text={titlePage} />
+        <SwitchContent data={tabsData} contents={tabsContent} />
+      </Layout>
     </>
   );
 }

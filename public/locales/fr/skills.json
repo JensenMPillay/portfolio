@@ -1,0 +1,16 @@
+{
+  "tabsData": [
+    {
+      "title": "Langages",
+      "value": "languages"
+    },
+    {
+      "title": "Frameworks",
+      "value": "frameworks"
+    },
+    {
+      "title": "Outils",
+      "value": "tools"
+    }
+  ]
+}

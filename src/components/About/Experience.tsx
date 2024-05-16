@@ -19,12 +19,12 @@ const Details = ({
   return (
     <li
       ref={ref}
-      className="mx-auto my-8 flex w-[60%] flex-col justify-between first:mt-0 last:mb-0 md:w-[80%]"
+      className="flex w-full flex-row space-x-8 text-left first:mt-0 last:mb-0"
       key={id}
     >
       <LineIcon reference={ref} />
       <motion.div variants={variants} initial="hidden" whileInView="show">
-        <h3 className="font-jost text-3xl font-extralight capitalize md:text-2xl sm:text-xl xs:text-base">
+        <h3 className="font-jost text-2xl font-extralight capitalize md:text-xl sm:text-lg xs:text-base">
           {position}&nbsp;
           <a
             href={companyLink}
@@ -63,7 +63,7 @@ const Experience = ({ scrollRef }: AboutContentProps) => {
 
   const { scrollYProgress } = useScroll({
     // Target
-    container: scrollRef,
+    target: scrollRef,
     // Settings Offset
     offset: ["start start", "end end"],
   });
@@ -74,7 +74,7 @@ const Experience = ({ scrollRef }: AboutContentProps) => {
 
   return (
     <>
-      <div ref={ref} className="relative w-full">
+      <div ref={ref} className="w-full">
         {/* SideBar  */}
         <motion.div
           style={{ scaleY: scrollYProgress }}
@@ -82,7 +82,7 @@ const Experience = ({ scrollRef }: AboutContentProps) => {
         />
         {/* Experiences List  */}
         <motion.ul
-          className="ml-4 flex w-full flex-col items-start justify-between md:ml-2"
+          className="ml-4 flex w-full flex-col space-y-8 md:ml-2"
           variants={containerVariants}
           initial="hidden"
           whileInView="show"

@@ -35,10 +35,10 @@ const singleWord: Variants = {
 
 const AnimatedText = ({ text, className, onAnimationComplete }: Props) => {
   return (
-    <motion.div className="mx-auto flex w-full items-center justify-center overflow-hidden py-2 text-left sm:p-0">
+    <motion.div className="mx-auto flex w-full items-center justify-center py-2 text-left sm:p-0">
       <motion.h1
         className={cn(
-          `font mb-12 inline-block w-full text-center font-jost text-5xl font-extralight uppercase text-dark dark:text-light lg:text-4xl md:mb-8 md:text-3xl sm:mb-4`,
+          `font inline-block w-full text-center font-jost text-5xl font-light uppercase text-dark dark:text-light lg:text-4xl md:text-3xl`,
           className,
         )}
         variants={sentence}

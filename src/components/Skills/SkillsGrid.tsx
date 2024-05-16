@@ -1,19 +1,8 @@
-import { skillsSVGsProps } from "@/@types/types";
 import { useEffect, useState } from "react";
-import * as skillsSVGsObject from "../Icons/SkillsIcons";
 import ComponentsGrid from "./ComponentsGrid";
 
-const SkillsGrid = () => {
+const SkillsGrid = ({ skillsSVGs }: { skillsSVGs: JSX.Element[] }) => {
   const [size, setSize] = useState<number>(0);
-
-  // Type Import SkillsSVGs
-  const skillsSVGs: skillsSVGsProps = Object.entries(skillsSVGsObject).reduce(
-    (acc, [key, SkillSVG]) => {
-      acc[key] = <SkillSVG />;
-      return acc;
-    },
-    {} as skillsSVGsProps,
-  );
 
   useEffect(() => {
     // Initialize Size Icon
@@ -44,13 +33,7 @@ const SkillsGrid = () => {
     };
   }, [size]);
 
-  return (
-    <div className="flex max-h-full w-full flex-row rounded-3xl border-solid border-dark bg-transparent shadow-lg dark:border-light sm:rounded-2xl">
-      <div className="h-full w-full overflow-y-auto backdrop-blur">
-        <ComponentsGrid skillsSVGs={skillsSVGs} size={size} />
-      </div>
-    </div>
-  );
+  return <ComponentsGrid skillsSVGs={skillsSVGs} size={size} />;
 };
 
 export default SkillsGrid;

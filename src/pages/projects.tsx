@@ -24,12 +24,10 @@ export default function Projects() {
       </Head>
       {/* Transition Page Effect */}
       {/* <TransitionEffect /> */}
-      <main className="flex max-h-[90vh] w-full flex-col items-center text-dark dark:text-light">
-        <Layout className="" direction="right">
-          <AnimatedText className="" text={titlePage} />
-          <Slider />
-        </Layout>
-      </main>
+      <Layout className="" direction="right">
+        <AnimatedText className="" text={titlePage} />
+        <Slider />
+      </Layout>
     </>
   );
 }

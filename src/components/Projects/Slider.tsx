@@ -49,7 +49,7 @@ const Slider = ({ children }: PropsWithChildren) => {
   }, [projectsData.length]);
 
   return (
-    <div className="relative flex h-full flex-col items-center">
+    <div className="relative flex h-full w-full flex-col items-center">
       {/* <div className="h-12 w-12">
         <DragX />
       </div> */}

@@ -207,6 +207,11 @@ const particlesConfig: ISourceOptions = {
             width: 24,
             height: 24,
           },
+          {
+            src: "https://www.svgrepo.com/show/473589/docker.svg",
+            width: 24,
+            height: 24,
+          },
         ],
       },
       type: "image",

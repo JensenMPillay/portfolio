@@ -40,7 +40,7 @@ function App({ Component, pageProps }: AppProps) {
       <ParticlesBackground />
       <main
         className={cn(
-          "min-h-screen w-full overflow-hidden bg-gradientLightLayout font-quicksand transition-colors duration-300 ease-in-out dark:bg-gradientDarkLayout",
+          "flex min-h-screen w-full overflow-x-hidden bg-gradientLightLayout font-quicksand transition-colors duration-300 ease-in-out dark:bg-gradientDarkLayout",
           quicksand.variable,
           jost.variable,
         )}

@@ -27,6 +27,12 @@ export type LinkProps = {
   title: string;
 };
 
+// Switch Content
+export type SwitchContentProps = {
+  data: Omit<TabProps, "content">[];
+  contents: Omit<TabProps, "title">[];
+};
+
 // About Tab
 export type ScrollRef = MutableRefObject<HTMLDivElement | null>;
 
@@ -67,9 +73,8 @@ export type EducationDetailsProps = {
 };
 
 // Skills SVGs
-export type skillsSVGsProps = {
-  [key: string]: JSX.Element;
-};
+export type skillsSVGsProps = JSX.Element[];
+export type skillsType = "languages" | "frameworks" | "tools";
 
 // Project
 export type ProjectProps = {

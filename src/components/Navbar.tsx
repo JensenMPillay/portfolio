@@ -24,7 +24,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className="relative z-10 flex w-full items-center bg-transparent px-32 py-8 font-medium dark:bg-transparent dark:text-light lg:px-16 md:px-12 sm:px-8">
+    <header className="absolute z-10 flex w-full items-center bg-transparent px-32 py-8 font-medium dark:bg-transparent dark:text-light lg:px-16 md:px-12 sm:px-8">
       {/* Home Menu  */}
       <HomeButton />
 
