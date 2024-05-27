@@ -1,8 +1,9 @@
-import { AboutContentProps, EducationDetailsProps } from "@/@types/types";
+import { EducationDetailsProps } from "@/@types/types";
 import { containerVariants, textVariants } from "@/utils/variants";
-import { Variants, motion, useScroll } from "framer-motion";
+import { Variants, motion } from "framer-motion";
 import { useTranslation } from "next-i18next";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
+import Line from "./Line";
 import LineIcon from "./LineIcon";
 
 const Details = ({
@@ -17,7 +18,7 @@ const Details = ({
   return (
     <li
       ref={ref}
-      className="flex w-full flex-row space-x-8 text-left first:mt-0 last:mb-0"
+      className="flex w-full flex-row space-x-8 text-left first:mt-0 last:mb-0 md:space-x-6 sm:space-x-4"
       key={id}
     >
       <LineIcon reference={ref} />
@@ -30,16 +31,18 @@ const Details = ({
         <h3 className="font-jost text-2xl font-extralight capitalize md:text-xl sm:text-lg xs:text-base">
           {type}
         </h3>
-        <span className="font-jost font-medium capitalize italic text-dark/75 dark:text-light/50 xs:text-sm">
+        <span className="font-jost font-medium capitalize italic text-dark/75 dark:text-light/50 sm:text-sm xs:text-xs">
           {time} | {place}
         </span>
-        <p className="my-1 w-full font-medium md:text-sm">{info}</p>
+        <p className="my-1 w-full text-balance font-medium md:text-sm">
+          {info}
+        </p>
       </motion.div>
     </li>
   );
 };
 
-const Education = ({ scrollRef }: AboutContentProps) => {
+const Education = () => {
   // Content
   const { t } = useTranslation("about");
 
@@ -49,25 +52,10 @@ const Education = ({ scrollRef }: AboutContentProps) => {
 
   const ref = useRef<HTMLDivElement | null>(null);
 
-  const { scrollYProgress } = useScroll({
-    // Target
-    target: scrollRef,
-    // Settings Offset
-    offset: ["end end", "start start"],
-  });
-
-  useEffect(() => {
-    scrollRef.current.scrollTo(0, 0);
-  }, [scrollRef]);
-
   return (
     <>
       <div ref={ref} className="w-full">
-        {/* SideBar  */}
-        <motion.div
-          style={{ scaleY: scrollYProgress }}
-          className="absolute left-9 top-0 h-full w-[4px] origin-top bg-dark dark:bg-light md:left-6 md:w-[3px] sm:left-3"
-        />
+        <Line reference={ref} type="education" />
         {/* Education List  */}
         <motion.ul
           className="ml-4 flex w-full flex-col space-y-8 md:ml-2"

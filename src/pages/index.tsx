@@ -103,7 +103,7 @@ export default function Home() {
               {paragraphs.map((paragraph, index) => (
                 <motion.p
                   key={index}
-                  className="my-4 text-lg font-medium text-dark/70 dark:text-light/70 lg:text-base md:text-sm sm:text-xs"
+                  className="my-4 text-balance text-lg font-medium text-dark/70 dark:text-light/70 lg:text-base md:text-sm sm:text-xs"
                   dangerouslySetInnerHTML={{ __html: paragraph }}
                 />
               ))}

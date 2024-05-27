@@ -1,11 +1,10 @@
-import { AboutContentProps, AboutMeProps } from "@/@types/types";
+import { AboutMeProps } from "@/@types/types";
 import { containerVariants } from "@/utils/variants";
 import { motion } from "framer-motion";
 import { useTranslation } from "next-i18next";
-import { useEffect } from "react";
 import AnimatedNumbers from "../Animations/AnimatedNumbers";
 
-const AboutMe = ({ scrollRef }: AboutContentProps) => {
+const AboutMe = () => {
   // Content
   const { t } = useTranslation("about");
 
@@ -13,9 +12,6 @@ const AboutMe = ({ scrollRef }: AboutContentProps) => {
     returnObjects: true,
   });
 
-  useEffect(() => {
-    scrollRef.current.scrollTo(0, 0);
-  }, [scrollRef]);
   return (
     <div className="grid w-full grid-cols-8 gap-16 sm:gap-8">
       <motion.div

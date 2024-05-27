@@ -1,8 +1,9 @@
-import { AboutContentProps, ExperienceDetailsProps } from "@/@types/types";
+import { ExperienceDetailsProps } from "@/@types/types";
 import { containerVariants, textVariants } from "@/utils/variants";
-import { Variants, motion, useScroll } from "framer-motion";
+import { Variants, motion } from "framer-motion";
 import { useTranslation } from "next-i18next";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
+import Line from "./Line";
 import LineIcon from "./LineIcon";
 
 const Details = ({
@@ -19,28 +20,28 @@ const Details = ({
   return (
     <li
       ref={ref}
-      className="flex w-full flex-row space-x-8 text-left first:mt-0 last:mb-0"
+      className="flex w-full flex-row space-x-8 text-left first:mt-0 last:mb-0 md:space-x-6 sm:space-x-4"
       key={id}
     >
       <LineIcon reference={ref} />
       <motion.div variants={variants} initial="hidden" whileInView="show">
-        <h3 className="font-jost text-2xl font-extralight capitalize md:text-xl sm:text-lg xs:text-base">
-          {position}&nbsp;
+        <h3 className="text-balance font-jost text-2xl font-extralight capitalize md:text-xl sm:text-lg xs:text-base">
+          {position}{" "}
           <a
             href={companyLink}
             target="_blank"
-            className="capitalize text-primaryDark dark:text-primaryDark"
+            className="capitalize text-dark/75 dark:text-light/75"
           >
             {company && `@${company}`}
           </a>
         </h3>
-        <span className="font-jost font-medium capitalize italic text-dark/75 dark:text-light/50 xs:text-sm">
+        <span className="font-jost font-medium capitalize italic text-dark/75 dark:text-light/50 sm:text-sm xs:text-xs">
           {time} | {address}
         </span>
         <div className="w-full font-medium md:text-sm">
-          <ul className="list-disc">
+          <ul className="list-disc space-y-1">
             {works.map((line, index) => (
-              <li key={index} className="my-1">
+              <li key={index} className="text-balance">
                 {line}
               </li>
             ))}
@@ -51,7 +52,7 @@ const Details = ({
   );
 };
 
-const Experience = ({ scrollRef }: AboutContentProps) => {
+const Experience = () => {
   // Content
   const { t } = useTranslation("about");
 
@@ -61,25 +62,10 @@ const Experience = ({ scrollRef }: AboutContentProps) => {
 
   const ref = useRef<HTMLDivElement | null>(null);
 
-  const { scrollYProgress } = useScroll({
-    // Target
-    target: scrollRef,
-    // Settings Offset
-    offset: ["start start", "end end"],
-  });
-
-  useEffect(() => {
-    scrollRef.current.scrollTo(0, 0);
-  }, [scrollRef]);
-
   return (
     <>
       <div ref={ref} className="w-full">
-        {/* SideBar  */}
-        <motion.div
-          style={{ scaleY: scrollYProgress }}
-          className="absolute left-9 top-0 h-full w-[4px] origin-top bg-dark dark:bg-light md:left-6 md:w-[3px] sm:left-3"
-        />
+        <Line reference={ref} type="experience" />
         {/* Experiences List  */}
         <motion.ul
           className="ml-4 flex w-full flex-col space-y-8 md:ml-2"

@@ -56,7 +56,7 @@ const Layout = ({
   return (
     <motion.section
       className={cn(
-        "z-0 flex h-full w-full flex-col bg-transparent p-32 text-dark transition-colors duration-300 ease-in-out dark:bg-transparent dark:text-light xl:p-24 lg:p-16 md:p-12 sm:p-8",
+        "z-0 flex h-full w-full flex-col bg-transparent p-32 text-dark transition-colors duration-300 ease-in-out dark:bg-transparent dark:text-light xl:p-24 lg:p-16 md:p-12",
         className,
       )}
       initial={initialProps}

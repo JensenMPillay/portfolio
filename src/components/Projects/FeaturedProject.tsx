@@ -60,7 +60,7 @@ const FeaturedProject = ({
 
   return (
     <div id={String(id)} className={className} ref={ref}>
-      <article className="relative flex h-full w-full flex-row items-center justify-between space-x-3 rounded-3xl border-solid border-dark bg-transparent p-6 shadow-lg backdrop-blur dark:border-light dark:bg-transparent md:flex-col md:justify-start md:p-4 sm:rounded-2xl sm:p-3 xs:p-2">
+      <article className="relative flex h-full w-full flex-row items-center justify-between space-x-3 rounded-3xl border-solid border-dark bg-transparent/20 p-6 shadow-lg backdrop-blur dark:border-light dark:bg-transparent/20 md:flex-col md:justify-start md:p-4 sm:rounded-2xl sm:p-3 xs:p-2">
         {/* <div className="absolute -right-3 top-0 -z-10 h-[103%] w-[101%] rounded-[2.5rem] rounded-br-3xl bg-dark dark:bg-light sm:h-[102%] xs:-right-2 xs:w-full xs:rounded-[1.5rem]" /> */}
         <motion.div
           className="flex w-full cursor-not-allowed items-center justify-center overflow-hidden rounded-lg md:w-full"
@@ -93,13 +93,13 @@ const FeaturedProject = ({
           </video>
         </motion.div>
         <motion.div
-          className="flex w-full flex-col items-start justify-between md:w-full"
+          className="flex w-full flex-col items-start justify-between space-y-2 md:w-full"
           variants={containerVariants}
           initial="hidden"
           whileInView="show"
         >
           <motion.div
-            className="my-2 flex h-1/5 w-full flex-row flex-wrap"
+            className="flex h-1/5 w-full flex-row flex-wrap"
             variants={textVariants}
           >
             {tools.map((tool, index) => (
@@ -112,19 +112,19 @@ const FeaturedProject = ({
             ))}
           </motion.div>
           <motion.h2
-            className="my-2 w-full text-left font-jost text-4xl font-bold uppercase -tracking-wider lg:text-2xl"
+            className="w-full text-left font-jost text-4xl font-bold uppercase -tracking-wider lg:text-2xl"
             variants={textVariants}
           >
             {title}
           </motion.h2>
           <motion.p
-            className="my-2 font-medium text-dark dark:text-light lg:my-1.5 md:my-1 md:text-xs"
+            className="text-balance font-medium text-dark dark:text-light lg:my-1.5 md:my-1 md:text-xs"
             variants={textVariants}
           >
             {summary}
           </motion.p>
           <motion.div
-            className="mt-2 flex w-full items-center justify-between lg:mt-1.5 md:mt-1"
+            className="flex w-full items-center justify-between lg:mt-1.5 md:mt-1"
             variants={textVariants}
           >
             {link && <ButtonGo title={buttonName} href={link} />}

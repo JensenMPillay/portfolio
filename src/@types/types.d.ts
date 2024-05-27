@@ -34,16 +34,10 @@ export type SwitchContentProps = {
 };
 
 // About Tab
-export type ScrollRef = MutableRefObject<HTMLDivElement | null>;
-
 export type TabProps = {
   title: string;
   value: string;
-  content: (scrollRef: ScrollRef) => JSX.Element;
-};
-
-export type AboutContentProps = {
-  scrollRef: ScrollRef;
+  content: () => JSX.Element;
 };
 
 export type AboutMeProps = TextProps & {

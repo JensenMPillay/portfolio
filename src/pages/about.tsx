@@ -28,15 +28,15 @@ export default function About() {
   const tabsContent: Omit<TabProps, "title">[] = [
     {
       value: "aboutme",
-      content: (scrollRef) => <AboutMe scrollRef={scrollRef} />,
+      content: () => <AboutMe />,
     },
     {
       value: "experience",
-      content: (scrollRef) => <Experience scrollRef={scrollRef} />,
+      content: () => <Experience />,
     },
     {
       value: "education",
-      content: (scrollRef) => <Education scrollRef={scrollRef} />,
+      content: () => <Education />,
     },
   ];
 
