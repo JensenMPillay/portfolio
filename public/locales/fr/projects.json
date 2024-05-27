@@ -18,7 +18,7 @@
       ],
       "summary": "Une application SaaS pilotée par l'IA permettant une interaction directe avec les PDF via une interface de chat IA. Authentifiez-vous, abonnez-vous pour des fonctionnalités améliorées, téléchargez et interagissez avec des PDF contextualisés par une IA.",
       "video": "/images/projects/pdfai-preview.mp4",
-      "link": "https://pdfai-jensenmpillay.vercel.app/",
+      "link": "https://pdfai-jmpillay.vercel.app/",
       "github": "https://github.com/JensenMPillay/pdfai"
     },
     {
@@ -106,7 +106,7 @@
       "tools": ["framer-motion", "javascript", "next.js", "tailwind"],
       "summary": "Un site web de portfolio professionnel utilisant Next.JS, Framer Motion et Tailwind CSS. Il dispose de transitions de page fluides, d'effets de fond attrayants, d'un design unique et est responsive sur mobile.",
       "video": "/images/projects/portfolio-preview.mp4",
-      "link": "https://portfolio-jensenmpillay.vercel.app/",
+      "link": "https://portfolio-jmpillay.vercel.app/",
       "github": "https://github.com/JensenMPillay/portfolio"
     }
   ]
