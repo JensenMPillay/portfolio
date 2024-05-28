@@ -1,6 +1,6 @@
 import { EducationDetailsProps } from "@/@types/types";
 import { containerVariants, textVariants } from "@/utils/variants";
-import { Variants, motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { useTranslation } from "next-i18next";
 import { useRef } from "react";
 import Line from "./Line";
@@ -14,11 +14,11 @@ const Details = ({
   info,
   variants,
 }: EducationDetailsProps & { variants: Variants }) => {
-  const ref = useRef(null);
+  const ref = useRef<HTMLLIElement | null>(null);
   return (
     <li
       ref={ref}
-      className="flex w-full flex-row space-x-8 text-left first:mt-0 last:mb-0 md:space-x-6 sm:space-x-4"
+      className="relative flex w-full flex-row space-x-8 text-left first:mt-0 last:mb-0 md:space-x-6 sm:space-x-4"
       key={id}
     >
       <LineIcon reference={ref} />
@@ -54,30 +54,28 @@ const Education = () => {
 
   return (
     <>
-      <div ref={ref} className="w-full">
-        <Line reference={ref} />
-        {/* Education List  */}
-        <motion.ul
-          className="ml-4 flex w-full flex-col space-y-8 md:ml-2"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="show"
-        >
-          {educationData.map(({ id, type, time, place, info }) => {
-            return (
-              <Details
-                id={id}
-                key={id}
-                type={type}
-                time={time}
-                place={place}
-                info={info}
-                variants={textVariants}
-              />
-            );
-          })}
-        </motion.ul>
-      </div>
+      <Line reference={ref} type="education" />
+      {/* Education List  */}
+      <motion.ul
+        className="ml-4 flex w-full flex-col space-y-8 md:ml-2"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="show"
+      >
+        {educationData.map(({ id, type, time, place, info }) => {
+          return (
+            <Details
+              id={id}
+              key={id}
+              type={type}
+              time={time}
+              place={place}
+              info={info}
+              variants={textVariants}
+            />
+          );
+        })}
+      </motion.ul>
     </>
   );
 };

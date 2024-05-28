@@ -10,12 +10,12 @@ const LineIcon = ({ reference }: Props) => {
     // Target
     target: reference,
     // Settings Offset
-    offset: ["end end", "start start"],
+    offset: ["start center", "end center"],
     layoutEffect: false,
   });
   return (
     <motion.figure
-      className="absolute -left-1 stroke-dark dark:stroke-light lg:-left-3 md:-left-3.5 sm:-left-2 xs:-left-0"
+      className="absolute -left-[52px] stroke-dark dark:stroke-light md:-left-[38px] sm:-left-8"
       initial={{ opacity: 0, scale: 0 }}
       whileInView={{ opacity: 1, scale: 1 }}
       transition={{ duration: 1, type: "spring", stiffness: 200 }}
@@ -35,7 +35,7 @@ const LineIcon = ({ reference }: Props) => {
           cy="50"
           r="20"
           className="fill-primaryDark stroke-[5px] dark:fill-dark md:stroke-[4px]"
-          style={{ pathLength: 1 }}
+          style={{ pathLength: scrollYProgress }}
         />
         <circle
           cx="50"

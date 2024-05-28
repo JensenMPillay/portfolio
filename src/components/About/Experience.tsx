@@ -63,36 +63,34 @@ const Experience = () => {
   const ref = useRef<HTMLDivElement | null>(null);
 
   return (
-    <>
-      <div ref={ref} className="w-full">
-        <Line reference={ref} />
-        {/* Experiences List  */}
-        <motion.ul
-          className="ml-4 flex w-full flex-col space-y-8 md:ml-2"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="show"
-        >
-          {experienceData.map(
-            ({ id, position, company, companyLink, time, address, works }) => {
-              return (
-                <Details
-                  id={id}
-                  key={id}
-                  position={position}
-                  company={company}
-                  companyLink={companyLink}
-                  time={time}
-                  address={address}
-                  works={works}
-                  variants={textVariants}
-                />
-              );
-            },
-          )}
-        </motion.ul>
-      </div>
-    </>
+    <div ref={ref}>
+      <Line reference={ref} type="experience" />
+      {/* Experience List  */}
+      <motion.ul
+        className="ml-4 flex w-full flex-col space-y-8 md:ml-2"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="show"
+      >
+        {experienceData.map(
+          ({ id, position, company, companyLink, time, address, works }) => {
+            return (
+              <Details
+                id={id}
+                key={id}
+                position={position}
+                company={company}
+                companyLink={companyLink}
+                time={time}
+                address={address}
+                works={works}
+                variants={textVariants}
+              />
+            );
+          },
+        )}
+      </motion.ul>
+    </div>
   );
 };
 
