@@ -74,7 +74,7 @@ const Navbar = () => {
         }}
       />
       <SideNavLink
-        href="projects"
+        href="/projects"
         title={projects}
         className="right-0 top-1/2 rotate-90"
         initial={{

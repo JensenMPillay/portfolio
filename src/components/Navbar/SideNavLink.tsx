@@ -22,10 +22,13 @@ const SideNavLink = ({
   // Get Actual Route for Highlight
   const routerPath = useRouter().asPath;
 
+  console.log(routerPath);
+  console.log(href);
+
   return (
     <MotionLink
       className={cn(
-        "group fixed font-jost text-2xl font-light uppercase -tracking-wider transition-colors duration-300 ease-in-out hover:text-dark dark:hover:text-light lg:hidden",
+        "group fixed origin-center font-jost text-2xl font-light uppercase -tracking-wider transition-colors duration-300 ease-in-out hover:text-dark dark:hover:text-light lg:hidden",
         className,
         routerPath === href
           ? "text-dark dark:text-light"
@@ -47,8 +50,8 @@ const SideNavLink = ({
       {title}
       <span
         className={cn(
-          "absolute -bottom-0.5 left-0 inline-block h-[2px] bg-dark transition-[width] duration-300 ease-in-out group-hover:w-full dark:bg-light",
-          routerPath === href ? "w-full" : "w-0",
+          "absolute -bottom-0.5 left-0 inline-block h-[2px] w-full origin-center scale-x-0 transform bg-dark transition-transform duration-300 ease-in-out group-hover:scale-x-100 dark:bg-light",
+          routerPath === href ? "scale-x-100" : "scale-x-0",
         )}
       />
     </MotionLink>
