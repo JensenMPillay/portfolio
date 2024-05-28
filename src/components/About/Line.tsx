@@ -3,18 +3,14 @@ import { MutableRefObject } from "react";
 
 type Props = {
   reference: MutableRefObject<HTMLDivElement | null>;
-  type: "experience" | "education";
 };
 
-const Line = ({ reference, type }: Props) => {
+const Line = ({ reference }: Props) => {
   const { scrollYProgress } = useScroll({
     // Target
     target: reference,
     // Settings Offset
-    offset:
-      type === "experience"
-        ? ["start start", "end end"]
-        : ["end end", "start start"],
+    offset: ["start start", "end end"],
     layoutEffect: false,
   });
   return (

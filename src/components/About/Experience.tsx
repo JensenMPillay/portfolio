@@ -65,7 +65,7 @@ const Experience = () => {
   return (
     <>
       <div ref={ref} className="w-full">
-        <Line reference={ref} type="experience" />
+        <Line reference={ref} />
         {/* Experiences List  */}
         <motion.ul
           className="ml-4 flex w-full flex-col space-y-8 md:ml-2"
