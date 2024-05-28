@@ -1,24 +1,31 @@
-import { motion, useScroll } from "framer-motion";
+import { motion, useScroll, useSpring } from "framer-motion";
 import { MutableRefObject } from "react";
 
 type Props = {
   reference: MutableRefObject<HTMLDivElement | null>;
-  type: "experience" | "education";
+  type: string;
 };
 
 const Line = ({ reference, type }: Props) => {
   const { scrollYProgress } = useScroll({
     // Target
-    // target: reference,
+    // container: reference,
     // Settings Offset
     // offset: type === "education" ? ["end", "start"] : ["start", "end"],
     layoutEffect: false,
   });
+  const scaleY = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+  });
   return (
-    <motion.div
-      style={{ scaleY: scrollYProgress }}
-      className="absolute top-0 h-full w-[4px] origin-top bg-dark dark:bg-light md:w-[3px] sm:w-[2px]"
-    />
+    type != "aboutme" && (
+      <motion.div
+        style={{ scaleY: scaleY }}
+        className="absolute top-0 h-full w-[4px] origin-top bg-dark dark:bg-light md:w-[3px] sm:w-[2px]"
+      />
+    )
   );
 };
 

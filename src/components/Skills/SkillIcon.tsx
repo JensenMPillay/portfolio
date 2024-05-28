@@ -28,6 +28,7 @@ const SkillIcon = ({
   const y = useSpring(motionY, { damping: 10, duration: 300 });
   const rotateX = useTransform(y, [0, size / 2], [45, -45]);
   const rotateY = useTransform(x, [0, size / 2], [-45, 45]);
+  const scale = useSpring(useMotionValue(1), { damping: 10, duration: 300 });
 
   function handleMouseMove(event: MouseEvent<HTMLLIElement | null>) {
     let containerRect = event.currentTarget.getBoundingClientRect();
@@ -44,6 +45,11 @@ const SkillIcon = ({
   function handleMouseLeave() {
     x.set(size / 4);
     y.set(size / 4);
+    scale.set(1);
+  }
+
+  function handleMouseOver() {
+    scale.set(1.5);
   }
 
   useEffect(() => {
@@ -57,22 +63,24 @@ const SkillIcon = ({
 
   return (
     <motion.li
-      className="group relative flex flex-col place-items-center overflow-hidden rounded-lg"
+      className="group relative flex flex-col place-items-center rounded-lg"
       style={{
         perspective: size,
       }}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
+      onMouseOver={handleMouseOver}
       variants={variants}
     >
       <MouseLightEffect mouseX={mouseX} mouseY={mouseY} />
       <motion.div
-        className="rounded-lg bg-transparent shadow-xl"
+        className="scale-100 rounded-lg bg-transparent shadow-xl"
         style={{
           width: size / 2,
           height: size / 2,
           rotateX: rotateX,
           rotateY: rotateY,
+          scale: scale,
         }}
         animate="animate"
       >

@@ -24,7 +24,7 @@ export default function Projects() {
       </Head>
       {/* Transition Page Effect */}
       {/* <TransitionEffect /> */}
-      <Layout className="" direction="right">
+      <Layout className="place-self-center" direction="right">
         <AnimatedText className="" text={titlePage} />
         <Slider />
       </Layout>

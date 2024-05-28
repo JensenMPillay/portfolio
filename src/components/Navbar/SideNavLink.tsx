@@ -22,9 +22,6 @@ const SideNavLink = ({
   // Get Actual Route for Highlight
   const routerPath = useRouter().asPath;
 
-  console.log(routerPath);
-  console.log(href);
-
   return (
     <MotionLink
       className={cn(

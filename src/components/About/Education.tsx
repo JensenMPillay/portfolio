@@ -18,7 +18,7 @@ const Details = ({
   return (
     <li
       ref={ref}
-      className="relative flex w-full flex-row space-x-8 text-left first:mt-0 last:mb-0 md:space-x-6 sm:space-x-4"
+      className="relative flex w-full flex-row space-x-8 text-left md:space-x-6 sm:space-x-4"
       key={id}
     >
       <LineIcon reference={ref} />
@@ -53,7 +53,7 @@ const Education = () => {
   const ref = useRef<HTMLDivElement | null>(null);
 
   return (
-    <>
+    <div className="relative" ref={ref}>
       <Line reference={ref} type="education" />
       {/* Education List  */}
       <motion.ul
@@ -76,7 +76,7 @@ const Education = () => {
           );
         })}
       </motion.ul>
-    </>
+    </div>
   );
 };
 

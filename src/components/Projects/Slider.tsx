@@ -1,8 +1,9 @@
 import { ProjectProps } from "@/@types/types";
 import { cn } from "@/utils/utils";
-import { motion } from "framer-motion";
+import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { useTranslation } from "next-i18next";
 import { PropsWithChildren, useEffect, useRef, useState } from "react";
+import IndicatorIcon from "../IndicatorIcon";
 import FeaturedProject from "./FeaturedProject";
 
 const Slider = ({ children }: PropsWithChildren) => {
@@ -28,6 +29,9 @@ const Slider = ({ children }: PropsWithChildren) => {
     setProjectInView(projectInViewId);
   };
 
+  const x = useSpring(useMotionValue(1), { damping: 10, duration: 300 });
+  const scaleX = useTransform(x, [0, projectsLength], [0, 1]);
+
   useEffect(() => {
     const updateOffset = () => {
       const clientRect = wrapperRef.current?.getBoundingClientRect();
@@ -40,19 +44,22 @@ const Slider = ({ children }: PropsWithChildren) => {
     };
     updateOffset();
 
-    setProjectsLength(projectsData.length);
-
     window.addEventListener("resize", updateOffset);
     return () => {
       window.removeEventListener("resize", updateOffset);
     };
+  }, []);
+
+  useEffect(() => {
+    setProjectsLength(projectsData.length);
   }, [projectsData.length]);
+
+  useEffect(() => {
+    x.set(projectInView);
+  }, [x, projectInView]);
 
   return (
     <div className="relative flex h-full w-full flex-col items-center">
-      {/* <div className="h-12 w-12">
-        <DragX />
-      </div> */}
       <div
         ref={dragFieldRef}
         className="pointer-events-none absolute left-0 top-0 h-full"
@@ -93,12 +100,7 @@ const Slider = ({ children }: PropsWithChildren) => {
           <div className="h-auto w-60 p-60 xl:w-48 xl:p-48 lg:w-32 lg:p-32 md:w-24 md:p-24"></div>
         </motion.div>
       </div>
-      {/* <div className="h-12 w-12">
-        <DragY />
-      </div> */}
-      <div className="my-2 text-center font-jost text-xl font-semibold text-dark dark:text-light lg:text-lg md:my-1 md:text-base sm:text-sm">
-        {projectInView} / {projectsLength}
-      </div>
+      <IndicatorIcon scale={scaleX} />
     </div>
   );
 };
