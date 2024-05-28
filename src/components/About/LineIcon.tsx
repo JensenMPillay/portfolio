@@ -12,7 +12,7 @@ const LineIcon = ({ reference }: Props) => {
     target: reference,
     // Settings Offset
     offset: ["start end", "end center"],
-    layoutEffect: true,
+    layoutEffect: false,
   });
   const scaleY = useSpring(scrollYProgress, {
     stiffness: 100,
